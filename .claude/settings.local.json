@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest blockchain-lab-uai --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --yes)"
+      "Bash(npx create-next-app@latest blockchain-lab-uai --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install *)",
+      "Bash(npx shadcn@latest *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(npx next *)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(Get-Item \"C:\\\\proyectos\\\\blockchain-lab-uai\\\\uai_logo.png\")",
+      "Bash(Select-Object Name, Length)",
+      "PowerShell(Copy-Item *)"
     ]
   }
 }
