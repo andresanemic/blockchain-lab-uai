@@ -5,6 +5,7 @@ import WhatIsBlockchain from '@/components/WhatIsBlockchain'
 import StrategicAreas from '@/components/StrategicAreas'
 import Process from '@/components/Process'
 import Impact from '@/components/Impact'
+import CaseStudy from '@/components/CaseStudy'
 import Roadmap from '@/components/Roadmap'
 import Team from '@/components/Team'
 import CTA from '@/components/CTA'
@@ -21,6 +22,7 @@ export default function Page() {
         <StrategicAreas />
         <Process />
         <Impact />
+        <CaseStudy />
         <Roadmap />
         <Team />
         <CTA />

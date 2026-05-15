@@ -3,11 +3,10 @@
 import Image from 'next/image'
 
 const navLinks = [
-  { label: 'Nosotros', href: '#nosotros' },
-  { label: 'Áreas', href: '#areas' },
-  { label: 'Proceso', href: '#proceso' },
-  { label: 'Equipo', href: '#equipo' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Áreas', href: '/#areas' },
+  { label: 'Proceso', href: '/#proceso' },
+  { label: 'Equipo', href: '/#equipo' },
+  { label: 'Certificados', href: '/certificados' },
 ]
 
 export default function Footer() {
@@ -17,7 +16,7 @@ export default function Footer() {
       style={{ borderColor: '#1E1E2E', background: '#0A0A0F' }}
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="#" className="flex items-center gap-3 shrink-0">
+        <a href="/" className="flex items-center gap-3 shrink-0">
           <Image
             src="/uai_logo.png"
             alt="UAI"

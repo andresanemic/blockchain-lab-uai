@@ -97,7 +97,7 @@ export default function Hero() {
             Universidad Adolfo Ibáñez
           </p>
 
-          <h1 className="font-sans font-extrabold text-5xl sm:text-6xl xl:text-7xl leading-[1.05] text-uai-text-primary mb-6">
+          <h1 className="font-sans font-extrabold text-[2.1rem] sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.08] text-uai-text-primary mb-6 text-balance">
             Innovación Económica y{' '}
             <span className="text-uai-accent">Relaciones Descentralizadas</span>
           </h1>

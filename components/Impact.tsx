@@ -100,9 +100,9 @@ export default function Impact() {
         </div>
       </div>
 
-      {/* Scrolling marquee */}
+      {/* Scrolling marquee — hidden on mobile */}
       <div
-        className="border-t border-b py-6 -mx-6"
+        className="hidden sm:block border-t border-b py-6 -mx-6"
         style={{ borderColor: '#1E1E2E' }}
       >
         <div className="flex whitespace-nowrap animate-marquee">

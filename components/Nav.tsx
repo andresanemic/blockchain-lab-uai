@@ -5,12 +5,11 @@ import Image from 'next/image'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
 
 const links = [
-  { label: 'Nosotros', href: '#nosotros' },
-  { label: 'Áreas', href: '#areas' },
-  { label: 'Proceso', href: '#proceso' },
-  { label: 'Roadmap', href: '#roadmap' },
-  { label: 'Equipo', href: '#equipo' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Áreas', href: '/#areas' },
+  { label: 'Proceso', href: '/#proceso' },
+  { label: 'Roadmap', href: '/#roadmap' },
+  { label: 'Equipo', href: '/#equipo' },
+  { label: 'Certificados', href: '/certificados' },
 ]
 
 export default function Nav() {
@@ -45,7 +44,7 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <Image
             src="/uai_logo.png"
             alt="UAI"
@@ -84,7 +83,7 @@ export default function Nav() {
         </ul>
 
         <a
-          href="#contacto"
+          href="/#contacto"
           className="hidden md:inline-flex items-center px-5 py-2 rounded text-sm font-medium transition-colors duration-200"
           style={{
             border: '1px solid #3B5BDB',

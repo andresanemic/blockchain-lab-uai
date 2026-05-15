@@ -10,7 +10,10 @@
       "Bash(curl -s http://localhost:3000)",
       "Bash(Get-Item \"C:\\\\proyectos\\\\blockchain-lab-uai\\\\uai_logo.png\")",
       "Bash(Select-Object Name, Length)",
-      "PowerShell(Copy-Item *)"
+      "PowerShell(Copy-Item *)",
+      "Bash(npm list *)",
+      "Bash(npx playwright *)",
+      "Bash(npx --yes playwright install chromium)"
     ]
   }
 }
