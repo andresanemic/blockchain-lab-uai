@@ -1,0 +1,270 @@
+================================================================================
+  CERTIFICADOS NFT EN BLOCKCHAIN — PILOTO UAI
+  Universidad Adolfo Ibáñez × Blockchain Lab UAI
+  Documento de implementación técnica — v1.0
+================================================================================
+
+1. RESUMEN EJECUTIVO
+────────────────────
+Este documento describe el flujo técnico y operativo para la emisión de 30
+certificados digitales como NFTs en la blockchain de Stellar, en el marco de
+un piloto del Blockchain Lab UAI. El sistema adopta el modelo de Account
+Abstraction que ChatterPay implementa (wallets vinculadas al número de
+teléfono, sin seed phrases, sin apps adicionales), adaptado al ecosistema de
+Stellar mediante cuentas inteligentes via Soroban.
+
+La premisa es la misma que la de ChatterPay: cualquier persona puede recibir
+un activo digital en blockchain sin gestionar claves privadas. La única
+interfaz es el chatbot de la UAI. El resultado: un certificado NFT permanente,
+verificable e imposible de falsificar.
+
+
+2. ANALOGÍA CON CHATTERPAY
+───────────────────────────
+ChatterPay permite a cualquier usuario enviar, recibir y mintear NFTs en
+blockchain usando solo WhatsApp, sin seed phrases ni apps adicionales. Esto es
+posible gracias a Account Abstraction (ERC-4337): cada usuario tiene una smart
+contract wallet vinculada a su número de teléfono, gestionada por el protocolo.
+
+El sistema de certificados UAI replica esta lógica en Stellar:
+
+  ChatterPay (Scroll / ERC-4337)        UAI Certificados (Stellar / Soroban)
+  ─────────────────────────────────     ────────────────────────────────────
+  Usuario: cualquier persona con        Participante: inscrito en el curso
+  WhatsApp
+
+  Wallet: smart contract ligada al      Wallet: cuenta Soroban ligada al
+  número de teléfono                    número de WhatsApp/teléfono
+
+  Bot mintea NFT desde imagen en chat   Chatbot UAI mintea NFT-certificado
+
+  Bot envía NFT a wallet del            Chatbot envía certificado a wallet del
+  destinatario (identificado por nro)   participante (identificado por nro)
+
+  Paymaster patrocina el gas            UAI patrocina las tarifas de red
+  (account sponsorship en Stellar)
+
+  Sin seed phrase para el usuario       Sin seed phrase para el participante
+
+  Registro inmutable en cadena          Registro inmutable en cadena
+
+Diferencia principal: blockchain subyacente (Stellar en vez de Scroll) y el
+modelo de contratos (Soroban en vez de ERC-4337). El principio operativo es
+idéntico.
+
+
+3. ARQUITECTURA TÉCNICA
+────────────────────────
+
+3.1 Blockchain: Stellar + Soroban
+  Stellar es una blockchain pública de capa 1 con confirmaciones en 3-5
+  segundos y tarifas menores a $0.01 USD por transacción. Soroban es su
+  entorno de contratos inteligentes, disponible desde 2024.
+
+  El piloto usará Stellar Testnet en la fase de validación y Stellar Mainnet
+  para la emisión oficial de los 30 certificados.
+
+3.2 Wallet Institucional de la UAI (Emisor)
+  La UAI opera una wallet institucional gestionada por el Blockchain Lab. Esta
+  cuenta:
+  - Es la única firmante autorizada para emitir certificados del curso.
+  - Patrocina la creación de las cuentas de los participantes (paga la tarifa
+    base de creación de cuenta en Stellar — equivalente al Paymaster de AA).
+  - Tiene permisos exclusivos para mintear NFTs desde el contrato Soroban del
+    curso.
+  - Se opera exclusivamente a través del chatbot — no existe otra interfaz.
+
+3.3 Wallets de los 30 Participantes (Account Abstraction en Stellar)
+  Cada participante obtiene una cuenta Soroban en Stellar sin gestionar claves
+  privadas. Su número de WhatsApp es su identidad en el sistema.
+
+  Proceso de creación:
+  a) El participante proporciona su número de WhatsApp al inscribirse.
+  b) El sistema deriva un par de claves determinístico a partir del número
+     (análogo al modelo de ChatterPay para ERC-4337).
+  c) La UAI patrocina la creación de la cuenta en Stellar.
+  d) La cuenta queda asociada permanentemente al número en el registro interno.
+  e) El participante no recibe ni gestiona claves — su acceso es su número.
+
+3.4 NFT de Certificado (Metadata On-Chain)
+  Cada certificado es un NFT bajo el estándar Soroban NFT de Stellar. Los
+  metadatos registrados automáticamente en cadena incluyen:
+
+  - Nombre completo del participante
+  - Nombre del curso y número de edición
+  - Fechas de inicio y término del curso
+  - Fecha y hora UTC de emisión del certificado
+  - Institución emisora: Universidad Adolfo Ibáñez
+  - Hash SHA-256 del documento PDF subyacente
+  - Dirección pública de la wallet institucional UAI (firmante)
+  - Número de ledger y hash de la transacción en Stellar
+
+
+4. FLUJO OPERATIVO DEL PILOTO
+──────────────────────────────
+
+  Fase 0 — Configuración inicial (una sola vez, equipo técnico)
+  ─────────────────────────────────────────────────────────────
+  El Blockchain Lab despliega el contrato Soroban del curso en Stellar Testnet,
+  configura la wallet institucional y conecta el chatbot al contrato. Una vez
+  validado en testnet, se replica en Mainnet.
+
+  Fase 1 — Onboarding de los 30 participantes
+  ─────────────────────────────────────────────
+  Cada participante registra su número de WhatsApp antes del cierre del curso.
+  El sistema genera automáticamente su wallet Soroban y la asocia al número.
+  No requieren instalar nada ni guardar ninguna clave.
+
+  Fase 2 — Emisión de certificados (operada por UAI vía chatbot)
+  ───────────────────────────────────────────────────────────────
+  El operador accede al chatbot UAI, selecciona el participante por número de
+  teléfono (o emite en lote para los 30) y ejecuta la emisión. El chatbot:
+    1. Genera el NFT con los datos del curso y del participante.
+    2. Firma la transacción con la wallet institucional UAI.
+    3. Envía el NFT a la wallet Soroban del participante.
+    4. Registra en blockchain: evento MINT, evento TRANSFER y timestamp.
+  Tiempo estimado por certificado: < 10 segundos.
+
+  Fase 3 — Acceso del participante al certificado
+  ─────────────────────────────────────────────────
+  El participante puede acceder a su certificado NFT en cualquier momento:
+  - Con wallet Stellar compatible (Lobstr, xBull, etc.): visualización directa.
+  - Sin wallet: mediante el link de verificación público que genera el chatbot,
+    que muestra el certificado y su prueba blockchain sin requerir cuenta propia.
+
+
+5. REGISTRO EN BLOCKCHAIN (TRAZABILIDAD AUTOMÁTICA)
+────────────────────────────────────────────────────
+Cada certificado genera automáticamente tres eventos on-chain que no pueden
+ser alterados ni eliminados:
+
+  Evento 1 — MINT
+    Creación del NFT con metadata completa: hash del documento, nombre del
+    participante, nombre del curso, institución emisora, timestamp UTC.
+
+  Evento 2 — TRANSFER
+    Envío desde la wallet UAI a la wallet Soroban del participante, con
+    registro de ambas direcciones y el número de ledger.
+
+  Evento 3 — LEDGER ENTRY
+    Confirmación final: número de bloque, hash de transacción y sello de
+    tiempo inmutable. Verificable públicamente en Stellar Expert.
+
+La única acción humana requerida es iniciar el proceso en el chatbot. La
+generación del NFT, la firma, el envío y los tres eventos on-chain ocurren
+de forma automática y consecutiva.
+
+
+6. RESUMEN DEL PILOTO
+──────────────────────
+  Participantes          30 personas
+  Blockchain             Stellar (Testnet → Mainnet)
+  Contratos              Soroban (Stellar)
+  Modelo de identidad    Account Abstraction — wallet ligada a nro de teléfono
+  Interfaz               Chatbot UAI (única interfaz gráfica)
+  Tarifas de red         Patrocinadas por la UAI — sin costo para participantes
+  Tipo de activo         NFT con metadata on-chain (nombre, curso, fecha, hash)
+  Tiempo por certificado < 10 segundos
+  Costo por certificado  < $0.01 USD en Mainnet
+  Acceso del receptor    Wallet Stellar o link de verificación público
+  Verificabilidad        Pública, permanente, sin intermediarios
+
+
+================================================================================
+  MAPAS DE FLUJO (ASCII)
+================================================================================
+
+── FLUJO 1: ONBOARDING DEL PARTICIPANTE ──────────────────────────────────────
+
+  PARTICIPANTE              SISTEMA UAI                  STELLAR BLOCKCHAIN
+       │                        │                                │
+       │  Proporciona número    │                                │
+       │  de WhatsApp           │                                │
+       │──────────────────────>│                                │
+       │                        │                                │
+       │                        │  [Deriva claves               │
+       │                        │   desde el número]            │
+       │                        │                                │
+       │                        │  [Wallet UAI patrocina        │
+       │                        │   tarifa de creación]         │
+       │                        │                                │
+       │                        │── Crea cuenta Soroban ───────>│
+       │                        │                                │
+       │                        │<── Confirmación (ledger) ─────│
+       │                        │                                │
+       │<── Wallet lista ───────│                               │
+       │    (sin seed phrase,   │                                │
+       │     sin app extra)     │                                │
+       │                        │                                │
+
+── FLUJO 2: EMISIÓN DEL CERTIFICADO ──────────────────────────────────────────
+
+  OPERADOR UAI             CHATBOT UAI                  STELLAR BLOCKCHAIN
+       │                        │                                │
+       │  Selecciona            │                                │
+       │  participante          │                                │
+       │  (nro de teléfono)     │                                │
+       │──────────────────────>│                                │
+       │                        │                                │
+       │                        │  [Genera NFT con              │
+       │                        │   metadata del curso]         │
+       │                        │                                │
+       │                        │  [Firma con wallet            │
+       │                        │   institucional UAI]          │
+       │                        │                                │
+       │                        │── Evento MINT ───────────────>│
+       │                        │── Evento TRANSFER ───────────>│
+       │                        │   (wallet UAI → wallet        │
+       │                        │    del participante)          │
+       │                        │                                │
+       │                        │<── Hash TX + Ledger # ─────── │
+       │                        │                                │
+       │<── Certificado emitido─│                               │
+       │    (link de verif.)    │                                │
+
+── FLUJO 3: ACCESO DEL PARTICIPANTE AL CERTIFICADO ───────────────────────────
+
+  PARTICIPANTE              SISTEMA UAI                  STELLAR BLOCKCHAIN
+       │                        │                                │
+       │  Accede con su         │                                │
+       │  número de WhatsApp    │                                │
+       │  (o link recibido)     │                                │
+       │──────────────────────>│                                │
+       │                        │                                │
+       │                        │  [Localiza wallet             │
+       │                        │   asociada al número]         │
+       │                        │                                │
+       │                        │── Consulta NFT en wallet ────>│
+       │                        │                                │
+       │                        │<── Metadata + prueba TX ───── │
+       │                        │                                │
+       │<── Muestra certificado─│                               │
+       │    NFT + metadata      │                                │
+       │    + link verificación │                                │
+       │      público           │                                │
+
+── FLUJO COMPLETO: VISIÓN GENERAL ────────────────────────────────────────────
+
+                     ┌─────────────────────────────────────┐
+                     │           STELLAR BLOCKCHAIN        │
+                     │                                     │
+  ┌──────────┐       │  ┌──────────────┐  NFT  ┌────────┐ │
+  │ CHATBOT  │──MINT─┼─>│ WALLET UAI   │──────>│ WALLET │ │
+  │   UAI    │       │  │ (Institucional)       │ PART.  │ │
+  └──────────┘       │  └──────────────┘       └────────┘ │
+       ↑             │         ↑                    ↑      │
+       │             │   Firmante único        Ligada al   │
+  OPERADOR UAI       │   del contrato          nro de tel. │
+                     │   Soroban               (AA)        │
+                     │                                     │
+                     │  Todo registrado: MINT + TRANSFER   │
+                     │  + TIMESTAMP automáticamente        │
+                     └─────────────────────────────────────┘
+
+                          30 participantes → 30 NFTs
+                          < 10 segundos por emisión
+                          < $0.01 USD por certificado
+
+================================================================================
+  Blockchain Lab UAI — 2026
+================================================================================
