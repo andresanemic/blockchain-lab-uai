@@ -1,33 +1,27 @@
-import Nav from '@/components/Nav'
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import WhatIsBlockchain from '@/components/WhatIsBlockchain'
-import StrategicAreas from '@/components/StrategicAreas'
-import Process from '@/components/Process'
-import Impact from '@/components/Impact'
-import CaseStudy from '@/components/CaseStudy'
-import Roadmap from '@/components/Roadmap'
-import Team from '@/components/Team'
-import CTA from '@/components/CTA'
-import Footer from '@/components/Footer'
+import CursorV2 from '@/components/v2/CursorV2'
+import NavV2 from '@/components/v2/NavV2'
+import HeroV2 from '@/components/v2/HeroV2'
+import StatementV2 from '@/components/v2/StatementV2'
+import AreasV2 from '@/components/v2/AreasV2'
+import ProjectsV2 from '@/components/v2/ProjectsV2'
+import TeamV2 from '@/components/v2/TeamV2'
+import ContactV2 from '@/components/v2/ContactV2'
+import FooterV2 from '@/components/v2/FooterV2'
 
 export default function Page() {
   return (
     <>
-      <Nav />
+      <CursorV2 />
+      <NavV2 />
       <main>
-        <Hero />
-        <About />
-        <WhatIsBlockchain />
-        <StrategicAreas />
-        <Process />
-        <Impact />
-        <CaseStudy />
-        <Roadmap />
-        <Team />
-        <CTA />
+        <HeroV2 />
+        <StatementV2 />
+        <AreasV2 />
+        <ProjectsV2 />
+        <TeamV2 />
+        <ContactV2 />
       </main>
-      <Footer />
+      <FooterV2 />
     </>
   )
 }

@@ -143,3 +143,40 @@ html {
   filter: blur(120px);
   pointer-events: none;
 }
+
+/* ─── v2 Redesign (redesign-blueprint branch) ─── */
+
+/* Custom cursor */
+body {
+  cursor: none;
+}
+a, button, [role="button"], label, [tabindex] {
+  cursor: none;
+}
+
+/* Selection — gold flash (Ouros principle) */
+::selection {
+  background-color: #C9A84C;
+  color: #131313;
+}
+
+/* Scrollbar — UAI blue on dark */
+html {
+  scrollbar-color: #3B5BDB #131313;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3B5BDB;
+  border-radius: 0;
+}
+
+/* Space Grotesk as display font */
+@theme {
+  --font-display: var(--font-space-grotesk);
+}
