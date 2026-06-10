@@ -1,0 +1,6058 @@
+[
+  {
+    "slide": 1,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;16;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;17;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;18;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;19;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;20;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;21;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;22;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;23;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;24;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;25;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;26;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;27;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;28;p1",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;29;p1",
+        "fill": "F8F8F4",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;30;p1",
+        "text": "UNIVERSIDAD ADOLFO IBÁÑEZ"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;31;p1",
+        "text": "BLOCKCHAIN LAB UAI"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;32;p1",
+        "text": "Innovación Económica y\nRelaciones Descentralizadas"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;33;p1",
+        "text": "Transformando confianza, transparencia y nuevos modelos de colaboración mediante tecnologías descentralizadas."
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;34;p1"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;35;p1"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;36;p1",
+        "text": "Confianza"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;37;p1"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;38;p1",
+        "text": "Transparencia"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;39;p1"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;40;p1",
+        "text": "Colaboración"
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;46;p2",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;47;p2",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;48;p2",
+        "text": "QUIÉNES SOMOS"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;49;p2",
+        "text": "Un laboratorio para la confianza digital"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;50;p2",
+        "text": "El Blockchain Lab UAI de la Universidad Adolfo Ibáñez es un laboratorio\norientado al diseño, validación e implementación de soluciones basadas en\nblockchain para organizaciones públicas y privadas."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;51;p2",
+        "text": "Nuestro propósito: transformar la forma en que las instituciones generan confianza verificable."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;52;p2",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;53;p2",
+        "text": "Confianza"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;54;p2",
+        "text": "Registros verificables que\nnadie puede alterar."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;55;p2",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;56;p2",
+        "text": "Trazabilidad"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;57;p2",
+        "text": "Historial completo y auditable de cada operación."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;58;p2",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;59;p2",
+        "text": "Eficiencia económica"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;60;p2",
+        "text": "Menos intermediarios,\nmenores costos de operación."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;61;p2"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;62;p2",
+        "text": "Diseño",
+        "fill": "F8F8F4",
+        "line_color": "1A40A1"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;63;p2",
+        "text": "Validación",
+        "fill": "F8F8F4",
+        "line_color": "1A40A1"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;64;p2",
+        "text": "Implementación",
+        "fill": "F8F8F4",
+        "line_color": "1A40A1"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;65;p2"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;66;p2"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;67;p2"
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;73;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;74;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;75;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;76;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;77;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;78;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;79;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;80;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;81;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;82;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;83;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;84;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;85;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;86;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;87;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;88;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;89;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;90;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;91;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;92;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;93;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;94;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;95;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;96;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;97;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;98;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;99;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;100;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;101;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;102;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;103;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;104;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;105;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;106;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;107;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;108;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;109;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;110;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;111;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;112;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;113;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;114;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;115;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;116;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;117;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;118;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;119;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;120;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;121;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;122;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;123;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;124;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;125;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;126;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;127;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;128;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;129;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;130;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;131;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;132;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;133;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;134;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;135;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;136;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;137;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;138;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;139;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;140;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;141;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;142;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;143;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;144;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;145;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;146;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;147;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;148;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;149;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;150;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;151;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;152;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;153;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;154;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;155;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;156;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;157;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;158;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;159;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;160;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;161;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;162;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;163;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;164;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;165;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;166;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;167;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;168;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;169;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;170;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;171;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;172;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;173;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;174;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;175;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;176;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;177;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;178;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;179;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;180;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;181;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;182;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;183;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;184;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;185;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;186;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;187;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;188;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;189;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;190;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;191;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;192;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;193;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;194;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;195;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;196;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;197;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;198;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;199;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;200;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;201;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;202;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;203;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;204;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;205;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;206;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;207;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;208;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;209;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;210;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;211;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;212;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;213;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;214;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;215;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;216;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;217;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;218;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;219;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;220;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;221;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;222;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;223;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;224;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;225;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;226;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;227;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;228;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;229;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;230;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;231;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;232;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;233;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;234;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;235;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;236;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;237;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;238;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;239;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;240;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;241;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;242;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;243;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;244;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;245;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;246;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;247;p3",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;248;p3",
+        "fill": "F8F8F4",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;249;p3",
+        "text": "NUESTRA MISIÓN"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;250;p3",
+        "text": "Impulsar innovación con impacto real"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;251;p3",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;252;p3",
+        "text": "Investigar aplicaciones\neconómicas"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;253;p3",
+        "text": "Estudiamos los usos de blockchain\ncon mayor potencial de valor real."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;254;p3",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;255;p3",
+        "text": "Diseñar soluciones\ndescentralizadas"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;256;p3",
+        "text": "Creamos arquitecturas innovadoras\nadaptadas a cada problema."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;257;p3",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;258;p3",
+        "text": "Conectar academia,\nindustria y Estado"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;259;p3",
+        "text": "Articulamos a los actores clave del\necosistema de innovación."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;260;p3",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;261;p3",
+        "text": "Impulsamos formas de colaboración\nmás transparentes y abiertas."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;262;p3",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;263;p3",
+        "text": "Acelerar la adopción\ntecnológica"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;264;p3",
+        "text": "Llevamos tecnologías emergentes\na la práctica de las organizaciones."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;265;p3",
+        "fill": "0057FF",
+        "line_color": "0057FF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;266;p3",
+        "fill": "0057FF",
+        "line_color": "001B58"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;267;p3",
+        "text": "De la investigación\nacadémica a soluciones\nque las organizaciones\npueden usar."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;268;p3",
+        "text": "Promover nuevos modelos\nde gobernanza"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;269;p3"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;270;p3"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;271;p3"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;272;p3"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;273;p3"
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;279;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;280;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;281;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;282;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;283;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;284;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;285;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;286;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;287;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;288;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;289;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;290;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;291;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;292;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;293;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;294;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;295;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;296;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;297;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;298;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;299;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;300;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;301;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;302;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;303;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;304;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;305;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;306;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;307;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;308;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;309;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;310;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;311;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;312;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;313;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;314;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;315;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;316;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;317;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;318;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;319;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;320;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;321;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;322;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;323;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;324;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;325;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;326;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;327;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;328;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;329;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;330;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;331;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;332;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;333;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;334;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;335;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;336;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;337;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;338;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;339;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;340;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;341;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;342;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;343;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;344;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;345;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;346;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;347;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;348;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;349;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;350;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;351;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;352;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;353;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;354;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;355;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;356;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;357;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;358;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;359;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;360;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;361;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;362;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;363;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;364;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;365;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;366;p4",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;367;p4",
+        "text": "EL PUNTO DE PARTIDA"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;368;p4",
+        "text": "Confiar cuesta caro. Nosotros lo abaratamos"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;369;p4",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;370;p4",
+        "text": "Documentos falsificables"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;371;p4",
+        "text": "Diplomas, contratos,\ncertificados. Hoy cualquiera\npuede alterarlos sin dejar rastro\nvisible."
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;372;p4",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;373;p4",
+        "text": "Blockchain resuelve la\nautenticidad sin intermediarios."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;374;p4",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;375;p4",
+        "text": "Videos editables"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;376;p4",
+        "text": "Con IA generativa, un video de\ndron puede ser manipulado sin\nque a simple vista se note nada."
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;377;p4",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;378;p4",
+        "text": "Hash SHA-256 + registro en\nblockchain garantiza integridad."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;379;p4",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;380;p4",
+        "text": "Intermediarios lentos"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;381;p4",
+        "text": "Notarías, bancos, abogados:\ncada proceso requiere un\ntercero que “da fe”. Eso tarda y\ncuesta."
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;382;p4",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;383;p4",
+        "text": "Smart contracts automatizan\nla confianza sin terceros."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;384;p4",
+        "text": "Blockchain resuelve estos tres problemas a la vez."
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;385;p4"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;386;p4"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;387;p4"
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;393;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;394;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;395;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;396;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;397;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;398;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;399;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;400;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;401;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;402;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;403;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;404;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;405;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;406;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;407;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;408;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;409;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;410;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;411;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;412;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;413;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;414;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;415;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;416;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;417;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;418;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;419;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;420;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;421;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;422;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;423;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;424;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;425;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;426;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;427;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;428;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;429;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;430;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;431;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;432;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;433;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;434;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;435;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;436;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;437;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;438;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;439;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;440;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;441;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;442;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;443;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;444;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;445;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;446;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;447;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;448;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;449;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;450;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;451;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;452;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;453;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;454;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;455;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;456;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;457;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;458;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;459;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;460;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;461;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;462;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;463;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;464;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;465;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;466;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;467;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;468;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;469;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;470;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;471;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;472;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;473;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;474;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;475;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;476;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;477;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;478;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;479;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;480;p5",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;481;p5",
+        "text": "¿QUÉ ES BLOCKCHAIN?"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;482;p5",
+        "text": "Infraestructura para la confianza digital"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;483;p5",
+        "text": "Blockchain es una tecnología de registro distribuido que permite\nalmacenar información de forma:"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;484;p5",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;485;p5",
+        "text": "Segura"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;486;p5",
+        "text": "Protegida por\ncriptografía. Inviolable\npor diseño."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;487;p5",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;488;p5",
+        "text": "Transparente"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;489;p5",
+        "text": "Cualquiera puede\nverificar lo registrado."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;490;p5",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;491;p5",
+        "text": "Inmutable"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;492;p5",
+        "text": "Lo escrito no se puede\nborrar ni alterar."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;493;p5",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;494;p5",
+        "text": "Descentralizada"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;495;p5",
+        "text": "Sin un único punto de\ncontrol ni de falla."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;496;p5",
+        "fill": "F3F6FF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;497;p5",
+        "text": "Permite eliminar intermediarios y crear sistemas basados en\nconfianza matemática y verificabilidad permanente."
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;498;p5"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;499;p5"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;500;p5"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;501;p5"
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;507;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;508;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;509;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;510;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;511;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;512;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;513;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;514;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;515;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;516;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;517;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;518;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;519;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;520;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;521;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;522;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;523;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;524;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;525;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;526;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;527;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;528;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;529;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;530;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;531;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;532;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;533;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;534;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;535;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;536;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;537;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;538;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;539;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;540;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;541;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;542;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;543;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;544;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;545;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;546;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;547;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;548;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;549;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;550;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;551;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;552;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;553;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;554;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;555;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;556;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;557;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;558;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;559;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;560;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;561;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;562;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;563;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;564;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;565;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;566;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;567;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;568;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;569;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;570;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;571;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;572;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;573;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;574;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;575;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;576;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;577;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;578;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;579;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;580;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;581;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;582;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;583;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;584;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;585;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;586;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;587;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;588;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;589;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;590;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;591;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;592;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;593;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;594;p6",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;595;p6",
+        "text": "RELACIONES DESCENTRALIZADAS"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;596;p6",
+        "text": "Nuevas formas de interacción institucional"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;597;p6",
+        "text": "Blockchain redefine la forma en que personas y organizaciones colaboran:"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;598;p6",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;599;p6",
+        "text": "Confianza sin intermediarios"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;600;p6",
+        "text": "Las partes interactúan directamente,\nsin un tercero que “dé fe”."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;601;p6",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;602;p6",
+        "text": "Redes peer-to-peer"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;603;p6",
+        "text": "Conexiones directas entre pares, sin\nun punto central de control."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;604;p6",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;605;p6",
+        "text": "Organizaciones autónomas (DAO)"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;606;p6",
+        "text": "Comunidades que se coordinan y\ndeciden mediante reglas en código."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;607;p6",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;608;p6",
+        "text": "Participación verificable"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;609;p6",
+        "text": "Cada voto o aporte queda\nregistrado y es auditable por todos."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;610;p6",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;611;p6",
+        "text": "Gobernanza transparente"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;612;p6",
+        "text": "Las decisiones y sus reglas son\npúblicas y trazables."
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;613;p6"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;614;p6"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;615;p6"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;616;p6"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;617;p6"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;618;p6",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;619;p6",
+        "text": "Nueva Ley Protección de Datos"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;620;p6",
+        "text": "Garantizamos la confidencialidad, integridad, disponibilidad de los datos personales."
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;621;p6"
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;626;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;627;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;628;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;629;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;630;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;631;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;632;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;633;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;634;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;635;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;636;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;637;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;638;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;639;p8",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;640;p8",
+        "text": "MARCO REGULATORIO — CHILE 2026"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;641;p8",
+        "text": "Diseñado para las nuevas reglas"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;642;p8",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;643;p8",
+        "text": "01"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;644;p8",
+        "text": "Ley 21.719\nProtección de Datos"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;645;p8",
+        "text": "Nuevo marco para el tratamiento de datos personales: crea una Agencia fiscalizadora autónoma y otorga derechos concretos a los titulares de datos."
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;646;p8",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;647;p8",
+        "text": "✓ Datos personales        ✓ Vigente 1 dic 2026"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;648;p8",
+        "text": "✓ Privacidad                      ✓ Agencia fiscalizadora"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;649;p8",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;650;p8",
+        "text": "02"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;651;p8",
+        "text": "Ley 21.668\nFichas Clínicas"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;652;p8",
+        "text": "Interoperabilidad de fichas clínicas entre prestadores de salud bajo el estándar HL7 FHIR R4, garantizando la continuidad y coordinación del cuidado."
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;653;p8",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;654;p8",
+        "text": "✓ Interoperabilidad        ✓ HL7 FHIR R4"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;655;p8",
+        "text": "✓ Salud digital                 ✓ Vigente desde 2024"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;656;p8",
+        "text": "En el Blockchain Lab UAI construimos cada solución en cumplimiento de este marco regulatorio."
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;662;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;663;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;664;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;665;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;666;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;667;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;668;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;669;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;670;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;671;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;672;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;673;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;674;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;675;p7",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;676;p7",
+        "text": "ÁREAS ESTRATÉGICAS DE TRABAJO"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;677;p7",
+        "text": "Soluciones aplicadas a desafíos reales"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;678;p7",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;679;p7",
+        "fill": "0057FF",
+        "line_color": "0057FF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;680;p7",
+        "text": "DeFi"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;681;p7",
+        "text": "Finanzas\nDescentralizadas"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;682;p7",
+        "text": "Servicios financieros sin\nbancos intermediarios."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;683;p7",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;684;p7",
+        "text": "Gobernanza\nDigital"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;685;p7",
+        "text": "Decisiones colectivas\ntransparentes y verificables."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;686;p7",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;687;p7",
+        "text": "Tokenización\nde Activos"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;688;p7",
+        "text": "Representar bienes reales\ncomo activos digitales."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;689;p7",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;690;p7",
+        "text": "Identidad\nDigital"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;691;p7",
+        "text": "Identidades autosoberanas\ny verificables."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;692;p7",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;693;p7",
+        "text": "Smart\nContracts"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;694;p7",
+        "text": "Acuerdos que se ejecutan\nsolos, sin terceros."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;695;p7",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;696;p7",
+        "text": "Trazabilidad y\nAuditoría"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;697;p7",
+        "text": "Registro inmutable de cada\noperación."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;698;p7",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;699;p7",
+        "fill": "0057FF",
+        "line_color": "0057FF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;700;p7",
+        "text": "RUC-D"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;701;p7",
+        "text": "Recursos\nCompartidos"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;702;p7",
+        "text": "Recursos únicos compartidos\ndescentralizados."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;703;p7",
+        "fill": "0057FF",
+        "line_color": "0057FF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;704;p7",
+        "fill": "0057FF",
+        "line_color": "001B58"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;705;p7",
+        "text": "Siete frentes, un\nmismo objetivo:\nconfianza\nverificable."
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;706;p7"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;707;p7"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;708;p7"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;709;p7"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;710;p7"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;711;p7"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;712;p7"
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;718;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;719;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;720;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;721;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;722;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;723;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;724;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;725;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;726;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;727;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;728;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;729;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;730;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;731;p9",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;732;p9",
+        "text": "NUESTROS PROYECTOS"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;733;p9",
+        "text": "Lo que estamos construyendo hoy"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;734;p9",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;735;p9",
+        "text": "01"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;736;p9",
+        "text": "Certificados NFT\nen Blockchain"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;737;p9",
+        "text": "Emisión de certificados como NFTs en blockchain. Verificación instantánea, con Account Abstraction,\ncosto menor a $0.01 por certificado."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;738;p9",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;739;p9",
+        "text": "02"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;740;p9",
+        "text": "Validación de Videos\npara Forestales"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;741;p9",
+        "text": "El Protocolo RUC-D combina streaming en vivo, \nhuella digital SHA-256 y registro en blockchain para convertir videos de dron en prueba judicial válida."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;742;p9",
+        "text": "✓ Blockchain                           ✓ NFT"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;743;p9",
+        "text": "✓ Chatbot                                 ✓ Verificación pública"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;744;p9",
+        "text": "✓ SHA-256                               ✓ Blockchain"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;745;p9",
+        "text": "✓ Drones                                   ✓ Validez judicial"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;746;p9",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;747;p9",
+        "line_color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 10,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;753;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;754;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;755;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;756;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;757;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;758;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;759;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;760;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;761;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;762;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;763;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;764;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;765;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;766;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;767;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;768;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;769;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;770;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;771;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;772;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;773;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;774;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;775;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;776;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;777;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;778;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;779;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;780;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;781;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;782;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;783;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;784;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;785;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;786;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;787;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;788;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;789;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;790;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;791;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;792;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;793;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;794;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;795;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;796;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;797;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;798;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;799;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;800;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;801;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;802;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;803;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;804;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;805;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;806;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;807;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;808;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;809;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;810;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;811;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;812;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;813;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;814;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;815;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;816;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;817;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;818;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;819;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;820;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;821;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;822;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;823;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;824;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;825;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;826;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;827;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;828;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;829;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;830;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;831;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;832;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;833;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;834;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;835;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;836;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;837;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;838;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;839;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;840;p10",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;841;p10",
+        "text": "PROYECTO 01 · CERTIFICADOS NFT EN BLOCKCHAIN"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;842;p10",
+        "text": "Sus certificados, imposibles de falsificar"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;843;p10",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;844;p10",
+        "text": "< $0.01"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;845;p10",
+        "text": "Costo por certificado"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;846;p10",
+        "text": "En blockchain"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;847;p10",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;848;p10",
+        "text": "< 30s"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;849;p10",
+        "text": "Tiempo de emisión"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;850;p10",
+        "text": "Desde el chatbot al blockchain"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;851;p10",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;852;p10",
+        "text": "∞"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;853;p10",
+        "text": "Años de validez"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;854;p10",
+        "text": "El registro es permanente"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;855;p10",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;856;p10",
+        "text": "0"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;857;p10",
+        "text": "Intermediarios"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;858;p10",
+        "text": "Todo es automático"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;859;p10",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;860;p10",
+        "text": "EL PROBLEMA HOY"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;861;p10",
+        "text": "Cualquier empresa puede imprimir un certificado falso. Los empleadores no tienen cómo verificar si lo que ven es real sin llamar a la institución — un proceso lento y muchas veces imposible."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;862;p10",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;863;p10",
+        "text": "LA SOLUCIÓN"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;864;p10",
+        "text": "Emitimos el certificado como NFT en la red Stellar. El participante lo recibe en su wallet y puede compartir un link de verificación público. Cualquiera puede comprobar su autenticidad en segundos, si"
+      }
+    ]
+  },
+  {
+    "slide": 11,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;870;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;871;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;872;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;873;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;874;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;875;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;876;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;877;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;878;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;879;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;880;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;881;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;882;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;883;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;884;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;885;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;886;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;887;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;888;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;889;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;890;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;891;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;892;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;893;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;894;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;895;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;896;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;897;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;898;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;899;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;900;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;901;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;902;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;903;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;904;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;905;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;906;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;907;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;908;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;909;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;910;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;911;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;912;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;913;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;914;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;915;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;916;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;917;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;918;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;919;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;920;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;921;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;922;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;923;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;924;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;925;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;926;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;927;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;928;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;929;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;930;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;931;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;932;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;933;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;934;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;935;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;936;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;937;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;938;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;939;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;940;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;941;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;942;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;943;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;944;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;945;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;946;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;947;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;948;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;949;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;950;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;951;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;952;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;953;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;954;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;955;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;956;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;957;p11",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;958;p11",
+        "text": "CÓMO FUNCIONA · CERTIFICADOS NFT"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;959;p11",
+        "text": "3 pasos. Sin que el participante\nnecesite saber qué es \nblockchain"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;960;p11",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;961;p11",
+        "text": "1"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;962;p11",
+        "text": "El operador usa\nel chatbot"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;963;p11",
+        "text": "A través de un Chatbot, el emisor indica nombre del participante, curso y fecha. No necesita instalar nada."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;964;p11",
+        "text": "✓ Funciona con Account Abstraction"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;965;p11",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;966;p11",
+        "text": "2"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;967;p11",
+        "text": "El certificado se emite\nautomáticamente"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;968;p11",
+        "text": "El sistema crea la wallet del participante, genera el NFT con todos los metadatos y lo registra en blockchain."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;969;p11",
+        "text": "✓ Sin intervención técnica"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;970;p11",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;971;p11",
+        "text": "3"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;972;p11",
+        "text": "El participante recibe\ny comparte"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;973;p11",
+        "text": "Recibe un link de verificación que puede poner en LinkedIn, un correo o su CV. Cualquier empleador puede verificar la autenticidad."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;974;p11",
+        "text": "✓ Verificable desde cualquier lugar"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;975;p11",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;976;p11",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;977;p11",
+        "line_color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 12,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;983;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;984;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;985;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;986;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;987;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;988;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;989;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;990;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;991;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;992;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;993;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;994;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;995;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;996;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;997;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;998;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;999;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1000;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1001;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1002;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1003;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1004;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1005;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1006;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1007;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1008;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1009;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1010;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1011;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1012;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1013;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1014;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1015;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1016;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1017;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1018;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1019;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1020;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1021;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1022;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1023;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1024;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1025;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1026;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1027;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1028;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1029;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1030;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1031;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1032;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1033;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1034;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1035;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1036;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1037;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1038;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1039;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1040;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1041;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1042;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1043;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1044;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1045;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1046;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1047;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1048;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1049;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1050;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1051;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1052;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1053;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1054;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1055;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1056;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1057;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1058;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1059;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1060;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1061;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1062;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1063;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1064;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1065;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1066;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1067;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1068;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1069;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1070;p12",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1071;p12",
+        "text": "PROYECTO 02 · VALIDACIÓN DE VIDEOS PARA FORESTALES"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1072;p12",
+        "text": "Un video de dron como prueba judicial válida"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1073;p12",
+        "text": "La industria forestal usa drones para vigilar zonas remotas, pero cuando el video llega a un tribunal,\nla defensa tiene tres argumentos para dejarlo fuera:"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1074;p12",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1075;p12",
+        "text": "\"No sabemos de dónde viene\""
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1076;p12",
+        "text": "GPS, número de serie del dron y\nstreaming en vivo prueban el origen exacto."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1077;p12",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1078;p12",
+        "text": "\"El video fue editado\""
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1079;p12",
+        "text": "El hash SHA-256 es único. Un solo píxel cambiado y el hash es diferente."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1080;p12",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1081;p12",
+        "text": "\"Cadena de custodia rota\""
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1082;p12",
+        "text": "El video llega al blockchain antes que   cualquier mano humana."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1083;p12",
+        "fill": "F3F6FF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1084;p12",
+        "text": "Protocolo RUC-D · Streaming en vivo + SHA-256 + Blockchain = ninguna de esas objeciones es válida"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;1085;p12"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;1086;p12"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;1087;p12"
+      }
+    ]
+  },
+  {
+    "slide": 13,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;1093;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1094;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1095;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1096;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1097;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1098;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1099;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1100;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1101;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1102;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1103;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1104;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1105;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1106;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1107;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1108;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1109;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1110;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1111;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1112;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1113;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1114;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1115;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1116;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1117;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1118;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1119;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1120;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1121;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1122;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1123;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1124;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1125;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1126;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1127;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1128;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1129;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1130;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1131;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1132;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1133;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1134;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1135;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1136;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1137;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1138;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1139;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1140;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1141;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1142;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1143;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1144;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1145;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1146;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1147;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1148;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1149;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1150;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1151;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1152;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1153;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1154;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1155;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1156;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1157;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1158;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1159;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1160;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1161;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1162;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1163;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1164;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1165;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1166;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1167;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1168;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1169;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1170;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1171;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1172;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1173;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1174;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1175;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1176;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1177;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1178;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1179;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1180;p13",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1181;p13",
+        "text": "CÓMO TRABAJAMOS"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1182;p13",
+        "text": "Del problema al MVP"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1183;p13",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1184;p13",
+        "text": "1"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1185;p13",
+        "text": "Identificación\ndel problema"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1186;p13",
+        "text": "Entendemos el desafío real de la organización antes de proponer nada."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1187;p13",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1188;p13",
+        "text": "2"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1189;p13",
+        "text": "Diseño del caso \nde uso"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1190;p13",
+        "text": "Definimos dónde y cómo blockchain agrega valor concreto."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1191;p13",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1192;p13",
+        "text": "3"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1193;p13",
+        "text": "Validación técnica y económica"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1194;p13",
+        "text": "Comprobamos viabilidad, costos e indicadores de éxito."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1195;p13",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1196;p13",
+        "text": "4"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1197;p13",
+        "text": "Desarrollo de\npiloto / MVP"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1198;p13",
+        "text": "Construimos una solución funcional, no una demo de laboratorio."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1199;p13",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1200;p13",
+        "text": "5"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1201;p13",
+        "text": "Escalabilidad y\nacompañamiento"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1202;p13",
+        "text": "Llevamos el piloto a producción y acompañamos su\nadopción."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1203;p13",
+        "text": "Un proceso probado: del diagnóstico a una solución que funciona en su operación real."
+      }
+    ]
+  },
+  {
+    "slide": 14,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;1209;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1210;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1211;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1212;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1213;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1214;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1215;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1216;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1217;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1218;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1219;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1220;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1221;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1222;p14",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1223;p14",
+        "text": "EL EQUIPO"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1224;p14",
+        "text": "Las personas detrás del Lab"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1225;p14",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1226;p14",
+        "text": "Giacomo Tomasoni Orozco"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1227;p14",
+        "text": "Jefe de Vinculación I+D"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1228;p14",
+        "text": "Lidera la relación entre el laboratorio y las organizaciones. Puente entre investigación académica y necesidades empresariales."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1229;p14",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1230;p14",
+        "text": "Francisco Toro"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1231;p14",
+        "text": "Investigador — Sistemas Descentralizados"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1232;p14",
+        "text": "Diseña y desarrolla la arquitectura técnica de los proyectos. Especialista en smart contracts, protocolos blockchain y sistemas distribuidos."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1233;p14",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1234;p14",
+        "text": "Pablo Guzmán"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1235;p14",
+        "text": "Transformación Digital"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1236;p14",
+        "text": "Asegura que la tecnología tenga impacto organizacional real. Trabaja la adopción, los procesos y el cambio cultural."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1237;p14",
+        "fill": "FFFFFF",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1238;p14",
+        "text": "Andrés Peña"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1239;p14",
+        "text": "Investigador y Operaciones"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1240;p14",
+        "text": "Combina investigación aplicada con la gestión operativa del laboratorio. Asegura que los proyectos avancen con rigor y agilidad."
+      }
+    ]
+  },
+  {
+    "slide": 15,
+    "bg": {
+      "color": "F8F8F4"
+    },
+    "shapes": [
+      {
+        "type": 9,
+        "name": "Google Shape;1246;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1247;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1248;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1249;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1250;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1251;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1252;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1253;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1254;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1255;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1256;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1257;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 9,
+        "name": "Google Shape;1258;g3e75db9229c_0_30",
+        "line_color": "C9D1DF"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1259;g3e75db9229c_0_30",
+        "fill": "F8F8F4",
+        "line_color": "080D2B"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1260;g3e75db9229c_0_30",
+        "text": "INVITACIÓN A COLABORAR"
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1261;g3e75db9229c_0_30",
+        "text": "Blockchain no es una\ntendencia. Es una nueva\ninfraestructura de confianza."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1262;g3e75db9229c_0_30",
+        "text": "Invitamos a empresas, fundaciones e instituciones a co-crear soluciones reales junto al Blockchain Lab UAI."
+      },
+      {
+        "type": 1,
+        "name": "Google Shape;1263;g3e75db9229c_0_30",
+        "text": "giacomo.tomasoni@uai.cl"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;1264;g3e75db9229c_0_30"
+      },
+      {
+        "type": 13,
+        "name": "Google Shape;1265;g3e75db9229c_0_30"
+      }
+    ]
+  }
+]

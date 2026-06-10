@@ -1,0 +1,215 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Blockchain Lab UAI" [ref=e4]:
+        - /url: /
+        - img "Blockchain Lab UAI" [ref=e5]
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Áreas" [ref=e8]:
+            - /url: "#areas"
+        - listitem [ref=e9]:
+          - link "Proyectos" [ref=e10]:
+            - /url: "#proyectos"
+        - listitem [ref=e11]:
+          - link "Equipo" [ref=e12]:
+            - /url: "#equipo"
+        - listitem [ref=e13]:
+          - link "Certificados" [ref=e14]:
+            - /url: /certificados
+      - link "Contacto →" [ref=e15]:
+        - /url: "#contacto"
+      - button "Abrir menú" [ref=e16]
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: Universidad Adolfo Ibáñez
+        - heading "BLOCKCHAIN LAB UAI" [level=1] [ref=e25]:
+          - generic [ref=e26]: BLOCKCHAIN
+          - generic [ref=e27]: LAB UAI
+        - paragraph [ref=e28]: Investigación aplicada en tecnologías descentralizadas. De la academia al mundo real.
+        - generic [ref=e29]:
+          - link "Explorar →" [ref=e30]:
+            - /url: "#areas"
+          - link "Colaborar" [ref=e31]:
+            - /url: "#contacto"
+      - generic [ref=e32]:
+        - generic [ref=e34]:
+          - generic [ref=e37]: CERTIFICADO VERIFICADO
+          - paragraph [ref=e38]: Francisco Toro
+          - paragraph [ref=e39]: DeFi & Smart Contracts · 2026
+          - generic [ref=e40]: 0x7f2a4b8c…e9d3 · UAI
+        - generic [ref=e42]:
+          - generic [ref=e45]: smart_contract.sol
+          - generic [ref=e46]: "contract Cert { mapping(address => bytes32) public hash; function issue( address to, bytes32 _hash ) external onlyAdmin { hash[to] = _hash; } }"
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Red activa
+          - generic [ref=e50]:
+            - generic [ref=e51]:
+              - generic [ref=e52]: Nodos
+              - generic [ref=e53]: "12"
+            - generic [ref=e54]:
+              - generic [ref=e55]: Transacciones
+              - generic [ref=e56]: 1.2k
+            - generic [ref=e57]:
+              - generic [ref=e58]: Disponibilidad
+              - generic [ref=e59]: 99.9%
+    - generic [ref=e61]:
+      - heading "Donde la academia construye tecnología que transforma." [level=2] [ref=e62]:
+        - generic [ref=e63]: Donde la academia
+        - generic [ref=e64]: construye tecnología
+        - generic [ref=e65]: que transforma.
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - paragraph [ref=e68]: "7"
+          - paragraph [ref=e69]: Áreas de investigación
+        - generic [ref=e70]:
+          - paragraph [ref=e71]: 3+
+          - paragraph [ref=e72]: Proyectos desplegados
+        - generic [ref=e73]:
+          - paragraph [ref=e74]: UAI
+          - paragraph [ref=e75]: Universidad Adolfo Ibáñez
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - paragraph [ref=e79]: Áreas estratégicas
+        - heading "Soluciones aplicadas a desafíos reales." [level=2] [ref=e80]
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: "01"
+            - img [ref=e85]
+          - heading "DeFi" [level=3] [ref=e88]
+          - paragraph [ref=e89]: Finanzas sin intermediarios
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]: "02"
+            - img [ref=e93]
+          - heading "Gobernanza Digital" [level=3] [ref=e96]
+          - paragraph [ref=e97]: Decisiones verificables on-chain
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]: "03"
+            - img [ref=e101]
+          - heading "Tokenización" [level=3] [ref=e106]
+          - paragraph [ref=e107]: Activos reales en blockchain
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - generic [ref=e110]: "04"
+            - img [ref=e111]
+          - heading "Identidad Digital" [level=3] [ref=e120]
+          - paragraph [ref=e121]: Credenciales soberanas
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - generic [ref=e124]: "05"
+            - img [ref=e125]
+          - heading "Smart Contracts" [level=3] [ref=e130]
+          - paragraph [ref=e131]: Lógica inmutable en cadena
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - generic [ref=e134]: "06"
+            - img [ref=e135]
+          - heading "Trazabilidad" [level=3] [ref=e138]
+          - paragraph [ref=e139]: Registro permanente y auditable
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: "07"
+            - img [ref=e143]
+          - heading "RUC-D" [level=3] [ref=e149]
+          - paragraph [ref=e150]: Recursos compartidos descentralizados
+    - generic [ref=e152]:
+      - generic [ref=e153]:
+        - paragraph [ref=e154]: Proyectos
+        - heading "Tecnología que opera en el mundo real." [level=2] [ref=e155]:
+          - text: Tecnología que opera
+          - text: en el mundo real.
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - img [ref=e159]
+          - paragraph [ref=e175]: Caso de Estudio
+          - heading "ChatterPay" [level=3] [ref=e176]
+          - paragraph [ref=e177]: Wallet DeFi que opera vía WhatsApp. Account abstraction en L2 para pagos sin fricción entre usuarios comunes.
+          - generic [ref=e178]:
+            - generic [ref=e179]: Account Abstraction
+            - generic [ref=e180]: L2
+            - generic [ref=e181]: DeFi
+          - link "Ver proyecto" [ref=e182]:
+            - /url: "#"
+            - text: Ver proyecto
+            - img [ref=e183]
+        - generic [ref=e186]:
+          - img [ref=e188]
+          - paragraph [ref=e201]: Producto Activo
+          - heading "Certificados UAI" [level=3] [ref=e202]
+          - paragraph [ref=e203]: Emisión y validación de credenciales académicas on-chain. Verificación inmutable para títulos y certificados de la universidad.
+          - generic [ref=e204]:
+            - generic [ref=e205]: ERC-721
+            - generic [ref=e206]: Identidad Digital
+            - generic [ref=e207]: UAI
+          - link "Ver proyecto" [ref=e208]:
+            - /url: /certificados
+            - text: Ver proyecto
+            - img [ref=e209]
+    - generic [ref=e213]:
+      - generic [ref=e214]:
+        - paragraph [ref=e215]: Equipo
+        - heading "Las personas detrás del Lab." [level=2] [ref=e216]
+      - generic [ref=e217]:
+        - generic [ref=e218]:
+          - img [ref=e219]:
+            - generic [ref=e221]: GTO
+          - generic [ref=e222]:
+            - paragraph [ref=e223]: Giacomo Tomasoni
+            - paragraph [ref=e224]: Jefe de Vinculación I+D
+        - generic [ref=e225]:
+          - img [ref=e226]:
+            - generic [ref=e228]: FT
+          - generic [ref=e229]:
+            - paragraph [ref=e230]: Francisco Toro
+            - paragraph [ref=e231]: Sistemas Descentralizados
+        - generic [ref=e232]:
+          - img [ref=e233]:
+            - generic [ref=e235]: PG
+          - generic [ref=e236]:
+            - paragraph [ref=e237]: Pablo Guzmán
+            - paragraph [ref=e238]: Transformación Digital
+        - generic [ref=e239]:
+          - img [ref=e240]:
+            - generic [ref=e242]: AP
+          - generic [ref=e243]:
+            - paragraph [ref=e244]: Andrés Peña
+            - paragraph [ref=e245]: Investigación & Operaciones
+    - generic [ref=e247]:
+      - paragraph [ref=e248]: Contacto
+      - heading "Trabajemos juntos." [level=2] [ref=e249]:
+        - text: Trabajemos
+        - text: juntos.
+      - link "blockchain@uai.cl" [ref=e250]:
+        - /url: mailto:blockchain@uai.cl
+        - img [ref=e251]
+        - text: blockchain@uai.cl
+        - img [ref=e254]
+      - link "Enviar mensaje" [ref=e257]:
+        - /url: mailto:blockchain@uai.cl
+        - text: Enviar mensaje
+        - img [ref=e258]
+  - contentinfo [ref=e260]:
+    - generic [ref=e261]:
+      - generic [ref=e262]:
+        - link "Blockchain Lab UAI" [ref=e263]:
+          - /url: /
+          - img "Blockchain Lab UAI" [ref=e264]
+        - navigation [ref=e265]:
+          - link "Áreas" [ref=e266]:
+            - /url: "#areas"
+          - link "Proyectos" [ref=e267]:
+            - /url: "#proyectos"
+          - link "Equipo" [ref=e268]:
+            - /url: "#equipo"
+          - link "Certificados" [ref=e269]:
+            - /url: /certificados
+          - link "Validación" [ref=e270]:
+            - /url: /validacion-pruebas-multimedia
+      - generic [ref=e271]:
+        - paragraph [ref=e272]: © 2026 Blockchain Lab UAI — Universidad Adolfo Ibáñez
+        - link "blockchain@uai.cl" [ref=e273]:
+          - /url: mailto:blockchain@uai.cl

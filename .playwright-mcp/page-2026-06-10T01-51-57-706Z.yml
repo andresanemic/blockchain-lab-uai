@@ -1,0 +1,556 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Blockchain Lab UAI" [ref=e4]:
+        - /url: /
+        - img "Blockchain Lab UAI" [ref=e5]
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Áreas" [ref=e8]:
+            - /url: "#areas"
+        - listitem [ref=e9]:
+          - link "Proyectos" [ref=e10]:
+            - /url: "#proyectos"
+        - listitem [ref=e11]:
+          - link "Equipo" [ref=e12]:
+            - /url: "#equipo"
+        - listitem [ref=e13]:
+          - link "Certificados" [ref=e14]:
+            - /url: /certificados
+      - link "Colaborar" [ref=e15]:
+        - /url: "#contacto"
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - paragraph [ref=e20]: Blockchain Lab UAI
+        - heading "Innovación Económica y Relaciones Descentralizadas." [level=1] [ref=e21]:
+          - generic [ref=e22]: Innovación
+          - generic [ref=e23]: Económica
+          - generic [ref=e24]: y Relaciones
+          - generic [ref=e25]: Descentralizadas.
+        - paragraph [ref=e26]: Transformamos desafíos reales en soluciones blockchain para organizaciones públicas y privadas.
+        - generic [ref=e27]:
+          - link "Explorar áreas →" [ref=e28]:
+            - /url: "#areas"
+          - link "Colaborar" [ref=e29]:
+            - /url: "#contacto"
+        - generic [ref=e32]: Universidad Adolfo Ibáñez
+      - generic [ref=e33]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e39]: Certificado · Verificado
+            - paragraph [ref=e40]: Francisco Toro
+            - paragraph [ref=e41]: Smart Contracts · 2026
+            - paragraph [ref=e42]: 0x7f2a…e9d3 · UAI
+          - generic [ref=e45]: Inmutabilidad garantizada
+          - generic [ref=e46]:
+            - paragraph [ref=e47]: Última tx
+            - generic [ref=e48]:
+              - generic [ref=e49]: Estado
+              - generic [ref=e50]: Confirmada
+            - generic [ref=e51]:
+              - generic [ref=e52]: Bloque
+              - generic [ref=e53]: "#18,442,301"
+          - generic [ref=e56]: SHA-256
+          - generic [ref=e57]:
+            - paragraph [ref=e58]: Disponibilidad
+            - paragraph [ref=e59]: 99.9%
+          - generic [ref=e62]: Ethereum · Mainnet
+          - generic [ref=e63]:
+            - generic [ref=e66]: Certificado · Verificado
+            - paragraph [ref=e67]: Andrés Peña
+            - paragraph [ref=e68]: Blockchain Dev · 2026
+            - paragraph [ref=e69]: 0x3c9e…1f7a · UAI
+          - generic [ref=e72]: Trazabilidad verificable
+          - generic [ref=e73]:
+            - generic [ref=e76]: Certificado · Verificado
+            - paragraph [ref=e77]: Francisco Toro
+            - paragraph [ref=e78]: Smart Contracts · 2026
+            - paragraph [ref=e79]: 0x7f2a…e9d3 · UAI
+          - generic [ref=e82]: Inmutabilidad garantizada
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: Última tx
+            - generic [ref=e85]:
+              - generic [ref=e86]: Estado
+              - generic [ref=e87]: Confirmada
+            - generic [ref=e88]:
+              - generic [ref=e89]: Bloque
+              - generic [ref=e90]: "#18,442,301"
+          - generic [ref=e93]: SHA-256
+          - generic [ref=e94]:
+            - paragraph [ref=e95]: Disponibilidad
+            - paragraph [ref=e96]: 99.9%
+          - generic [ref=e99]: Ethereum · Mainnet
+          - generic [ref=e100]:
+            - generic [ref=e103]: Certificado · Verificado
+            - paragraph [ref=e104]: Andrés Peña
+            - paragraph [ref=e105]: Blockchain Dev · 2026
+            - paragraph [ref=e106]: 0x3c9e…1f7a · UAI
+          - generic [ref=e109]: Trazabilidad verificable
+        - generic [ref=e111]:
+          - generic [ref=e114]: Confianza Digital
+          - generic [ref=e115]:
+            - paragraph [ref=e116]: Block Hash
+            - paragraph [ref=e117]: "0x1a2b3c4d5e6f7a8b"
+            - text: Ethereum
+          - generic [ref=e120]: Validez Judicial
+          - generic [ref=e121]:
+            - paragraph [ref=e122]: Transacciones
+            - paragraph [ref=e123]: 1.2k
+          - generic [ref=e124]:
+            - generic [ref=e127]: Cert.sol
+            - generic [ref=e128]: "function issue( address to, bytes32 h ) onlyAdmin {}"
+          - generic [ref=e131]: Descentralización
+          - generic [ref=e134]: Cardano Foundation
+          - generic [ref=e135]:
+            - paragraph [ref=e136]: Nodos activos
+            - paragraph [ref=e137]: "12"
+          - generic [ref=e140]: Confianza Digital
+          - generic [ref=e141]:
+            - paragraph [ref=e142]: Block Hash
+            - paragraph [ref=e143]: "0x1a2b3c4d5e6f7a8b"
+            - text: Ethereum
+          - generic [ref=e146]: Validez Judicial
+          - generic [ref=e147]:
+            - paragraph [ref=e148]: Transacciones
+            - paragraph [ref=e149]: 1.2k
+          - generic [ref=e150]:
+            - generic [ref=e153]: Cert.sol
+            - generic [ref=e154]: "function issue( address to, bytes32 h ) onlyAdmin {}"
+          - generic [ref=e157]: Descentralización
+          - generic [ref=e160]: Cardano Foundation
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: Nodos activos
+            - paragraph [ref=e163]: "12"
+    - generic [ref=e166]:
+      - generic [ref=e167]:
+        - paragraph [ref=e168]: Quiénes Somos
+        - heading "Un laboratorio para la confianza digital." [level=2] [ref=e169]:
+          - text: Un laboratorio
+          - text: para la confianza
+          - text: digital.
+      - generic [ref=e170]:
+        - generic [ref=e171]:
+          - generic [ref=e172]: "01"
+          - generic [ref=e173]:
+            - paragraph [ref=e174]: Diseño
+            - paragraph [ref=e175]: Arquitecturas a medida del problema
+        - generic [ref=e176]:
+          - generic [ref=e177]: "02"
+          - generic [ref=e178]:
+            - paragraph [ref=e179]: Validación
+            - paragraph [ref=e180]: Viabilidad técnica y económica
+        - generic [ref=e181]:
+          - generic [ref=e182]: "03"
+          - generic [ref=e183]:
+            - paragraph [ref=e184]: Implementación
+            - paragraph [ref=e185]: De piloto a producción real
+      - generic [ref=e186]:
+        - paragraph [ref=e187]: El Blockchain Lab UAI es un laboratorio orientado al diseño, validación e implementación de soluciones basadas en blockchain para organizaciones públicas y privadas.
+        - paragraph [ref=e188]: "Nuestro propósito: transformar la forma en que las instituciones generan confianza verificable."
+        - generic [ref=e189]:
+          - generic [ref=e190]: Confianza verificable
+          - generic [ref=e192]: Trazabilidad
+          - generic [ref=e194]: Eficiencia económica
+    - generic [ref=e197]:
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - paragraph [ref=e200]: ¿Qué es Blockchain?
+          - heading "Infraestructura para la confianza digital." [level=2] [ref=e201]:
+            - text: Infraestructura para
+            - text: la confianza digital.
+          - paragraph [ref=e202]: Permite eliminar intermediarios y crear sistemas basados en confianza matemática y verificabilidad permanente.
+        - img [ref=e205]
+        - generic [ref=e236]:
+          - generic [ref=e237]:
+            - paragraph [ref=e238]: Segura
+            - paragraph [ref=e239]: Protegida por criptografía. Inviolable por diseño.
+          - generic [ref=e240]:
+            - paragraph [ref=e241]: Transparente
+            - paragraph [ref=e242]: Cualquiera puede verificar lo registrado.
+          - generic [ref=e243]:
+            - paragraph [ref=e244]: Inmutable
+            - paragraph [ref=e245]: Lo escrito no se puede borrar ni alterar.
+          - generic [ref=e246]:
+            - paragraph [ref=e247]: Descentralizada
+            - paragraph [ref=e248]: Sin un único punto de control ni de falla.
+      - generic [ref=e249]:
+        - paragraph [ref=e250]: "\"Confiar cuesta caro. Nosotros lo abaratamos.\""
+        - link "Ver proyectos →" [ref=e251]:
+          - /url: "#proyectos"
+    - generic [ref=e253]:
+      - generic [ref=e254]:
+        - generic [ref=e255]:
+          - paragraph [ref=e256]: Áreas Estratégicas de Trabajo
+          - heading "Soluciones aplicadas a desafíos reales." [level=2] [ref=e257]:
+            - text: Soluciones aplicadas a
+            - text: desafíos reales.
+        - paragraph [ref=e258]:
+          - text: "Siete frentes, un mismo objetivo:"
+          - strong [ref=e259]: confianza verificable.
+      - generic [ref=e260]:
+        - generic [ref=e261]:
+          - generic [ref=e262]:
+            - generic [ref=e263]: "01"
+            - generic [ref=e264]: DeFi
+          - generic [ref=e265]:
+            - paragraph [ref=e266]: Finanzas Descentralizadas
+            - paragraph [ref=e267]: Servicios financieros sin bancos intermediarios.
+        - generic [ref=e268]:
+          - generic [ref=e270]: "02"
+          - generic [ref=e271]:
+            - paragraph [ref=e272]: Gobernanza Digital
+            - paragraph [ref=e273]: Decisiones colectivas transparentes y verificables.
+        - generic [ref=e274]:
+          - generic [ref=e276]: "03"
+          - generic [ref=e277]:
+            - paragraph [ref=e278]: Tokenización de Activos
+            - paragraph [ref=e279]: Representar bienes reales como activos digitales.
+        - generic [ref=e280]:
+          - generic [ref=e282]: "04"
+          - generic [ref=e283]:
+            - paragraph [ref=e284]: Identidad Digital
+            - paragraph [ref=e285]: Identidades autosoberanas y verificables.
+        - generic [ref=e286]:
+          - generic [ref=e288]: "05"
+          - generic [ref=e289]:
+            - paragraph [ref=e290]: Smart Contracts
+            - paragraph [ref=e291]: Acuerdos que se ejecutan solos, sin terceros.
+        - generic [ref=e292]:
+          - generic [ref=e294]: "06"
+          - generic [ref=e295]:
+            - paragraph [ref=e296]: Trazabilidad y Auditoría
+            - paragraph [ref=e297]: Registro inmutable de cada operación.
+        - generic [ref=e298]:
+          - generic [ref=e299]:
+            - generic [ref=e300]: "07"
+            - generic [ref=e301]: RUC-D
+          - generic [ref=e302]:
+            - paragraph [ref=e303]: Recursos Compartidos
+            - paragraph [ref=e304]: Recursos únicos compartidos descentralizados.
+    - generic [ref=e306]:
+      - generic [ref=e307]:
+        - paragraph [ref=e308]: Nuestros Proyectos
+        - heading "Lo que estamos construyendo hoy." [level=2] [ref=e309]:
+          - text: Lo que estamos
+          - text: construyendo hoy.
+      - generic [ref=e310]:
+        - generic [ref=e311]:
+          - generic [ref=e312]:
+            - generic [ref=e313]: "01"
+            - generic [ref=e315]: CERTIFICADOS NFT EN BLOCKCHAIN
+          - generic [ref=e316]:
+            - heading "Sus certificados, imposibles de falsificar." [level=3] [ref=e317]:
+              - text: Sus certificados,
+              - text: imposibles de falsificar.
+            - paragraph [ref=e318]: Emisión de certificados como NFTs en blockchain. Verificación instantánea con Account Abstraction. Costo menor a $0.01 por certificado.
+          - generic [ref=e319]:
+            - generic [ref=e320]:
+              - paragraph [ref=e321]: < $0.01
+              - paragraph [ref=e322]: Costo/certificado
+            - generic [ref=e323]:
+              - paragraph [ref=e324]: < 30s
+              - paragraph [ref=e325]: Emisión
+            - generic [ref=e326]:
+              - paragraph [ref=e327]: ∞
+              - paragraph [ref=e328]: Años validez
+          - generic [ref=e329]:
+            - generic [ref=e330]: Blockchain
+            - generic [ref=e331]: NFT
+            - generic [ref=e332]: Stellar
+            - generic [ref=e333]: Account Abstraction
+            - generic [ref=e334]: Chatbot
+          - link "Ver demo →" [ref=e335]:
+            - /url: /certificados
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - generic [ref=e338]: "02"
+            - generic [ref=e340]: VALIDACIÓN DE VIDEOS · RUC-D
+          - generic [ref=e341]:
+            - heading "Un video de dron como prueba judicial válida." [level=3] [ref=e342]:
+              - text: Un video de dron como
+              - text: prueba judicial válida.
+            - paragraph [ref=e343]: Streaming en vivo + SHA-256 + blockchain = ninguna objeción de defensa es válida.
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - paragraph [ref=e346]: "\"No sabemos de dónde viene\""
+              - paragraph [ref=e347]: GPS + serie del dron + streaming en vivo.
+            - generic [ref=e348]:
+              - paragraph [ref=e349]: "\"El video fue editado\""
+              - paragraph [ref=e350]: "SHA-256: un solo píxel cambia el hash."
+            - generic [ref=e351]:
+              - paragraph [ref=e352]: "\"Cadena de custodia rota\""
+              - paragraph [ref=e353]: Al blockchain antes que cualquier mano humana.
+          - generic [ref=e354]:
+            - generic [ref=e355]: SHA-256
+            - generic [ref=e356]: Blockchain
+            - generic [ref=e357]: Drones
+            - generic [ref=e358]: Validez Judicial
+            - generic [ref=e359]: RUC-D
+          - link "Ver validación →" [ref=e360]:
+            - /url: /validacion-pruebas-multimedia
+    - generic [ref=e363]:
+      - generic [ref=e364]:
+        - paragraph [ref=e365]: Cómo Trabajamos
+        - heading "Del problema al MVP." [level=2] [ref=e366]:
+          - text: Del problema
+          - text: al MVP.
+        - paragraph [ref=e367]: "Un proceso probado: del diagnóstico a una solución que funciona en su operación real."
+      - generic [ref=e368]:
+        - generic [ref=e369]:
+          - generic [ref=e371]: "01"
+          - generic [ref=e372]:
+            - paragraph [ref=e373]: Identificación del problema
+            - paragraph [ref=e374]: Entendemos el desafío real de la organización antes de proponer nada.
+        - generic [ref=e375]:
+          - generic [ref=e377]: "02"
+          - generic [ref=e378]:
+            - paragraph [ref=e379]: Diseño del caso de uso
+            - paragraph [ref=e380]: Definimos dónde y cómo blockchain agrega valor concreto.
+        - generic [ref=e381]:
+          - generic [ref=e383]: "03"
+          - generic [ref=e384]:
+            - paragraph [ref=e385]: Validación técnica y económica
+            - paragraph [ref=e386]: Comprobamos viabilidad, costos e indicadores de éxito.
+        - generic [ref=e387]:
+          - generic [ref=e389]: "04"
+          - generic [ref=e390]:
+            - paragraph [ref=e391]: Desarrollo de piloto / MVP
+            - paragraph [ref=e392]: Construimos una solución funcional, no una demo de laboratorio.
+        - generic [ref=e393]:
+          - generic [ref=e395]: "05"
+          - generic [ref=e396]:
+            - paragraph [ref=e397]: Escalabilidad y acompañamiento
+            - paragraph [ref=e398]: Llevamos el piloto a producción y acompañamos su adopción.
+    - generic [ref=e400]:
+      - generic [ref=e401]:
+        - paragraph [ref=e402]: Impacto Esperado
+        - heading "Transformación de industrias y sectores." [level=2] [ref=e403]:
+          - text: Transformación de industrias
+          - text: y sectores.
+      - generic [ref=e404]:
+        - generic [ref=e405]:
+          - paragraph [ref=e406]: "7"
+          - paragraph [ref=e407]: Áreas estratégicas
+          - paragraph [ref=e408]: de aplicación
+        - generic [ref=e409]:
+          - paragraph [ref=e410]: 2+
+          - paragraph [ref=e411]: Proyectos activos
+          - paragraph [ref=e412]: en producción
+        - generic [ref=e413]:
+          - paragraph [ref=e414]: UAI
+          - paragraph [ref=e415]: Respaldo académico
+          - paragraph [ref=e416]: Universidad Adolfo Ibáñez
+      - generic [ref=e417]:
+        - paragraph [ref=e418]: Sectores de aplicación
+        - generic [ref=e419]:
+          - generic [ref=e420]:
+            - generic [ref=e421]: 🏦
+            - text: Sector financiero
+          - generic [ref=e422]:
+            - generic [ref=e423]: 🎓
+            - text: Educación y certificaciones
+          - generic [ref=e424]:
+            - generic [ref=e425]: 🏥
+            - text: Salud y trazabilidad
+          - generic [ref=e426]:
+            - generic [ref=e427]: 🤝
+            - text: Fundaciones y ONG
+          - generic [ref=e428]:
+            - generic [ref=e429]: 🏛️
+            - text: Sector público
+          - generic [ref=e430]:
+            - generic [ref=e431]: 🚚
+            - text: Supply chain
+          - generic [ref=e432]:
+            - generic [ref=e433]: 👥
+            - text: Recursos Humanos
+    - generic [ref=e435]:
+      - generic [ref=e436]:
+        - paragraph [ref=e437]: Plan de Acción · Corto Plazo
+        - heading "Nuestro Roadmap." [level=2] [ref=e438]
+        - paragraph [ref=e439]: Las cinco iniciativas prioritarias que definen la dirección del lab en el horizonte de corto plazo.
+      - generic [ref=e440]:
+        - generic [ref=e441]:
+          - generic [ref=e442]:
+            - generic [ref=e443]: "01"
+            - generic [ref=e444]: Ley de Protección de Datos
+          - generic [ref=e445]:
+            - heading "Prospección Empresarial" [level=3] [ref=e446]
+            - paragraph [ref=e447]: Identificar empresas con convenio UAI que enfrenten la Ley 21.719 y necesiten trazabilidad blockchain.
+            - list [ref=e448]:
+              - listitem [ref=e449]:
+                - generic [ref=e450]: —
+                - text: Levantar lista de empresas con convenio activo
+              - listitem [ref=e451]:
+                - generic [ref=e452]: —
+                - text: "Filtrar sectores de mayor exposición: salud, finanzas, retail, RRHH"
+              - listitem [ref=e453]:
+                - generic [ref=e454]: —
+                - text: Redactar mensajes de primer contacto por batch de 10
+        - generic [ref=e455]:
+          - generic [ref=e456]:
+            - generic [ref=e457]: "02"
+            - generic [ref=e458]: Para reuniones de conversión
+          - generic [ref=e459]:
+            - heading "Propuesta de Valor" [level=3] [ref=e460]
+            - paragraph [ref=e461]: "Deck de máximo 8 slides adaptado a cada perfil: gerente legal, CTO, directorio."
+            - list [ref=e462]:
+              - listitem [ref=e463]:
+                - generic [ref=e464]: —
+                - text: "Articular el problema: la ley exige trazabilidad verificable"
+              - listitem [ref=e465]:
+                - generic [ref=e466]: —
+                - text: Establecer rangos de inversión y co-financiamiento UAI
+              - listitem [ref=e467]:
+                - generic [ref=e468]: —
+                - text: Preparar casos de uso que anclen la conversación
+        - generic [ref=e469]:
+          - generic [ref=e470]:
+            - generic [ref=e471]: "03"
+            - generic [ref=e472]: Capital educacional UAI
+          - generic [ref=e473]:
+            - heading "Certificaciones" [level=3] [ref=e474]
+            - paragraph [ref=e475]: Monetizar el prestigio académico de los miembros del laboratorio.
+            - list [ref=e476]:
+              - listitem [ref=e477]:
+                - generic [ref=e478]: —
+                - text: Mapear certificaciones con reconocimiento real (Ethereum Foundation, Hyperledger)
+              - listitem [ref=e479]:
+                - generic [ref=e480]: —
+                - text: Explorar certificaciones avaladas institucionalmente por la UAI
+              - listitem [ref=e481]:
+                - generic [ref=e482]: —
+                - text: Usar certificaciones como argumento de credibilidad
+        - generic [ref=e483]:
+          - generic [ref=e484]:
+            - generic [ref=e485]: "04"
+            - generic [ref=e486]: Validación del marco de operación
+          - generic [ref=e487]:
+            - heading "Respaldo Legal" [level=3] [ref=e488]
+            - paragraph [ref=e489]: Validar el marco legal antes de escalar.
+            - list [ref=e490]:
+              - listitem [ref=e491]:
+                - generic [ref=e492]: —
+                - text: "Agendar reunión con abogada: PI, responsabilidad y datos"
+              - listitem [ref=e493]:
+                - generic [ref=e494]: —
+                - text: Definir modelo de contrato estándar para pilotos
+              - listitem [ref=e495]:
+                - generic [ref=e496]: —
+                - text: Aclarar la figura jurídica que opera el lab
+        - generic [ref=e497]:
+          - generic [ref=e498]:
+            - generic [ref=e499]: "05"
+            - generic [ref=e500]: Financiamiento y red global
+          - generic [ref=e501]:
+            - heading "Concursos y Vinculación Internacional" [level=3] [ref=e502]
+            - paragraph [ref=e503]: Ampliar financiamiento y red de contactos más allá del mercado chileno.
+            - list [ref=e504]:
+              - listitem [ref=e505]:
+                - generic [ref=e506]: —
+                - text: Identificar 3-5 fondos blockchain activos (Ethereum Foundation, Filecoin, Web3 Foundation)
+              - listitem [ref=e507]:
+                - generic [ref=e508]: —
+                - text: Levantar calendario de concursos CORFO y Minciencia
+              - listitem [ref=e509]:
+                - generic [ref=e510]: —
+                - text: Preparar pitch en inglés para postulaciones internacionales
+    - generic [ref=e512]:
+      - generic [ref=e513]:
+        - paragraph [ref=e514]: El Equipo
+        - heading "Las personas detrás del Lab." [level=2] [ref=e515]:
+          - text: Las personas detrás
+          - text: del Lab.
+      - generic [ref=e516]:
+        - generic [ref=e517]:
+          - img [ref=e519]:
+            - generic [ref=e521]: GTO
+          - generic [ref=e522]:
+            - paragraph [ref=e523]: Giacomo Tomasoni Orozco
+            - paragraph [ref=e524]: Jefe de Vinculación I+D
+            - paragraph [ref=e525]: Lidera la relación entre el laboratorio y las organizaciones. Puente entre investigación académica y aplicación real.
+        - generic [ref=e526]:
+          - img [ref=e528]:
+            - generic [ref=e530]: FT
+          - generic [ref=e531]:
+            - paragraph [ref=e532]: Francisco Toro
+            - paragraph [ref=e533]: Investigador — Sistemas Descentralizados
+            - paragraph [ref=e534]: Diseña y desarrolla la arquitectura técnica de los proyectos. Especialista en smart contracts y protocolos descentralizados.
+        - generic [ref=e535]:
+          - img [ref=e537]:
+            - generic [ref=e539]: PG
+          - generic [ref=e540]:
+            - paragraph [ref=e541]: Pablo Guzmán
+            - paragraph [ref=e542]: Transformación Digital
+            - paragraph [ref=e543]: Asegura que la tecnología tenga impacto organizacional real. Trabaja la adopción, los procesos y el cambio.
+        - generic [ref=e544]:
+          - img [ref=e546]:
+            - generic [ref=e548]: AP
+          - generic [ref=e549]:
+            - paragraph [ref=e550]: Andrés Peña
+            - paragraph [ref=e551]: Investigador y Operaciones
+            - paragraph [ref=e552]: Combina investigación aplicada con la gestión operativa del laboratorio. Asegura que los proyectos avancen.
+    - generic [ref=e554]:
+      - paragraph [ref=e555]: Invitación a Colaborar
+      - heading "Blockchain no es una tendencia. Es una nueva infraestructura de confianza." [level=2] [ref=e556]:
+        - text: Blockchain no es una tendencia.
+        - text: Es una nueva infraestructura
+        - text: de confianza.
+      - paragraph [ref=e557]: Invitamos a empresas, fundaciones e instituciones a co-crear soluciones reales junto al Blockchain Lab UAI.
+      - generic [ref=e558]:
+        - link "Iniciar conversación →" [ref=e559]:
+          - /url: mailto:blockchain@uai.cl
+        - link "blockchain@uai.cl" [ref=e560]:
+          - /url: mailto:blockchain@uai.cl
+  - contentinfo [ref=e561]:
+    - generic:
+      - generic: BLOCKCHAIN
+      - generic: LAB UAI.
+    - generic [ref=e563]:
+      - generic [ref=e564]:
+        - paragraph [ref=e565]: Blockchain Lab UAI
+        - paragraph [ref=e566]: Laboratorio de investigación aplicada de la Universidad Adolfo Ibáñez. Transformamos desafíos reales en soluciones blockchain.
+      - generic [ref=e567]:
+        - paragraph [ref=e568]: Explorar
+        - list [ref=e569]:
+          - listitem [ref=e570]:
+            - link "Inicio" [ref=e571]:
+              - /url: "#inicio"
+          - listitem [ref=e572]:
+            - link "Nosotros" [ref=e573]:
+              - /url: "#nosotros"
+          - listitem [ref=e574]:
+            - link "Soluciones" [ref=e575]:
+              - /url: "#soluciones"
+          - listitem [ref=e576]:
+            - link "Proyectos" [ref=e577]:
+              - /url: "#proyectos"
+          - listitem [ref=e578]:
+            - link "Proceso" [ref=e579]:
+              - /url: "#proceso"
+          - listitem [ref=e580]:
+            - link "Impacto" [ref=e581]:
+              - /url: "#impacto"
+          - listitem [ref=e582]:
+            - link "Roadmap" [ref=e583]:
+              - /url: "#roadmap"
+          - listitem [ref=e584]:
+            - link "Equipo" [ref=e585]:
+              - /url: "#equipo"
+          - listitem [ref=e586]:
+            - link "Contacto" [ref=e587]:
+              - /url: "#contacto"
+      - generic [ref=e588]:
+        - paragraph [ref=e589]: Contacto
+        - generic [ref=e590]:
+          - link "blockchain@uai.cl" [ref=e591]:
+            - /url: mailto:blockchain@uai.cl
+          - link "giacomo.tomasoni@uai.cl" [ref=e592]:
+            - /url: mailto:giacomo.tomasoni@uai.cl
+          - paragraph [ref=e593]:
+            - text: Universidad Adolfo Ibáñez
+            - text: Santiago, Chile
+    - generic [ref=e594]:
+      - paragraph [ref=e595]: © 2025 Blockchain Lab UAI · Universidad Adolfo Ibáñez
+      - paragraph [ref=e596]: blockchain@uai.cl

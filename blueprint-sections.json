@@ -1,0 +1,62 @@
+{
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Hire  Mobile  Devs  Differently",
+      "y": 324.515625
+    },
+    {
+      "tag": "H2",
+      "text": "Built by Blueprint. Featured on",
+      "y": 6573.734375
+    },
+    {
+      "tag": "H2",
+      "text": "Our clients are backed by leading investors",
+      "y": 12917.59375
+    }
+  ],
+  "sections": [
+    {
+      "class": "_whatWeDoIntro_npf7m_5",
+      "y": 2088.875,
+      "h": 284
+    },
+    {
+      "class": "_whatWeDo_31hk4_1",
+      "y": 2662.1875,
+      "h": 3556
+    },
+    {
+      "class": "_logoSection_npf7m_38",
+      "y": 6573.734375,
+      "h": 152
+    },
+    {
+      "class": "_flexSection_npf7m_60",
+      "y": 7081.578125,
+      "h": 1199
+    },
+    {
+      "class": "_statsSection_npf7m_134",
+      "y": 8669.046875,
+      "h": 1431
+    },
+    {
+      "class": "_techSection_uj48c_1",
+      "y": 10488.9375,
+      "h": 847
+    },
+    {
+      "class": "_vsSection_npf7m_234",
+      "y": 11624.328125,
+      "h": 938
+    },
+    {
+      "class": "_logoSection_npf7m_38 _endingLogos_npf7m_361",
+      "y": 12917.59375,
+      "h": 152
+    }
+  ],
+  "pageH": 14346
+}

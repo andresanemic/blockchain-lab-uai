@@ -1,0 +1,518 @@
+- main [ref=e3]:
+  - generic:
+    - img "Blueprint print grid"
+    - img "Blueprint print grid"
+  - navigation [ref=e4]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "Services" [ref=e8] [cursor=pointer]:
+          - /url: /services/
+          - generic [ref=e9]:
+            - generic: Services
+        - link "Approach" [ref=e10] [cursor=pointer]:
+          - /url: /approach/
+          - generic [ref=e11]:
+            - generic: Approach
+        - link "Cases" [ref=e12] [cursor=pointer]:
+          - /url: /cases/
+          - generic [ref=e13]:
+            - generic: Cases
+        - link "About" [ref=e14] [cursor=pointer]:
+          - /url: /about/
+          - generic [ref=e15]:
+            - generic: About
+      - button "Hire Talent" [ref=e16] [cursor=pointer]:
+        - generic [ref=e17]: Hire Talent
+  - generic:
+    - generic:
+      - link "Home":
+        - /url: /
+      - link "Services":
+        - /url: /services/
+      - link "Approach":
+        - /url: /approach/
+      - link "Cases":
+        - /url: /cases/
+      - link "About":
+        - /url: /about/
+    - generic:
+      - link "Terms & Conds":
+        - /url: /terms/
+      - link "Privacy Policy":
+        - /url: /privacy/
+    - button "Hire Talent":
+      - generic: Hire Talent
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e25]:
+            - figure [ref=e26]
+            - generic:
+              - generic: Anne Kaerst
+              - generic:
+                - paragraph:
+                  - strong: Industry Voice
+                  - text: – Speaker at Swift meetups & global mobile conferences.
+          - figure [ref=e31]
+          - generic [ref=e35]:
+            - figure [ref=e36]
+            - generic:
+              - generic: Tim Green
+              - generic:
+                - paragraph: Published Author – Best-selling book on high-performance programming
+          - figure [ref=e41]
+          - generic [ref=e45]:
+            - figure [ref=e46]
+            - generic:
+              - generic: Daniel Coyer
+              - generic:
+                - paragraph:
+                  - strong: Open Source Leader
+                  - text: – Creator of a widely used Swift library
+          - figure [ref=e51]
+          - figure [ref=e56]
+          - generic [ref=e60]:
+            - figure [ref=e61]
+            - generic:
+              - generic: Nina Sau
+              - generic:
+                - paragraph:
+                  - strong: Ex-Apple Engineer
+                  - text: – Bringing Silicon Valley expertise
+          - figure [ref=e66]
+        - generic [ref=e68]:
+          - heading "Hire Mobile Devs Differently" [level=1] [ref=e69]:
+            - generic [ref=e70]:
+              - generic [ref=e72]:
+                - generic [ref=e73]: Hire
+                - generic [ref=e74]: Mobile
+                - generic [ref=e75]: Devs
+              - generic [ref=e78]: Differently
+          - generic [ref=e79]:
+            - generic [ref=e81]:
+              - generic [ref=e82]: Engineers
+              - generic [ref=e83]: who
+              - generic [ref=e84]: own
+              - generic [ref=e85]: outcomes
+              - generic [ref=e86]: —
+            - generic [ref=e88]:
+              - generic [ref=e89]: CTO-screened
+              - generic [ref=e90]: with
+              - generic [ref=e91]: ≤
+              - generic [ref=e92]: 5%
+              - generic [ref=e93]: pass
+              - generic [ref=e94]: rate
+              - generic [ref=e95]: for
+              - generic [ref=e96]: skill,
+            - generic [ref=e98]:
+              - generic [ref=e99]: mindset,
+              - generic [ref=e100]: and
+              - generic [ref=e101]: long-term
+              - generic [ref=e102]: fit.
+        - button "Hire Talent" [ref=e103] [cursor=pointer]:
+          - generic [ref=e104]: Hire Talent
+      - generic [ref=e105]:
+        - generic [ref=e107]: What we do
+        - generic [ref=e108]:
+          - generic [ref=e110]:
+            - generic [ref=e111]: Hiring
+            - generic [ref=e112]: senior
+            - generic [ref=e113]: mobile
+            - generic [ref=e114]: devs
+            - generic [ref=e115]: shouldn’t
+            - generic [ref=e116]: feel
+            - generic [ref=e117]: uncertain.
+          - generic [ref=e119]:
+            - generic [ref=e120]: Blueprint
+            - generic [ref=e121]: makes
+            - generic [ref=e122]: it
+            - generic [ref=e123]: clear.
+            - generic [ref=e124]: Through
+            - generic [ref=e125]: expert
+            - generic [ref=e126]: screening,
+          - generic [ref=e128]:
+            - generic [ref=e129]: matched
+            - generic [ref=e130]: talent,
+            - generic [ref=e131]: flexible
+            - generic [ref=e132]: models,
+            - generic [ref=e133]: and
+            - generic [ref=e134]: long-term
+            - generic [ref=e135]: fit,
+            - generic [ref=e136]: we
+          - generic [ref=e138]:
+            - generic [ref=e139]: make
+            - generic [ref=e140]: every
+            - generic [ref=e141]: hire
+            - generic [ref=e142]: count.
+      - generic [ref=e145]:
+        - generic:
+          - generic [ref=e146]:
+            - generic [ref=e148]:
+              - generic [ref=e149]: Screen
+              - generic [ref=e150]: for
+              - generic [ref=e151]: Skill
+              - generic [ref=e152]: "&"
+              - generic [ref=e153]: Fit
+            - generic [ref=e155]:
+              - generic [ref=e156]: CTO-screened
+              - generic [ref=e157]: engineers
+          - generic [ref=e158]:
+            - generic [ref=e160]:
+              - generic [ref=e161]: Simplify
+              - generic [ref=e162]: Selection
+            - generic [ref=e164]:
+              - generic [ref=e165]: Only
+              - generic [ref=e166]: top
+              - generic [ref=e167]: matches
+          - generic [ref=e168]:
+            - generic [ref=e170]:
+              - generic [ref=e171]: Staff
+              - generic [ref=e172]: Smart—Scale
+              - generic [ref=e173]: Fast
+            - generic [ref=e175]:
+              - generic [ref=e176]: Flexible
+              - generic [ref=e177]: Staffing
+              - generic [ref=e178]: Options
+          - generic [ref=e179]:
+            - generic [ref=e181]:
+              - generic [ref=e182]: Proven
+              - generic [ref=e183]: Partner
+            - generic [ref=e186]: Retention
+        - generic [ref=e187]:
+          - figure [ref=e191]
+          - figure [ref=e197]
+          - figure [ref=e203]
+          - figure [ref=e209]
+        - generic:
+          - generic [ref=e212]:
+            - generic [ref=e214]:
+              - generic [ref=e215]: Vetted
+              - generic [ref=e216]: for
+              - generic [ref=e217]: skill,
+              - generic [ref=e218]: communication,
+            - generic [ref=e220]:
+              - generic [ref=e221]: timezone
+              - generic [ref=e222]: fit,
+              - generic [ref=e223]: and
+              - generic [ref=e224]: values.
+          - generic [ref=e225]:
+            - generic [ref=e227]:
+              - generic [ref=e228]: You
+              - generic [ref=e229]: meet
+              - generic [ref=e230]: just
+              - generic [ref=e231]: 1–2
+              - generic [ref=e232]: engineers,
+            - generic [ref=e234]:
+              - generic [ref=e235]: pre-vetted
+              - generic [ref=e236]: for
+              - generic [ref=e237]: fit.
+          - generic [ref=e238]:
+            - generic [ref=e240]:
+              - generic [ref=e241]: Staff
+              - generic [ref=e242]: Aug
+              - generic [ref=e243]: or
+              - generic [ref=e244]: Contract-to-Hire.
+            - generic [ref=e246]:
+              - generic [ref=e247]: 84%
+              - generic [ref=e248]: convert.
+          - generic [ref=e249]:
+            - generic [ref=e251]:
+              - generic [ref=e252]: 94%
+              - generic [ref=e253]: engineer
+              - generic [ref=e254]: retention.
+            - generic [ref=e256]:
+              - generic [ref=e257]: 86%
+              - generic [ref=e258]: client
+              - generic [ref=e259]: renewal.
+      - generic [ref=e260]:
+        - heading "Built by Blueprint. Featured on" [level=2] [ref=e261]
+        - generic [ref=e266]:
+          - generic [ref=e267]:
+            - figure [ref=e271]:
+              - generic "Healthline" [ref=e273]
+            - figure [ref=e277]:
+              - generic "Techcrunch" [ref=e279]
+            - figure [ref=e283]:
+              - generic "BusinessWire" [ref=e285]
+            - figure [ref=e289]:
+              - generic "The business Journal" [ref=e291]
+            - figure [ref=e295]:
+              - generic "Forbes" [ref=e297]
+            - figure [ref=e301]:
+              - generic "Billboard" [ref=e303]
+            - figure [ref=e307]:
+              - generic "Business Insider" [ref=e309]
+            - figure [ref=e313]:
+              - generic "Music Business WorldWide" [ref=e315]
+          - generic [ref=e316]:
+            - figure [ref=e320]:
+              - generic "Healthline" [ref=e322]
+            - figure [ref=e326]:
+              - generic "Techcrunch" [ref=e328]
+            - figure [ref=e332]:
+              - generic "BusinessWire" [ref=e334]
+            - figure [ref=e338]:
+              - generic "The business Journal" [ref=e340]
+            - figure [ref=e344]:
+              - generic "Forbes" [ref=e346]
+            - figure [ref=e350]:
+              - generic "Billboard" [ref=e352]
+            - figure [ref=e356]:
+              - generic "Business Insider" [ref=e358]
+            - figure [ref=e362]:
+              - generic "Music Business WorldWide" [ref=e364]
+      - generic [ref=e365]:
+        - generic [ref=e366]:
+          - generic [ref=e369]: Made to flex
+          - generic [ref=e371]:
+            - generic [ref=e373]:
+              - generic [ref=e374]: Top-tier
+              - generic [ref=e375]: mobile
+              - generic [ref=e376]: dev
+              - generic [ref=e377]: talent.
+              - generic [ref=e378]: Fast,
+              - generic [ref=e379]: flexible,
+              - generic [ref=e380]: and
+            - generic [ref=e382]:
+              - generic [ref=e383]: fully
+              - generic [ref=e384]: aligned
+              - generic [ref=e385]: with
+              - generic [ref=e386]: your
+              - generic [ref=e387]: goals.
+              - generic [ref=e388]: Work
+              - generic [ref=e389]: with
+              - generic [ref=e390]: a
+            - generic [ref=e392]:
+              - generic [ref=e393]: global
+              - generic [ref=e394]: team
+              - generic [ref=e395]: engineered
+              - generic [ref=e396]: to
+              - generic [ref=e397]: grow
+              - generic [ref=e398]: and
+              - generic [ref=e399]: evolve
+            - generic [ref=e401]:
+              - generic [ref=e402]: as
+              - generic [ref=e403]: you
+              - generic [ref=e404]: do.
+        - generic [ref=e405]:
+          - generic [ref=e406]:
+            - figure [ref=e407]
+            - strong [ref=e410]: Staff Augmentation
+            - paragraph [ref=e412]: Scale your engineering team fast with vetted, high-performing developers who plug in instantly.
+          - generic [ref=e413]:
+            - figure [ref=e414]
+            - strong [ref=e417]: Contract to Hire
+            - paragraph [ref=e419]: Trial top-tier talent risk-free, with a seamless path to full-time hire when you’re ready.
+      - generic [ref=e420]:
+        - generic [ref=e421]:
+          - generic [ref=e423]: The model works
+          - generic [ref=e426]:
+            - generic [ref=e427]: Here's
+            - generic [ref=e428]: the
+            - generic [ref=e429]: proof.
+        - generic [ref=e431]:
+          - generic [ref=e432]:
+            - generic [ref=e433]: <5%
+            - paragraph [ref=e434]: Acceptance rate into our CTO vetted network
+          - generic [ref=e435]:
+            - generic [ref=e436]: 94%
+            - paragraph [ref=e437]: Developer retention on client teams for 2.5+ years (avg tenure w/ Blueprint = 6 years)
+          - generic [ref=e438]:
+            - generic [ref=e439]: 84%
+            - paragraph [ref=e440]: Contract-to-hire engineers convert to full time
+          - generic [ref=e441]:
+            - generic [ref=e442]: 86%
+            - paragraph [ref=e443]: Staff Augmentation Clients renew after the initial 6 month engagement
+      - generic [ref=e444]:
+        - generic [ref=e445]:
+          - generic [ref=e447]: Our technologies
+          - generic [ref=e448]:
+            - generic [ref=e450]:
+              - generic [ref=e451]: Mobile
+              - generic [ref=e452]: is
+              - generic [ref=e453]: all
+              - generic [ref=e454]: we
+              - generic [ref=e455]: do
+              - generic [ref=e456]: —
+            - generic [ref=e458]:
+              - generic [ref=e459]: native
+              - generic [ref=e460]: or
+              - generic [ref=e461]: hybrid.
+        - generic [ref=e462]:
+          - generic [ref=e463]:
+            - generic [ref=e464]: Native
+            - generic [ref=e465]:
+              - generic [ref=e466]:
+                - generic [ref=e467]: iOS
+                - generic [ref=e468]:
+                  - generic [ref=e469]:
+                    - figure [ref=e471]
+                    - generic [ref=e474]: Swift
+                  - generic [ref=e475]:
+                    - figure [ref=e477]
+                    - generic [ref=e480]: Objective-c
+              - generic [ref=e481]:
+                - generic [ref=e482]: Android
+                - generic [ref=e483]:
+                  - generic [ref=e484]:
+                    - figure [ref=e486]
+                    - generic [ref=e489]: Kotlin
+                  - generic [ref=e490]:
+                    - figure [ref=e492]
+                    - generic [ref=e495]: Java
+          - generic [ref=e496]:
+            - generic [ref=e497]: Hybrid
+            - generic [ref=e500]:
+              - generic [ref=e501]:
+                - figure [ref=e503]
+                - generic [ref=e506]: Flutter
+              - generic [ref=e507]:
+                - figure [ref=e509]
+                - generic [ref=e512]: Dart
+              - generic [ref=e513]:
+                - figure [ref=e515]
+                - generic [ref=e518]: React Native
+              - generic [ref=e519]:
+                - figure [ref=e521]
+                - generic [ref=e524]: Typescript
+              - generic [ref=e525]:
+                - figure [ref=e527]
+                - generic [ref=e530]: Kotlin
+              - generic [ref=e531]:
+                - figure [ref=e533]
+                - generic [ref=e536]: Javascript
+      - generic [ref=e537]:
+        - generic [ref=e538]:
+          - generic [ref=e540]:
+            - generic [ref=e541]: Blueprint
+            - generic [ref=e542]: VS
+          - generic [ref=e544]:
+            - generic [ref=e545]: Traditional
+            - generic [ref=e546]: Hiring
+        - generic [ref=e548]:
+          - generic [ref=e550]:
+            - generic [ref=e553]: Blueprint
+            - paragraph [ref=e556]:
+              - text: Dev Agencies
+              - text: (Encora, BairesDev)
+            - paragraph [ref=e559]:
+              - text: Marketplace
+              - text: (TopTal, Upwork)
+            - paragraph [ref=e562]:
+              - text: Hiring Portals
+              - text: (ZipRecruiter, Monster)
+          - generic [ref=e563]:
+            - generic [ref=e564]:
+              - paragraph [ref=e567]: CTO-Led Vetting
+              - generic [ref=e571]: "No"
+              - generic [ref=e573]: "No"
+              - generic [ref=e575]: "No"
+            - generic [ref=e576]:
+              - paragraph [ref=e579]:
+                - text: We handle all upfront vetting.
+                - text: You only meet the top 1–2 candidates
+              - generic [ref=e583]: "No"
+              - generic [ref=e585]: "No"
+              - generic [ref=e587]: "No"
+            - generic [ref=e588]:
+              - paragraph [ref=e591]: Staff Level Engineers
+              - generic [ref=e595]: Sometimes
+              - generic [ref=e597]: Sometimes
+              - generic [ref=e599]: Sometimes
+            - generic [ref=e600]:
+              - paragraph [ref=e603]: Flexible Hiring Models
+              - generic [ref=e607]: "No"
+              - generic [ref=e609]: "No"
+              - generic [ref=e611]: "No"
+      - generic [ref=e612]:
+        - heading "Our clients are backed by leading investors" [level=2] [ref=e613]
+        - generic [ref=e618]:
+          - generic [ref=e619]:
+            - figure [ref=e623]:
+              - generic "Point72" [ref=e625]
+            - figure [ref=e629]:
+              - generic "SmashVentures" [ref=e631]
+            - figure [ref=e635]:
+              - generic "General Catalyst" [ref=e637]
+            - figure [ref=e641]:
+              - generic "Imaginary" [ref=e643]
+            - figure [ref=e647]:
+              - generic "Goldman Sachs" [ref=e649]
+            - figure [ref=e653]:
+              - generic "Altos" [ref=e655]
+          - generic [ref=e656]:
+            - figure [ref=e660]:
+              - generic "Point72" [ref=e662]
+            - figure [ref=e666]:
+              - generic "SmashVentures" [ref=e668]
+            - figure [ref=e672]:
+              - generic "General Catalyst" [ref=e674]
+            - figure [ref=e678]:
+              - generic "Imaginary" [ref=e680]
+            - figure [ref=e684]:
+              - generic "Goldman Sachs" [ref=e686]
+            - figure [ref=e690]:
+              - generic "Altos" [ref=e692]
+          - generic [ref=e693]:
+            - figure [ref=e697]:
+              - generic "Point72" [ref=e699]
+            - figure [ref=e703]:
+              - generic "SmashVentures" [ref=e705]
+            - figure [ref=e709]:
+              - generic "General Catalyst" [ref=e711]
+            - figure [ref=e715]:
+              - generic "Imaginary" [ref=e717]
+            - figure [ref=e721]:
+              - generic "Goldman Sachs" [ref=e723]
+            - figure [ref=e727]:
+              - generic "Altos" [ref=e729]
+    - generic [ref=e730]:
+      - generic [ref=e731]:
+        - link [ref=e732] [cursor=pointer]:
+          - /url: /
+          - img [ref=e733]
+          - img [ref=e746]
+        - generic [ref=e749]:
+          - generic [ref=e750]: Work with the best
+          - paragraph [ref=e752]:
+            - text: Built for teams that need to deliver.
+            - text: Experienced engineers. Real outcomes.
+          - button "Get started" [ref=e753] [cursor=pointer]:
+            - generic [ref=e754]: Get started
+      - generic [ref=e755]:
+        - generic [ref=e756]:
+          - generic [ref=e758]:
+            - generic [ref=e759]: Explore
+            - generic:
+              - link "Services" [ref=e760] [cursor=pointer]:
+                - /url: /services/
+              - link "Approach" [ref=e761] [cursor=pointer]:
+                - /url: /approach/
+              - link "Cases" [ref=e762] [cursor=pointer]:
+                - /url: /cases/
+              - link "Contact" [ref=e763] [cursor=pointer]:
+                - /url: /contact/
+          - generic [ref=e764]:
+            - generic [ref=e765]:
+              - generic [ref=e766]: Follow us
+              - generic:
+                - link "Instagram" [ref=e767] [cursor=pointer]:
+                  - /url: https://www.instagram.com/blueprint.apps/
+                - generic [ref=e768] [cursor=pointer]: LinkedIn
+            - generic [ref=e769]:
+              - generic [ref=e770]: Contact us
+              - link "info@blueprintapps.com" [ref=e771] [cursor=pointer]:
+                - /url: mailto:info@blueprintapps.com
+        - figure [ref=e772]
+      - generic [ref=e775]:
+        - paragraph [ref=e777]:
+          - text: Blueprint Apps
+          - text: © 2025 All Rights Reserved
+        - link "Terms & Conditions" [ref=e779] [cursor=pointer]:
+          - /url: /terms/
+        - link "Privacy Policy" [ref=e781] [cursor=pointer]:
+          - /url: /privacy/

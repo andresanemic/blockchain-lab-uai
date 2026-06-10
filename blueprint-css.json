@@ -1,0 +1,37 @@
+{
+  "bodyBg": "rgb(27, 27, 27)",
+  "bodyFont": "Saans, sans-serif",
+  "bodyColor": "rgb(247, 245, 242)",
+  "cssVars": [
+    [
+      "--nav-height",
+      "71px"
+    ],
+    [
+      "--column",
+      "calc(19.05px*100/12 - 28rem*2/12 - 28rem*11/12)"
+    ],
+    [
+      "--margin",
+      "28rem"
+    ],
+    [
+      "--start-vh",
+      "889px"
+    ],
+    [
+      "--gap",
+      "28rem"
+    ],
+    [
+      "--rvw",
+      "19.05px"
+    ]
+  ],
+  "fonts": [
+    "sans-serif",
+    "Saans, sans-serif",
+    "\"Saans Mono\", monospace"
+  ],
+  "sectionBgs": []
+}

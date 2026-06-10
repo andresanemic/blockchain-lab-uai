@@ -1,0 +1,1826 @@
+[
+  {
+    "slide": 1,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "UNIVERSIDAD ADOLFO IBÁÑEZ",
+        "bold": true,
+        "size": 13.5,
+        "color": "080D2B"
+      },
+      {
+        "text": "BLOCKCHAIN LAB UAI",
+        "bold": false,
+        "size": 24.0,
+        "color": "1A40A1"
+      },
+      {
+        "text": "Innovación Económica y",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Relaciones Descentralizadas",
+        "bold": false,
+        "size": 37.0,
+        "color": "1A40A1"
+      },
+      {
+        "text": "Transformando confianza, transparencia y nuevos modelos de",
+        "bold": true,
+        "size": 17.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "colaboración mediante tecnologías descentralizadas.",
+        "bold": true,
+        "size": 17.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Confianza",
+        "bold": true,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Transparencia",
+        "bold": true,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Colaboración",
+        "bold": true,
+        "size": 20.0,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "QUIÉNES SOMOS",
+        "bold": false,
+        "size": 20.0,
+        "color": "1A40A1"
+      },
+      {
+        "text": "Un laboratorio para la",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "confianza digital",
+        "bold": false,
+        "size": 37.0,
+        "color": "1A40A1"
+      },
+      {
+        "text": "El Blockchain Lab UAI de la Universidad Adolfo Ibáñez es un laboratorio",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "orientado al diseño, validación e implementación de soluciones basadas en",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "blockchain para organizaciones públicas y privadas.",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Nuestro propósito:",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "transformar la forma en que las instituciones generan confianza verificable.",
+        "bold": true,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Confianza",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Registros verificables que",
+        "bold": false,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "nadie puede alterar.",
+        "bold": false,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Trazabilidad",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Historial completo y",
+        "bold": false,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "auditable de cada",
+        "bold": false,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "operación.",
+        "bold": false,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Eficiencia económica",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Menos intermediarios,",
+        "bold": false,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "menores costos",
+        "bold": false,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "de operación",
+        "bold": null,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Diseño",
+        "bold": true,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Validación",
+        "bold": true,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Implementación",
+        "bold": true,
+        "size": 12.0,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "NUESTRA MISIÓN",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Impulsar innovación con",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "impacto real",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Investigar aplicaciones",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "económicas",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Estudiamos los usos de blockchain",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "con mayor potencial de valor real.",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "Diseñar soluciones",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "descentralizadas",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Creamos arquitecturas innovadoras",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "adaptadas a cada problema.",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "Conectar academia,",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "industria y Estado",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Articulamos a los actores clave del",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "ecosistema de innovación.",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "Impulsamos formas de colaboración",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "más transparentes y abiertas.",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "Acelerar la adopción",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "tecnológica",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Llevamos tecnologías emergentes",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "a la práctica de las organizaciones.",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "De la investigación",
+        "bold": true,
+        "size": 19.0,
+        "color": "FFFFFF"
+      },
+      {
+        "text": "académica a soluciones",
+        "bold": true,
+        "size": 19.0,
+        "color": "FFFFFF"
+      },
+      {
+        "text": "que las organizaciones",
+        "bold": true,
+        "size": 19.0,
+        "color": "FFFFFF"
+      },
+      {
+        "text": "pueden usar.",
+        "bold": true,
+        "size": 19.0,
+        "color": "FFFFFF"
+      },
+      {
+        "text": "Promover nuevos modelos",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "de gobernanza",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "EL PUNTO DE PARTIDA",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Confiar cuesta caro.",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Nosotros lo abaratamos",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Documentos falsificables",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Diplomas, contratos,",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "certificados. Hoy cualquiera",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "puede alterarlos sin dejar rastro",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "visible",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Blockchain resuelve la",
+        "bold": true,
+        "size": 14.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "autenticidad sin intermediarios.",
+        "bold": true,
+        "size": 14.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Videos editables",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Con IA generativa, un video de",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "dron puede ser manipulado sin",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "que a simple vista se note nada.",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Hash SHA-256 + registro en",
+        "bold": true,
+        "size": 14.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "blockchain garantiza integridad.",
+        "bold": true,
+        "size": 14.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Intermediarios lentos",
+        "bold": true,
+        "size": 19.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Notarías, bancos, abogados:",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "cada proceso requiere un",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "tercero que “da fe”. Eso tarda y",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "cuesta.",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Smart contracts automatizan",
+        "bold": true,
+        "size": 14.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "la confianza sin terceros.",
+        "bold": true,
+        "size": 14.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Blockchain",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "resuelve estos tres problemas a la vez.",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "¿QUÉ ES BLOCKCHAIN?",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Infraestructura para la",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "confianza digital",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Blockchain es una tecnología de registro distribuido que permite",
+        "bold": true,
+        "size": 17.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "almacenar información de forma:",
+        "bold": true,
+        "size": 17.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Segura",
+        "bold": true,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Protegida por",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "criptografía. Inviolable",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "por diseño.",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Transparente",
+        "bold": true,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Cualquiera puede",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "verificar lo registrado",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Inmutable",
+        "bold": true,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Lo escrito no se puede",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "borrar ni alterar.",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Descentralizada",
+        "bold": true,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Sin un único punto de",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "control ni de falla.",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Permite",
+        "bold": false,
+        "size": 15.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "eliminar intermediarios",
+        "bold": false,
+        "size": 15.2,
+        "color": "0057FF"
+      },
+      {
+        "text": "y crear sistemas basados en",
+        "bold": false,
+        "size": 15.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "confianza matemática y verificabilidad permanente.",
+        "bold": false,
+        "size": 15.2,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "RELACIONES DESCENTRALIZADAS",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Nuevas formas de",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "interacción institucional",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Blockchain redefine la forma en que personas y organizaciones colaboran:",
+        "bold": true,
+        "size": 17.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Confianza sin intermediarios",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Las partes interactúan directamente,",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "sin un tercero que “dé fe”.",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "Redes peer-to-pe",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "er",
+        "bold": true,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "Conexiones directas entre pares, sin",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "un punto central de control.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Organizaciones autónomas (DAO",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Comunidades que se coordinan y",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "deciden mediante reglas en código.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Participación verificable",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Cada voto o aporte queda",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "registrado y es auditable por todos.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Gobernanza transparente",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Las decisiones y sus reglas son",
+        "bold": false,
+        "size": 11.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "públicas y trazables.",
+        "bold": false,
+        "size": 11.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "Nueva Ley Protección de Datos",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Garantizamos la confidencialidad, integridad, disponibilidad de los datos personales.",
+        "bold": null,
+        "size": 11.2,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "MARCO REGULATORIO — CHILE 2026",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Diseñado para las",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "nuevas reglas",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "01",
+        "bold": false,
+        "size": 30.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Ley 21.719",
+        "bold": false,
+        "size": 25.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Protección de Datos",
+        "bold": false,
+        "size": 25.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Nuevo marco para el tratamiento de datos personales: crea una Agencia fiscalizadora autónoma y otorg",
+        "bold": false,
+        "size": 15.3,
+        "color": "080D2B"
+      },
+      {
+        "text": "✓ Datos personales        ✓ Vigente 1 dic 2026",
+        "bold": true,
+        "size": 13.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "✓ Privacidad                      ✓ Agencia fiscalizadora",
+        "bold": true,
+        "size": 13.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "02",
+        "bold": false,
+        "size": 30.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Ley 21.668",
+        "bold": false,
+        "size": 25.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Fichas Clínicas",
+        "bold": false,
+        "size": 25.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Interoperabilidad de fichas clínicas entre prestadores de salud bajo el estándar HL7 FHIR R4, garant",
+        "bold": false,
+        "size": 15.3,
+        "color": "080D2B"
+      },
+      {
+        "text": "✓ Interoperabilidad        ✓ HL7 FHIR R4",
+        "bold": true,
+        "size": 13.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "✓ Salud digital                 ✓ Vigente desde 2024",
+        "bold": true,
+        "size": 13.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "En el",
+        "bold": null,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Blockchain Lab UAI",
+        "bold": true,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "construimos cada solución en cumplimiento de este marco regulatorio",
+        "bold": null,
+        "size": 18.0,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "ÁREAS ESTRATÉGICAS DE TRABAJO",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Soluciones aplicadas a",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "desafíos reales",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "DeFi",
+        "bold": true,
+        "size": 9.5,
+        "color": "FFFFFF"
+      },
+      {
+        "text": "Finanzas",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Descentralizadas",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Servicios financieros sin",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "bancos intermediarios.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Gobernanza",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Digital",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Decisiones colectivas",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "transparentes y verificables.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Tokenización",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "de Activos",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Representar bienes reales",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "como activos digitales.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Identidad",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Digital",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Identidades autosoberanas",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "y verificables.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Smart",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Contracts",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Acuerdos que se ejecutan",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "solos, sin terceros.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Trazabilidad y",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Auditoría",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Registro inmutable de cada",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "operación.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "RUC-D",
+        "bold": true,
+        "size": 9.5,
+        "color": "FFFFFF"
+      },
+      {
+        "text": "Recursos",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Compartidos",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Recursos únicos compartidos",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "descentralizados.",
+        "bold": false,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Siete frentes, un",
+        "bold": true,
+        "size": 19.0,
+        "color": "FFFFFF"
+      },
+      {
+        "text": "mismo objetivo:",
+        "bold": true,
+        "size": 19.0,
+        "color": "FFFFFF"
+      },
+      {
+        "text": "confianza",
+        "bold": true,
+        "size": 19.0,
+        "color": "FFFFFF"
+      },
+      {
+        "text": "verificable.",
+        "bold": true,
+        "size": 19.0,
+        "color": "FFFFFF"
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "NUESTROS PROYECTOS",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Lo que estamos",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "construyendo hoy",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "01",
+        "bold": false,
+        "size": 30.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Certificados NFT",
+        "bold": false,
+        "size": 25.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "en Blockchain",
+        "bold": false,
+        "size": 25.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Emisión de certificados como NFTs en blockchain. Verificación instantánea, con Account Abstraction,",
+        "bold": false,
+        "size": 15.3,
+        "color": "080D2B"
+      },
+      {
+        "text": "costo menor a $0.01 por certificado.",
+        "bold": false,
+        "size": 15.3,
+        "color": "080D2B"
+      },
+      {
+        "text": "02",
+        "bold": false,
+        "size": 30.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Validación de Videos",
+        "bold": false,
+        "size": 25.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "para Forestales",
+        "bold": false,
+        "size": 25.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "El Protocolo RUC-D combina streaming en vivo,",
+        "bold": false,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "huella digital SHA-256 y registro en blockchain para convertir videos de dron en prueba judicial vál",
+        "bold": false,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "✓ Blockchain                           ✓ NFT",
+        "bold": true,
+        "size": 13.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "✓ Chatbot                                 ✓ Verificación pública",
+        "bold": true,
+        "size": 13.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "✓ SHA-256                               ✓ Blockchain",
+        "bold": true,
+        "size": 13.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "✓ Drones                                   ✓ Validez judicial",
+        "bold": true,
+        "size": 13.0,
+        "color": "0057FF"
+      }
+    ]
+  },
+  {
+    "slide": 10,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "PROYECTO 01 · CERTIFICADOS NFT EN BLOCKCHAIN",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Sus certificados,",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "imposibles de falsificar",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "< $0.01",
+        "bold": false,
+        "size": 30.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Costo por certificado",
+        "bold": true,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "En blockchain",
+        "bold": false,
+        "size": 11.0,
+        "color": "222743"
+      },
+      {
+        "text": "< 30s",
+        "bold": false,
+        "size": 30.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Tiempo de emisión",
+        "bold": true,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Desde el chatbot al blockchain",
+        "bold": false,
+        "size": 11.0,
+        "color": "222743"
+      },
+      {
+        "text": "Años de validez",
+        "bold": true,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "El registro es permanente",
+        "bold": false,
+        "size": 11.0,
+        "color": "222743"
+      },
+      {
+        "text": "Intermediarios",
+        "bold": true,
+        "size": 12.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Todo es automático",
+        "bold": false,
+        "size": 11.0,
+        "color": "222743"
+      },
+      {
+        "text": "EL PROBLEMA HOY",
+        "bold": false,
+        "size": 12.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Cualquier empresa puede imprimir un certificado falso. Los empleadores no tienen cómo verificar si l",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "LA SOLUCIÓN",
+        "bold": false,
+        "size": 12.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Emitimos el certificado como NFT en la red Stellar. El participante lo recibe en su wallet y puede c",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 11,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "CÓMO FUNCIONA · CERTIFICADOS NFT",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "3 pasos. Sin que el participante",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "necesite saber qué es",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "blockchain",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "El operador usa",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "el chatbot",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "A través de un Chatbot, el emisor indica nombre del participante, curso y fecha. No necesita instala",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "✓ Funciona con Account Abstraction",
+        "bold": false,
+        "size": 12.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "El certificado se emite",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "automáticamente",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "El sistema crea la wallet del participante, genera el NFT con todos los metadatos y lo registra en b",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "✓ Sin intervención técnica",
+        "bold": false,
+        "size": 12.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "El participante recibe",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "y comparte",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Recibe un link de verificación que puede poner en LinkedIn, un correo o su CV. Cualquier empleador p",
+        "bold": false,
+        "size": 14.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "✓ Verificable desde cualquier lug",
+        "bold": false,
+        "size": 12.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "ar",
+        "bold": true,
+        "size": 11.5,
+        "color": "0057FF"
+      }
+    ]
+  },
+  {
+    "slide": 12,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "PROYECTO 02 · VALIDACIÓN DE VIDEOS PARA FORESTALES",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Un video de dron como",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "prueba judicial válida",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "La industria forestal usa drones para vigilar zonas remotas, pero cuando el video llega a un tribuna",
+        "bold": true,
+        "size": 17.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "la defensa tiene tres argumentos para dejarlo fuera:",
+        "bold": true,
+        "size": 17.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "\"No sabemos de dónde viene\"",
+        "bold": false,
+        "size": 15.2,
+        "color": "990000"
+      },
+      {
+        "text": "GPS, número de serie del dron y",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "streaming en vivo prueban el origen exacto.",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "\"El video fue editado\"",
+        "bold": false,
+        "size": 15.2,
+        "color": "990000"
+      },
+      {
+        "text": "El hash SHA-256 es único. Un solo píxel",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "cambiado y el hash es diferente.",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "\"Cadena de custodia rota\"",
+        "bold": false,
+        "size": 15.2,
+        "color": "990000"
+      },
+      {
+        "text": "El video llega al blockchain antes que   cualquier mano humana.",
+        "bold": false,
+        "size": 12.2,
+        "color": "080D2B"
+      },
+      {
+        "text": "Protocolo RUC-D ·",
+        "bold": false,
+        "size": 16.2,
+        "color": "0057FF"
+      },
+      {
+        "text": "Streaming en vivo + SHA-256 + Blockchain = ninguna de esas objeciones es válida",
+        "bold": false,
+        "size": 16.2,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 13,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "CÓMO TRABAJAMOS",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Del problema al",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "MVP",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Identificación",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "del problema",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Entendemos el desafío real de la organización antes de proponer nada.",
+        "bold": false,
+        "size": 10.8,
+        "color": "080D2B"
+      },
+      {
+        "text": "Diseño del caso",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "de uso",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Definimos dónde y cómo blockchain agrega valor concreto.",
+        "bold": false,
+        "size": 10.8,
+        "color": "080D2B"
+      },
+      {
+        "text": "Validación técnica y económica",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Comprobamos viabilidad, costos e indicadores de éxito.",
+        "bold": false,
+        "size": 10.8,
+        "color": "080D2B"
+      },
+      {
+        "text": "Desarrollo de",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "piloto / MVP",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Construimos una solución funcional, no una demo de laboratorio.",
+        "bold": false,
+        "size": 10.8,
+        "color": "080D2B"
+      },
+      {
+        "text": "Escalabilidad y",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "acompañamiento",
+        "bold": false,
+        "size": 16.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Llevamos el piloto a producción y acompañamos su",
+        "bold": false,
+        "size": 10.8,
+        "color": "080D2B"
+      },
+      {
+        "text": "adopción.",
+        "bold": false,
+        "size": 10.8,
+        "color": "080D2B"
+      },
+      {
+        "text": "Un proceso probado:",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "del diagnóstico a una solución que funciona en su operación real.",
+        "bold": false,
+        "size": 18.0,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 14,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "EL EQUIPO",
+        "bold": false,
+        "size": 20.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Las personas detrás del",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Lab",
+        "bold": false,
+        "size": 37.0,
+        "color": "1A40A1"
+      },
+      {
+        "text": "Giacomo Tomasoni Orozco",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Jefe de Vinculación I+D",
+        "bold": false,
+        "size": 10.3,
+        "color": "0057FF"
+      },
+      {
+        "text": "Lidera la relación entre el laboratorio y las organizaciones. Puente entre investigación académica y",
+        "bold": true,
+        "size": 10.4,
+        "color": "080D2B"
+      },
+      {
+        "text": "Francisco Toro",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Investigador — Sistemas Descentralizados",
+        "bold": false,
+        "size": 10.3,
+        "color": "0057FF"
+      },
+      {
+        "text": "Diseña y desarrolla la arquitectura técnica de los proyectos. Especialista en smart contracts, proto",
+        "bold": true,
+        "size": 10.4,
+        "color": "080D2B"
+      },
+      {
+        "text": "Pablo Guzmán",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Transformación Digital",
+        "bold": false,
+        "size": 10.3,
+        "color": "0057FF"
+      },
+      {
+        "text": "Asegura que la tecnología tenga impacto organizacional real. Trabaja la adopción, los procesos y el ",
+        "bold": true,
+        "size": 10.4,
+        "color": "080D2B"
+      },
+      {
+        "text": "Andrés Peña",
+        "bold": true,
+        "size": 15.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "Investigador y Operaciones",
+        "bold": false,
+        "size": 10.3,
+        "color": "0057FF"
+      },
+      {
+        "text": "Combina investigación aplicada con la gestión operativa del laboratorio. Asegura que los proyectos a",
+        "bold": true,
+        "size": 10.4,
+        "color": "080D2B"
+      }
+    ]
+  },
+  {
+    "slide": 15,
+    "bg": "F8F8F4",
+    "texts": [
+      {
+        "text": "INVITACIÓN A COLABORAR",
+        "bold": true,
+        "size": 13.5,
+        "color": "080D2B"
+      },
+      {
+        "text": "Blockchain no es una",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "tendencia. Es una nueva",
+        "bold": false,
+        "size": 37.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "infraestructura de confianza.",
+        "bold": false,
+        "size": 37.0,
+        "color": "0057FF"
+      },
+      {
+        "text": "Invitamos a empresas, fundaciones e instituciones a co-crear soluciones reales junto al Blockchain L",
+        "bold": true,
+        "size": 17.0,
+        "color": "080D2B"
+      },
+      {
+        "text": "giacomo.tomasoni@uai.cl",
+        "bold": false,
+        "size": 17.0,
+        "color": "0057FF"
+      }
+    ]
+  }
+]

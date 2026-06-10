@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, JetBrains_Mono, Lato, Oswald } from 'next/font/google'
 import './globals.css'
+import LenisProvider from '@/components/v2/LenisProvider'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -48,7 +49,7 @@ export default function RootLayout({
       lang="es"
       className={`${inter.variable} ${jetbrainsMono.variable} ${lato.variable} ${oswald.variable} antialiased`}
     >
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen"><LenisProvider>{children}</LenisProvider></body>
     </html>
   )
 }

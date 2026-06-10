@@ -96,7 +96,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Lenis overrides scroll-behavior */
 }
 
 @layer base {
@@ -104,74 +104,66 @@ html {
     @apply border-border outline-ring/50;
   }
   body {
-    background-color: #0A0A0F;
-    color: #F0F0F5;
+    background-color: #F8F8F4;
+    color: #080D2B;
   }
 }
 
-/* Grain texture overlay */
-.grain {
-  position: relative;
-  overflow: hidden;
-}
-.grain::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 1;
-}
+/* ─── Global cursor: none ─── */
+*, *::before, *::after { cursor: none !important; }
 
-/* Marquee animation */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
+/* ─── Selection ─── */
+::selection { background-color: #0057FF; color: #F8F8F4; }
 
-.animate-marquee {
-  animation: marquee 40s linear infinite;
-}
-
-/* Gradient orb utility */
-.orb {
-  position: absolute;
-  border-radius: 9999px;
-  filter: blur(120px);
-  pointer-events: none;
-}
-
-/* ─── v2 Redesign (redesign-blueprint branch) ─── */
-/* Brochure palette: #F8F8F4 cream · #080D2B navy · #0057FF blue · #1A40A1 deeper blue */
-
-/* Custom cursor */
-body {
-  cursor: none;
-}
-a, button, [role="button"], label, [tabindex] {
-  cursor: none;
-}
-
-/* Selection — brochure blue */
-::selection {
-  background-color: #0057FF;
-  color: #F8F8F4;
-}
-
-/* Scrollbar */
-html {
-  scrollbar-color: #0057FF #F8F8F4;
-  scrollbar-width: thin;
-}
-::-webkit-scrollbar { width: 4px; }
+/* ─── Scrollbar ─── */
+html { scrollbar-color: #080D2B #F8F8F4; scrollbar-width: thin; }
+::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: #F8F8F4; }
-::-webkit-scrollbar-thumb { background-color: #0057FF; border-radius: 0; }
+::-webkit-scrollbar-thumb { background: #080D2B; }
 
-/* Brochure font variables */
+/* ─── Brochure font tokens ─── */
 @theme {
   --font-display: var(--font-lato);
-  --font-label: var(--font-oswald);
+  --font-label:   var(--font-oswald);
 }
+
+/* ─── Grain overlay (applied to sections via className="grain") ─── */
+.grain { position: relative; }
+.grain::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ─── Word-reveal animation ─── */
+@keyframes wordUp {
+  from { transform: translateY(108%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.word-clip { display: inline-block; overflow: hidden; vertical-align: bottom; }
+.word-inner {
+  display: inline-block;
+  animation: wordUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ─── Marquee ─── */
+@keyframes marqueeL {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track { animation: marqueeL 28s linear infinite; }
+
+/* ─── Infinite column scroll (hero) ─── */
+@keyframes heroScrollUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+@keyframes heroScrollDown {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
+}
+

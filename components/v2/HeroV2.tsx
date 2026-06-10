@@ -5,261 +5,205 @@ import type { CSSProperties } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
 
-// ── Small blockchain concept cards for the infinite-scroll columns ──────────
-
-type CardItem =
-  | { kind: 'cert'; name: string; role: string; hash: string }
-  | { kind: 'tx'; label: string; status: string; block: string }
-  | { kind: 'pill'; text: string; mono?: boolean }
-  | { kind: 'hash'; value: string; chain: string }
-  | { kind: 'stat'; metric: string; value: string; up?: boolean }
-  | { kind: 'code'; file: string; snippet: string }
-
-const COL_A: CardItem[] = [
-  { kind: 'cert', name: 'Francisco Toro', role: 'Smart Contracts · 2026', hash: '0x7f2a…e9d3' },
-  { kind: 'pill', text: 'Inmutabilidad garantizada', mono: false },
-  { kind: 'tx', label: 'Estado', status: 'Confirmada', block: '#18,442,301' },
-  { kind: 'pill', text: 'SHA-256', mono: true },
-  { kind: 'stat', metric: 'Disponibilidad', value: '99.9%', up: true },
-  { kind: 'pill', text: 'Ethereum · Mainnet', mono: false },
-  { kind: 'cert', name: 'Andrés Peña', role: 'Blockchain Dev · 2026', hash: '0x3c9e…1f7a' },
-  { kind: 'pill', text: 'Trazabilidad verificable', mono: false },
-]
-
-const COL_B: CardItem[] = [
-  { kind: 'pill', text: 'Confianza Digital', mono: false },
-  { kind: 'hash', value: '0x1a2b3c4d5e6f7a8b', chain: 'Ethereum' },
-  { kind: 'pill', text: 'Validez Judicial', mono: false },
-  { kind: 'stat', metric: 'Transacciones', value: '1.2k', up: true },
-  { kind: 'code', file: 'Cert.sol', snippet: 'function issue(\n  address to,\n  bytes32 h\n) onlyAdmin {}' },
-  { kind: 'pill', text: 'Descentralización', mono: false },
-  { kind: 'pill', text: 'Cardano Foundation', mono: false },
-  { kind: 'stat', metric: 'Nodos activos', value: '12', up: false },
-]
-
-const CARD_STYLE: CSSProperties = {
-  background: 'rgba(255,255,255,0.05)',
-  border: '1px solid rgba(255,255,255,0.09)',
-  borderRadius: '14px',
-  padding: '14px 16px',
-  backdropFilter: 'blur(16px)',
+// ── Brochure card styles ────────────────────────────────────────────────────
+const CARD: CSSProperties = {
+  background: '#FFFFFF',
+  border: '1px solid rgba(8,13,43,0.13)',
+  borderRadius: '16px',
+  padding: '16px 18px',
+  boxShadow: '0 4px 24px rgba(8,13,43,0.07)',
   width: '100%',
   boxSizing: 'border-box',
   flexShrink: 0,
 }
+const MONO = 'var(--font-jetbrains-mono, monospace)'
+const BODY = 'var(--font-inter)'
+const LABEL_F = 'var(--font-oswald)'
 
-function Card({ item }: { item: CardItem }) {
-  const MONO = 'var(--font-jetbrains-mono, monospace)'
-  const BODY = 'var(--font-inter)'
+// ── Column card types ───────────────────────────────────────────────────────
+type Item =
+  | { k: 'cert';  name: string; role: string; hash: string }
+  | { k: 'tx';    status: string; block: string }
+  | { k: 'pill';  text: string; blue?: boolean }
+  | { k: 'stat';  label: string; value: string; green?: boolean }
+  | { k: 'hash';  value: string }
+  | { k: 'code';  snippet: string }
 
-  if (item.kind === 'cert') return (
-    <div style={CARD_STYLE}>
+const COL_A: Item[] = [
+  { k: 'cert', name: 'Francisco Toro', role: 'Smart Contracts · 2026', hash: '0x7f2a…e9d3' },
+  { k: 'pill', text: 'Inmutabilidad garantizada' },
+  { k: 'tx',   status: 'Confirmada', block: '#18,442,301' },
+  { k: 'pill', text: 'SHA-256', blue: true },
+  { k: 'stat', label: 'Disponibilidad', value: '99.9%', green: true },
+  { k: 'pill', text: 'Ethereum · Mainnet' },
+  { k: 'cert', name: 'Andrés Peña', role: 'Blockchain Dev · 2026', hash: '0x3c9e…1f7a' },
+  { k: 'pill', text: 'Trazabilidad verificable' },
+]
+const COL_B: Item[] = [
+  { k: 'pill', text: 'Confianza Digital' },
+  { k: 'hash', value: '0x1a2b3c4d5e6f7a8b9c0d' },
+  { k: 'pill', text: 'Validez Judicial' },
+  { k: 'stat', label: 'Transacciones', value: '1.2k' },
+  { k: 'code', snippet: 'function issue(\n  address to,\n  bytes32 h\n) onlyAdmin {}' },
+  { k: 'pill', text: 'Cardano Foundation' },
+  { k: 'stat', label: 'Nodos activos', value: '12' },
+  { k: 'pill', text: 'Descentralización', blue: true },
+]
+
+function Card({ item }: { item: Item }) {
+  if (item.k === 'cert') return (
+    <div style={CARD}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '10px' }}>
-        <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#22c55e' }} />
-        <span style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(248,248,244,0.3)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Certificado · Verificado</span>
+        <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#22c55e', flexShrink: 0 }} />
+        <span style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(8,13,43,0.35)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Certificado · Verificado</span>
       </div>
-      <p style={{ fontSize: '13px', fontWeight: 600, color: '#F8F8F4', marginBottom: '2px', fontFamily: BODY }}>{item.name}</p>
-      <p style={{ fontSize: '10px', color: 'rgba(248,248,244,0.3)', marginBottom: '10px', fontFamily: BODY }}>{item.role}</p>
-      <p style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(0,87,255,0.8)', background: 'rgba(0,87,255,0.08)', padding: '5px 8px', borderRadius: '5px' }}>{item.hash} · UAI</p>
+      <p style={{ fontSize: '13px', fontWeight: 700, color: '#080D2B', marginBottom: '2px', fontFamily: BODY }}>{item.name}</p>
+      <p style={{ fontSize: '10px', color: 'rgba(8,13,43,0.42)', marginBottom: '10px', fontFamily: BODY }}>{item.role}</p>
+      <p style={{ fontSize: '9px', fontFamily: MONO, color: '#0057FF', background: 'rgba(0,87,255,0.06)', padding: '5px 8px', borderRadius: '6px', border: '1px solid rgba(0,87,255,0.12)' }}>{item.hash} · UAI</p>
     </div>
   )
-
-  if (item.kind === 'tx') return (
-    <div style={CARD_STYLE}>
-      <p style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(248,248,244,0.25)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>Última tx</p>
+  if (item.k === 'tx') return (
+    <div style={CARD}>
+      <p style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(8,13,43,0.3)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>Última tx</p>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-        <span style={{ fontSize: '10px', color: 'rgba(248,248,244,0.3)', fontFamily: BODY }}>{item.label}</span>
-        <span style={{ fontSize: '10px', color: '#22c55e', fontFamily: MONO }}>{item.status}</span>
+        <span style={{ fontSize: '10px', color: 'rgba(8,13,43,0.4)', fontFamily: BODY }}>Estado</span>
+        <span style={{ fontSize: '10px', color: '#16a34a', fontFamily: MONO, fontWeight: 600 }}>{item.status}</span>
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <span style={{ fontSize: '10px', color: 'rgba(248,248,244,0.3)', fontFamily: BODY }}>Bloque</span>
-        <span style={{ fontSize: '10px', color: 'rgba(248,248,244,0.55)', fontFamily: MONO }}>{item.block}</span>
+        <span style={{ fontSize: '10px', color: 'rgba(8,13,43,0.4)', fontFamily: BODY }}>Bloque</span>
+        <span style={{ fontSize: '10px', color: 'rgba(8,13,43,0.6)', fontFamily: MONO }}>{item.block}</span>
       </div>
     </div>
   )
-
-  if (item.kind === 'pill') return (
-    <div style={{ ...CARD_STYLE, display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 16px' }}>
-      <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#0057FF', flexShrink: 0 }} />
-      <span style={{
-        fontSize: item.mono ? '11px' : '13px',
-        fontFamily: item.mono ? MONO : BODY,
-        color: item.mono ? 'rgba(0,87,255,0.8)' : 'rgba(248,248,244,0.72)',
-        fontWeight: 500,
-        letterSpacing: item.mono ? '0.04em' : 0,
-      }}>{item.text}</span>
+  if (item.k === 'pill') return (
+    <div style={{ ...CARD, display: 'flex', alignItems: 'center', gap: '10px', padding: '13px 16px' }}>
+      <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: item.blue ? '#0057FF' : '#1A40A1', flexShrink: 0 }} />
+      <span style={{ fontSize: '13px', fontFamily: BODY, color: item.blue ? '#0057FF' : '#080D2B', fontWeight: 500 }}>{item.text}</span>
     </div>
   )
-
-  if (item.kind === 'hash') return (
-    <div style={{ ...CARD_STYLE, border: '1px solid rgba(0,87,255,0.14)' }}>
-      <p style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(248,248,244,0.25)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '8px' }}>Block Hash</p>
-      <p style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(0,87,255,0.75)', lineHeight: 1.7, wordBreak: 'break-all', marginBottom: '8px' }}>{item.value}</p>
-      <span style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(248,248,244,0.25)' }}>{item.chain}</span>
+  if (item.k === 'stat') return (
+    <div style={CARD}>
+      <p style={{ fontSize: '10px', fontFamily: BODY, color: 'rgba(8,13,43,0.42)', marginBottom: '5px' }}>{item.label}</p>
+      <p style={{ fontSize: '28px', fontFamily: 'var(--font-lato)', fontWeight: 700, color: item.green ? '#16a34a' : '#0057FF', lineHeight: 1 }}>{item.value}</p>
     </div>
   )
-
-  if (item.kind === 'stat') return (
-    <div style={CARD_STYLE}>
-      <p style={{ fontSize: '10px', fontFamily: 'var(--font-inter)', color: 'rgba(248,248,244,0.3)', marginBottom: '6px' }}>{item.metric}</p>
-      <p style={{ fontSize: '26px', fontFamily: 'var(--font-lato)', fontWeight: 700, color: item.up ? '#22c55e' : '#F8F8F4', lineHeight: 1 }}>{item.value}</p>
+  if (item.k === 'hash') return (
+    <div style={{ ...CARD, border: '1px solid rgba(0,87,255,0.15)' }}>
+      <p style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(8,13,43,0.3)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '8px' }}>Block Hash</p>
+      <p style={{ fontSize: '9px', fontFamily: MONO, color: '#0057FF', lineHeight: 1.75, wordBreak: 'break-all' }}>{item.value}</p>
     </div>
   )
-
-  if (item.kind === 'code') return (
-    <div style={{ ...CARD_STYLE, border: '1px solid rgba(255,255,255,0.06)' }}>
+  if (item.k === 'code') return (
+    <div style={{ ...CARD, border: '1px solid rgba(0,87,255,0.10)' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
         <div style={{ width: '5px', height: '5px', borderRadius: '1px', background: '#0057FF' }} />
-        <span style={{ fontSize: '9px', fontFamily: 'var(--font-jetbrains-mono, monospace)', color: 'rgba(248,248,244,0.25)' }}>{item.file}</span>
+        <span style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(8,13,43,0.3)' }}>Cert.sol</span>
       </div>
-      <pre style={{ fontSize: '9px', fontFamily: 'var(--font-jetbrains-mono, monospace)', color: 'rgba(248,248,244,0.42)', margin: 0, lineHeight: 1.8, background: 'none', whiteSpace: 'pre' }}>{item.snippet}</pre>
+      <pre style={{ fontSize: '9px', fontFamily: MONO, color: 'rgba(8,13,43,0.5)', margin: 0, lineHeight: 1.85, background: 'none', whiteSpace: 'pre' }}>{item.snippet}</pre>
     </div>
   )
-
   return null
 }
 
-// Duplicated list for seamless CSS loop
-function InfiniteColumn({ items, direction }: { items: CardItem[]; direction: 'up' | 'down' }) {
+function InfiniteColumn({ items, dir }: { items: Item[]; dir: 'up' | 'down' }) {
   const doubled = [...items, ...items]
-  const animName = direction === 'up' ? 'heroScrollUp' : 'heroScrollDown'
-  const dur = direction === 'up' ? '22s' : '26s'
+  const anim = dir === 'up' ? 'heroScrollUp' : 'heroScrollDown'
+  const dur  = dir === 'up' ? '24s' : '30s'
 
   return (
-    <div style={{ overflow: 'hidden', flex: 1, position: 'relative' }}>
-      {/* Top fade */}
-      <div aria-hidden style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '80px', background: 'linear-gradient(to bottom, #080D2B, transparent)', zIndex: 2, pointerEvents: 'none' }} />
-      {/* Bottom fade */}
-      <div aria-hidden style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '80px', background: 'linear-gradient(to top, #080D2B, transparent)', zIndex: 2, pointerEvents: 'none' }} />
-
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '10px',
-        animation: `${animName} ${dur} linear infinite`,
-      }}>
-        {doubled.map((item, i) => (
-          <Card key={i} item={item} />
-        ))}
+    <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
+      <div aria-hidden style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '72px', background: 'linear-gradient(to bottom, #F8F8F4, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+      <div aria-hidden style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '72px', background: 'linear-gradient(to top, #F8F8F4, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', animation: `${anim} ${dur} linear infinite` }}>
+        {doubled.map((item, i) => <Card key={i} item={item} />)}
       </div>
     </div>
   )
 }
 
 export default function HeroV2() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const textRef = useRef<HTMLDivElement>(null)
-  const colsRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
+  const textRef    = useRef<HTMLDivElement>(null)
+  const colsRef    = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
     if (textRef.current) {
-      gsap.from(Array.from(textRef.current.children), {
-        y: 50,
-        opacity: 0,
-        duration: 1.1,
-        ease: 'power3.out',
-        stagger: 0.13,
-        delay: 0.2,
+      gsap.from(textRef.current.children, {
+        y: 56, opacity: 0, duration: 1.1, ease: 'power3.out', stagger: 0.12, delay: 0.15,
       })
     }
     if (colsRef.current) {
       gsap.from(colsRef.current, {
-        opacity: 0,
-        x: 40,
-        duration: 1.2,
-        ease: 'power3.out',
-        delay: 0.5,
+        opacity: 0, x: 48, duration: 1.4, ease: 'power3.out', delay: 0.35,
       })
     }
-  }, { scope: containerRef })
+  }, { scope: sectionRef })
 
   return (
     <section
-      ref={containerRef}
+      ref={sectionRef}
       id="inicio"
+      className="grain"
       style={{
         position: 'relative',
-        background: '#080D2B',
+        background: '#F8F8F4',
         minHeight: '100svh',
         overflow: 'hidden',
         display: 'flex',
-        alignItems: 'stretch',
+        alignItems: 'center',
       }}
     >
-      {/* CSS keyframes injected inline */}
-      <style>{`
-        @keyframes heroScrollUp {
-          from { transform: translateY(0) }
-          to   { transform: translateY(-50%) }
-        }
-        @keyframes heroScrollDown {
-          from { transform: translateY(-50%) }
-          to   { transform: translateY(0) }
-        }
-      `}</style>
-
-      {/* Subtle grid */}
+      {/* Brochure grid lines — vertical + horizontal (#C9D1DF) */}
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         backgroundImage: `
-          linear-gradient(rgba(248,248,244,0.022) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(248,248,244,0.022) 1px, transparent 1px)
+          linear-gradient(rgba(201,209,223,0.55) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(201,209,223,0.55) 1px, transparent 1px)
         `,
-        backgroundSize: '80px 80px',
+        backgroundSize: '88px 88px',
       }} />
 
-      {/* Blue glow — bottom-left */}
-      <div aria-hidden style={{
-        position: 'absolute',
-        width: '700px', height: '700px',
-        background: 'radial-gradient(circle, rgba(0,87,255,0.12) 0%, transparent 65%)',
-        bottom: '-15%', left: '-8%',
-        filter: 'blur(48px)',
-        pointerEvents: 'none',
-      }} />
-
-      {/* ── Main grid: left text | right columns ── */}
+      {/* Main layout */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         width: '100%',
-        maxWidth: '1400px',
+        maxWidth: '1360px',
         margin: '0 auto',
-        padding: '0 clamp(24px, 5vw, 72px)',
-        gap: 'clamp(40px, 5vw, 80px)',
+        padding: '0 clamp(32px, 5vw, 80px)',
+        gap: 'clamp(48px, 5vw, 88px)',
         alignItems: 'center',
+        position: 'relative', zIndex: 3,
       }}>
 
         {/* LEFT — text */}
         <div
           ref={textRef}
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            padding: 'clamp(100px, 14vh, 140px) 0 clamp(80px, 10vh, 100px)',
+            display: 'flex', flexDirection: 'column', alignItems: 'flex-start',
+            padding: 'clamp(112px, 16vh, 160px) 0 clamp(80px, 10vh, 120px)',
           }}
         >
+          {/* Eyebrow */}
           <p style={{
-            fontSize: '12px',
-            fontFamily: 'var(--font-oswald)',
-            fontWeight: 500,
-            color: '#0057FF',
-            letterSpacing: '0.22em',
-            textTransform: 'uppercase',
-            marginBottom: '32px',
+            fontSize: '11px', fontFamily: LABEL_F, fontWeight: 500,
+            color: '#0057FF', letterSpacing: '0.22em', textTransform: 'uppercase',
+            marginBottom: '36px',
+            display: 'flex', alignItems: 'center', gap: '12px',
           }}>
+            <span style={{ display: 'inline-block', width: '20px', height: '1px', background: '#0057FF' }} />
             Blockchain Lab UAI
           </p>
 
+          {/* Headline — Lato 300, very large */}
           <h1 style={{
             fontFamily: 'var(--font-lato)',
             fontWeight: 300,
-            fontSize: 'clamp(44px, 5.8vw, 88px)',
-            lineHeight: 1.0,
-            letterSpacing: '-0.025em',
-            color: '#F8F8F4',
-            marginBottom: '32px',
+            fontSize: 'clamp(52px, 6.2vw, 98px)',
+            lineHeight: 0.97,
+            letterSpacing: '-0.03em',
+            color: '#080D2B',
+            marginBottom: '36px',
           }}>
             <span style={{ display: 'block' }}>Innovación</span>
             <span style={{ display: 'block' }}>Económica</span>
@@ -267,89 +211,113 @@ export default function HeroV2() {
             <span style={{ display: 'block', color: '#0057FF' }}>Descentralizadas.</span>
           </h1>
 
+          {/* Body */}
           <p style={{
-            fontSize: 'clamp(15px, 1.5vw, 18px)',
-            fontFamily: 'var(--font-inter)',
-            color: 'rgba(248,248,244,0.40)',
-            lineHeight: 1.75,
-            maxWidth: '420px',
-            marginBottom: '48px',
+            fontSize: '16px', fontFamily: BODY, color: 'rgba(8,13,43,0.52)',
+            lineHeight: 1.75, maxWidth: '400px', marginBottom: '52px',
           }}>
             Transformamos desafíos reales en soluciones blockchain para organizaciones públicas y privadas.
           </p>
 
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+          {/* CTAs */}
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '64px' }}>
             <a
               href="#areas"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
                 padding: '14px 36px',
-                background: '#0057FF',
+                background: '#080D2B',
                 color: '#F8F8F4',
-                fontSize: '14px',
-                fontFamily: 'var(--font-lato)',
-                fontWeight: 400,
-                letterSpacing: '-0.01em',
-                borderRadius: '8px',
-                textDecoration: 'none',
-                transition: 'background 0.2s, transform 0.15s',
+                fontSize: '13px', fontFamily: LABEL_F, fontWeight: 500,
+                letterSpacing: '0.14em', textTransform: 'uppercase',
+                borderRadius: '8px', textDecoration: 'none',
+                transition: 'background 0.22s, transform 0.15s',
+                border: '1px solid #080D2B',
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#1A40A1'; e.currentTarget.style.transform = 'translateY(-2px)' }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#0057FF'; e.currentTarget.style.transform = 'translateY(0)' }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#0057FF'; e.currentTarget.style.borderColor = '#0057FF'; e.currentTarget.style.transform = 'translateY(-2px)' }}
+              onMouseLeave={e => { e.currentTarget.style.background = '#080D2B'; e.currentTarget.style.borderColor = '#080D2B'; e.currentTarget.style.transform = 'translateY(0)' }}
             >
-              Explorar áreas →
+              Explorar áreas
             </a>
             <a
               href="#contacto"
               style={{
-                display: 'inline-flex', alignItems: 'center',
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
                 padding: '14px 36px',
-                border: '1px solid rgba(248,248,244,0.13)',
-                color: 'rgba(248,248,244,0.50)',
-                fontSize: '14px',
-                fontFamily: 'var(--font-lato)',
-                letterSpacing: '-0.01em',
-                borderRadius: '8px',
-                textDecoration: 'none',
-                transition: 'border-color 0.2s, color 0.2s, transform 0.15s',
+                background: 'transparent',
+                color: '#080D2B',
+                fontSize: '13px', fontFamily: LABEL_F, fontWeight: 500,
+                letterSpacing: '0.14em', textTransform: 'uppercase',
+                borderRadius: '8px', textDecoration: 'none',
+                transition: 'border-color 0.22s, color 0.22s, transform 0.15s',
+                border: '1px solid rgba(8,13,43,0.25)',
               }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(248,248,244,0.32)'; e.currentTarget.style.color = '#F8F8F4'; e.currentTarget.style.transform = 'translateY(-2px)' }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(248,248,244,0.13)'; e.currentTarget.style.color = 'rgba(248,248,244,0.50)'; e.currentTarget.style.transform = 'translateY(0)' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = '#080D2B'; e.currentTarget.style.transform = 'translateY(-2px)' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(8,13,43,0.25)'; e.currentTarget.style.transform = 'translateY(0)' }}
             >
               Colaborar
             </a>
           </div>
 
-          <div style={{ marginTop: '56px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '32px', height: '1px', background: 'rgba(248,248,244,0.18)' }} />
-            <span style={{ fontSize: '9px', fontFamily: 'var(--font-jetbrains-mono)', color: 'rgba(248,248,244,0.18)', letterSpacing: '0.18em', textTransform: 'uppercase' }}>Universidad Adolfo Ibáñez</span>
+          {/* Concept pills — brochure cover style */}
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            {['Confianza', 'Transparencia', 'Colaboración'].map(word => (
+              <span key={word} style={{
+                fontSize: '11px', fontFamily: LABEL_F, fontWeight: 500,
+                color: '#1A40A1', letterSpacing: '0.14em', textTransform: 'uppercase',
+                padding: '7px 14px',
+                border: '1px solid #1A40A1',
+                borderRadius: '100px',
+                background: 'rgba(26,64,161,0.04)',
+              }}>
+                {word}
+              </span>
+            ))}
           </div>
         </div>
 
-        {/* RIGHT — two infinite-scroll columns */}
-        <div
-          ref={colsRef}
-          style={{
-            display: 'flex',
-            gap: '10px',
-            height: '100vh',
-            overflow: 'hidden',
-            position: 'relative',
-            paddingTop: '32px',
-          }}
-        >
-          <InfiniteColumn items={COL_A} direction="up" />
-          <InfiniteColumn items={COL_B} direction="down" />
+        {/* RIGHT — infinite scroll columns inside a brochure-style frame */}
+        <div style={{ padding: 'clamp(112px, 16vh, 160px) 0 clamp(80px, 10vh, 120px)' }}>
+          <div
+            ref={colsRef}
+            style={{
+              display: 'flex', gap: '10px',
+              height: 'clamp(440px, 65vh, 680px)',
+              overflow: 'hidden',
+              background: '#FFFFFF',
+              border: '1px solid #080D2B',
+              borderRadius: '24px',
+              padding: '16px',
+              boxShadow: '6px 6px 0px #080D2B',
+              position: 'relative',
+            }}
+          >
+            {/* Corner label */}
+            <div style={{
+              position: 'absolute', top: '14px', right: '14px', zIndex: 5,
+              fontSize: '8px', fontFamily: MONO, color: 'rgba(8,13,43,0.3)',
+              letterSpacing: '0.10em', textTransform: 'uppercase',
+              background: 'rgba(8,13,43,0.04)', padding: '4px 8px', borderRadius: '4px',
+            }}>
+              Live · Blockchain
+            </div>
+            <InfiniteColumn items={COL_A} dir="up" />
+            <InfiniteColumn items={COL_B} dir="down" />
+          </div>
+
+          {/* UAI label */}
+          <p style={{
+            marginTop: '16px', fontSize: '10px', fontFamily: MONO,
+            color: 'rgba(8,13,43,0.28)', letterSpacing: '0.10em', textAlign: 'right',
+          }}>
+            Universidad Adolfo Ibáñez · Santiago
+          </p>
         </div>
+
       </div>
 
-      {/* Fade to next section */}
-      <div aria-hidden style={{
-        position: 'absolute', bottom: 0, left: 0, right: 0,
-        height: '80px',
-        background: 'linear-gradient(to bottom, transparent, #F8F8F4)',
-        pointerEvents: 'none',
-      }} />
+      {/* Bottom divider — not a fade, a sharp border */}
+      <div aria-hidden style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'rgba(8,13,43,0.10)' }} />
     </section>
   )
 }

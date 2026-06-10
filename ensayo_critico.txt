@@ -1,0 +1,160 @@
+ANDRESANEMIC: ENSAYO CRÍTICO
+Plataforma web y propuesta poética
+——————————————————————————————————————————————————
+
+
+A. DISEÑO Y PROPUESTA DE PLATAFORMA ARTÍSTICA
+——————————————————————————————————————————————————
+
+La primera imagen que el sitio entrega es un disco que gira. No es una metáfora decorativa: es una declaración de principios. El rotorelief del hero —construido con elipses y círculos concéntricos en SVG, animado con GSAP, con parallax 3D al cursor— cita directamente Anemic Cinema (1926) de Marcel Duchamp: discos giratorios que oscilan entre la ilusión de profundidad y la planitud, entre el movimiento y el sin-sentido. Duchamp usó esa pieza para cuestionar si el cine podía ser arte, si el movimiento era suficiente para generar significado. El sitio usa la misma pregunta para presentar una colección de poemas.
+
+El gesto es inteligente y tiene peso conceptual real.
+
+Lo que funciona bien:
+
+El shuffle de poemas —algoritmo Fisher-Yates ejecutado en cada visita— es la decisión más coherente con la herencia duchampiana. No hay jerarquía autoral impuesta: el sitio no dice qué leer primero, qué poema es el más importante, cuál es el "bueno". Cada visita reorganiza el orden. Esto convierte la colección en un objeto vivo: el mismo conjunto de textos genera experiencias diferentes dependiendo del momento. Es un readymade poético. El autor entrega el material y cede el control del recorrido.
+
+La flecha de poema aleatorio refuerza esto. Más aún: prioriza los poemas no leídos antes de repetir. Hay una inteligencia de lectura incorporada al sistema que empuja al usuario hacia lo desconocido. Es un mecanismo simple pero que encarna bien la idea de la plataforma como guía.
+
+Las tarjetas respiran —una animación de escala muy sutil, desfasada por card, infinita— y responden al cursor con un leve giro 3D. Son organismos en reposo. El efecto es discreto y correcto: no distrae del texto, pero hace que la grid se sienta viva.
+
+El tracker de poemas leídos (sessionStorage + checkmark) añade una capa de juego: el sitio recuerda qué se ha leído en la sesión. No es una funcionalidad obvia para un sitio de poesía, pero aquí tiene sentido porque convierte la lectura en un recorrido con progreso.
+
+El nombre "andresanemic" es el hallazgo más agudo del proyecto. Une al autor (Andrés) con Anemic Cinema, y además "anémico" funciona como descriptor emocional —algo falto de sangre, de energía, en retiro. El nombre es ya un poema.
+
+Lo que no funciona o está subdesarrollado:
+
+La referencia a Duchamp vive casi exclusivamente en el disco del hero. El resto del sitio es dark minimalism clásico: fondo negro, tipografía blanca, grid de tres columnas, bordes finos. Es un diseño correcto y limpio, pero ese vocabulario lo comparten cientos de portfolios artísticos en 2025. La propuesta conceptual es más interesante que su ejecución visual. Si Anemic Cinema es el espíritu del sitio, podría permear más: en la tipografía, en cómo aparecen los textos, en la relación entre imagen en movimiento y palabra estática.
+
+La animación de entrada del poema —líneas que aparecen de abajo hacia arriba en stagger— es funcional pero genérica. Es la misma animación que usa cualquier agencia de diseño para revelar contenido. El momento en que el usuario llega a un poema es el más importante del sitio, y la animación no lo trata como tal. Debería ser el gesto más cuidado.
+
+El contador de "poemas leídos" aparece pero no está claro qué hace con esa información narrativamente. ¿Para qué le sirve al usuario saber cuántos leyó? Hay una semilla de algo ahí —un sitio que te recuerda, que te mide— pero no se desarrolla.
+
+Sugerencias para seguir desarrollando la plataforma:
+
+1. Llevar la lógica duchampiana al texto mismo. Duchamp trabajaba con el lenguaje como material físico —los discos de Anemic Cinema tienen espirales de texto. El sitio podría experimentar con la disposición tipográfica de los poemas: algunos ya usan espaciado y sangría ("mara", "patos de xochimilco"). [Implementado parcialmente: el renderer ahora preserva la indentación de los archivos fuente con whitespace-pre-wrap. Pendiente: espaciado variable entre estrofas y tratamiento por poema.]
+
+2. Incorporar tiempo como dimensión. Una fecha de publicación oculta, o un poema que solo aparece en ciertos horarios, o una versión del shuffle que cambia con la estación. El sitio como objeto que envejece.
+
+3. Registrar qué poemas el usuario lee más en sesiones distintas. No para el autor solamente, sino para devolverle al lector esa información: "volviste a leer esto." La plataforma como espejo.
+
+4. El random arrow podría tener variantes. A veces lleva a un poema. A veces no lleva a ningún lado. A veces lleva al mismo. Eso sería más Duchamp que lo actual.
+
+NOTA: 7 / 10
+
+El concepto es sólido y la ejecución técnica es buena. La brecha entre la ambición conceptual (Anemic Cinema, el readymade, la aleatoriedad como forma) y la expresión visual (dark portfolio estándar) es el problema central. El sitio tiene una idea genuinamente interesante; le falta llevarla hasta las últimas consecuencias.
+
+
+——————————————————————————————————————————————————
+B. ANÁLISIS LITERARIO: LA POESÍA DE ANDRÉS PEÑA
+——————————————————————————————————————————————————
+
+Voz y filiaciones
+
+La poesía de Andrés Peña opera en la zona de lo doméstico-perturbado: objetos cotidianos (leche vegetal, diclofenaco en gel, cortinas de termopanel, cogollos verdes) que transportan peso emocional sin nombrarlo. La emoción no se declara; se filtra a través de lo concreto. Eso es un instinto poético real y no es fácil de adquirir.
+
+Las filiaciones más visibles:
+
+Alejandra Pizarnik: la compresión extrema, el cuerpo como territorio de ansiedad, la elipsis como método. La voz de esta colección no alcanza la densidad hermética de Pizarnik —ni lo pretende— pero comparte la confianza en el silencio entre las palabras. En los mejores poemas, lo que no se dice importa tanto como lo que se dice.
+
+Emily Dickinson: el dash (—) como interrupción rítmica, la relación oblicua con la muerte y la naturaleza, la preferencia por el objeto pequeño sobre el concepto grande. El uso de guiones en "marea" e "impulsos" es el elemento más dicksoniano de la colección. Bien usado cuando interrumpe; débil cuando decora.
+
+Roberto Bolaño (el poeta, no el novelista): la planitud emocional como postura, la desencantada conciencia generacional. "dirección de arte" es el poema más bolañesco de la colección, aunque la resuelve desde un ángulo propio.
+
+Banana Yoshimoto: el duelo en lo cotidiano, los objetos como recipientes de afecto perdido. "mara" y "negro" son los poemas más yoshimoto: la pérdida de un animal comunicada a través de detalles físicos precisos, sin retórica del dolor.
+
+La corriente de conciencia se nota en la acumulación asociativa —especialmente en "¿qué dirían las abuelitas?" y "un verano antes"— pero no es el motor principal de la escritura. La tendencia es más hacia la elipsis que hacia el flujo; más Dickinson que Woolf.
+
+Análisis poema por poema
+
+¿ERA NECESARIO PEDIR QUE NO VOLVIERA PRONTO?
+El poema más tenso de la colección. "he puesto veneno / en tu vaso de la noche" aparece sin preparación y sin explicación: es el momento más perturbador de la colección, precisamente porque no se justifica. "el jardín llegó a decir / que prefería ser / —cortado": el dash antes de "cortado", precedido por un quiebre de línea, funciona como una hesitación antes de la palabra que importa — el poema se detiene justo antes del verbo de violencia, en el modo más dicksoniano de la colección. "el horror de la vida que volvía" como cierre es circular y correcto. [8/10]
+
+LEJOS DE LA LENGUA
+El único poema explícitamente metapoético. "pues camina reina" rompe bien la solemnidad abstracta. El cierre agrupa "ya no hay lugar / nadie se acordó de regar tus plantas" en un solo movimiento: la planta sin regar funciona como evidencia concreta del lugar que ya no existe, el abstracto colapsando en lo doméstico. Ese gesto —la idea que se prueba con un objeto— es coherente con el resto de la colección. [7/10]
+
+¿QUÉ DIRÍAN LAS ABUELITAS?
+La colección en miniatura: empieza con el yo derivando solo ("derivo por calles extranjeras / sustraídas por la urgencia"), pasa al tú con sus acciones privadas ("guardas la basura / de mi maleta azul / cogollos verdes / deshidratados de noche"), y termina con ambos en la misma escena ("reúnes agua envasada / donde antes hubo una fuente / me tropiezo cerca del punto"). La pregunta del título como marco de apertura y cierre convierte el poema en un objeto cerrado: empieza y termina en la misma pregunta sin respuesta. [7.5/10]
+
+DIRECCIÓN DE ARTE
+El poema funciona como documento visual: una paleta de época. No es un poema lírico en el sentido tradicional sino un catálogo de elementos estéticos —olfato (esencia de vainilla), luz (luces de neón), referencias culturales (minimalismo oriental, dreampop), comportamientos (viajamos, tomando té de oolong con naranja)— que juntos constituyen una realidad compartida. El título lo enmarca: no es una confesión, es una nota de dirección de arte. "luz de pantalla / siempre fría" nombra el medio que subyace a todos los demás elementos; la pantalla es la superficie desde la que esta estética se consume y produce. "nos perdemos" es el único comentario editorial, la única conclusión emocional después del catálogo completo. El poema hace el gesto duchampiano más explícito de la colección: presenta un readymade del lenguaje visual de una generación sin transformación ni juicio. [7.5/10]
+
+PÁJAROS
+El punto más débil de la colección. Declara su tesis, la desarrolla, la repite. No hay resistencia, no hay imagen que contradiga o complique la afirmación central. En una colección donde la norma es mostrar sin explicar, este poema explica. Eso no lo hace deshonesto —se siente sincero— pero lo hace redundante respecto al resto. [4/10]
+
+CARGADA
+Uno de los mejores. "leche vegetal / verde como las cortinas de mi casa / con ventanas de termopanel" es escritura de época: específica, doméstica, contemporánea sin ser costumbrista. La variación entre las 7 y las 8 —sin explicar por qué importa esa hora— produce un extrañamiento exacto. "uno encima del otro" como refrán de gravedad es inteligente. [8/10]
+
+PROYECCIÓN
+Cinco líneas. "los espejos / son palabras / del asco que escribiste" es el mejor terceto de la colección: convierte un objeto cotidiano en lenguaje, y el lenguaje en asco, todo en tres versos. "una luz entre lo absurdo" como cierre es demasiado vago para un poema que empieza tan preciso. [6/10]
+
+RESIDUOS
+El poema más extraño y uno de los más logrados. El salto de Orozco, Rivera y Siqueiros a "las nubes / son residuos / de animales calcinados" es el gesto surrealista más conseguido de la colección. No hay preparación, no hay explicación, y no la necesita. [8/10]
+
+MAREA
+"la muerte / los pájaros dijiste" —atribuir la muerte a alguien que la menciona en conversación, sin contexto, sin explicación— es una gran decisión. La carretera a oscuras, los cuatro pies congelados, el otoño que se funde entre guiones: la primera estrofa construye una escena física precisa antes de que llegue lo que se dijo. "la marea avanza en direcciones opuestas" como cierre tiene el tipo de paradoja que el poema merece. [7/10]
+
+MARA
+El poema más completo de la colección. La descripción física de un animal en sus últimos momentos —"la nariz seca / el calor de tu piel / aún sensible / en mis dedos"— es escritura corporal de alta precisión. "leo de una charca / que se evapora / para vivir en las nubes" es el uso más logrado de las nubes en toda la colección: no como consuelo sino como transformación natural, biológica, sin sentimentalismo. La sangría en la disposición tipográfica es el único experimento formal sostenido de la colección; señala una voz tipográfica que podría desarrollarse. [9/10]
+
+VOLCÁN
+"un volcán pedalea en la lluvia" es el mejor inicio de la colección: promesa surrealista cumplida. "colgadas en la pensión para animales" como estrofa sola —sin ornamento, sin enmarcado— entrega la imagen más extraña del poema con la frialdad que merece. "compro libros (títulos)" es el hallazgo central: comprarse el título sin el contenido, la pose sin la sustancia. "soy un volcán apagado" como cierre porta la referencia a José José sin declararla: está para quien la reconoce, no para quien no, y en cualquier caso funciona como declaración autónoma. [7.5/10]
+
+NEGRO
+Companion piece de "mara", más concentrado. "un caminar lento / mentiroso / que convierte ocho años en cien" es uno de los mejores versos de la colección: la idea de que la lentitud de un animal anciano es una mentira porque te hace creer que vivirá para siempre. Honesto y sin piedad consigo mismo. [8/10]
+
+PATOS DE XOCHIMILCO
+Empieza con "olvidar / que el día tiene segundos" — dos líneas que flotan antes de cualquier imagen, descontextualizadas, como un estado mental que precede a la escena. Ese inicio transforma el resto: la ausencia de moscas, los terneros que no muerden, la falta de noticias, el "nada / de / nada" vertical — todo se convierte en el contenido de ese olvido, la sustancia que queda cuando el tiempo se suspende. La fragmentación vertical de "nada / de / nada" obliga a leer el vacío en vertical, como si el poema cayera. [7/10]
+
+UN VERANO ANTES
+El más ambicioso. Cinco secciones, el único poema que nombra directamente la posibilidad del suicidio: "hoy podría ser el último / de mi vida". El giro de la sección 3 a la 4 —"encontré el mundo tan nuevo / quédate otra temporada"— es el momento más tierno de la colección. La sección 4 es el respiro más corto del libro: cuatro líneas, "nuevo mar", y basta. La sección 5 cierra desde lo doméstico: la cordillera desde la ventana, la luz que no siempre llena el dormitorio, la pregunta "cómo vivir", y luego la cocina. El poema termina en lo más pequeño después de lo más grande, que es exactamente la dirección correcta. [8/10]
+
+DICLOFENACO EN GEL
+Uno de los más logrados. La lista farmacológica inicial —crema, tramadol, diclofenaco— no dramatiza el dolor crónico: lo inventaría. "silencio familiar" en medio actúa como quiebre. "sertralina" integrada entre las historias de amor y la casa adornada hace lo mismo que el diclofenaco al inicio: transforma el medicamento en objeto doméstico sin explotarlo emocionalmente. "una casa adornada con mundos lejanos" como cierre condensa el tema de toda la colección en una imagen. [8/10]
+
+IMPULSOS
+El poema termina en pregunta y eso lo sostiene. Los em dashes funcionan como respiraciones dentro del verso, en el modo más dicksoniano de la colección. El único poema donde las nubes aparecen en posición de culpabilidad —"ya no serán culpables / de lo vacuo del cielo"— que es la inversión más interesante del motivo en todo el libro. [7/10]
+
+¿SIGUE REUNIÉNDOSE SU GRUPITO?
+El poema más social de la colección y, posiblemente, el más sardónico. El "su grupito" del título es el hallazgo central: el diminutivo convierte lo que podría ser una pregunta de nostalgia en un desdén apenas disimulado. El usted formal —"su", "váyase"— establece una distancia que no es respeto sino separación quirúrgica.
+
+La ambigüedad del poema es su motor. "Váyase tranquilamente" puede leerse en dos direcciones: el hablante despidiéndose de quien hace la pregunta, o el hablante diciéndose a sí mismo que se retire con dignidad antes de declarar "me marcho de aquí". La segunda lectura es más interesante: el hablante asume el imperativo formal como si observara su propia salida desde afuera, como si se diera instrucciones de cómo irse bien.
+
+"El pito lastimero / de la sirena de un barco" interrumpe el tono seco con el único instante lírico del poema. "Lastimero" es una palabra de otro registro —casi literario, casi arcaico— que funciona exactamente porque contrasta con el "grupito" del inicio. El barco que suena a lo lejos corrobora la partida: el mundo ya está en movimiento, el hablante no es el único que se marcha.
+
+"No pienso volver" cierra con la forma más deliberada posible de la despedida. No es incapacidad ("no puedo") ni deseo ("no quiero") sino decisión meditada ("no pienso"): el tiempo presente del pensamiento que ya tomó forma.
+
+La colección hasta ahora habitaba interiores —casas, cuerpos, relaciones de dos— y este poema es el primero que nombra un afuera social: un grupo, una escena, una pertenencia que se abandona. Esa novedad de registro es lo más valioso del poema. El "grupito" no tiene nombre ni historia en el texto, y esa elipsis —no explicar qué es el grupo, por qué se fue, qué pasó— es coherente con los mejores gestos de la colección: mostrar sin justificar. [7/10]
+
+
+El motivo de las nubes y los pájaros
+
+La poesía de Andrés Peña escribe sobre nubes y pájaros en al menos ocho de los dieciséis poemas. Cuando un motivo aparece con esa frecuencia sin ser deliberadamente convocado, es porque está haciendo algo que el escritor no sabe todavía nombrar del todo.
+
+En la colección, las nubes y los pájaros funcionan principalmente como imagen de transición: entre la vida y la muerte ("mara"), entre la culpa y el vacío ("impulsos"), entre el mundo terrenal y algo que se escapa ("un verano antes"). Son figuras del umbral. No pertenecen ni al suelo ni al cielo; flotan en el intermedio. Eso es exactamente el registro emocional de la colección: no el quiebre completo, no la paz completa, sino el estado suspendido entre ambos.
+
+El problema es que el motivo también aparece, en algunos poemas, como consuelo. En "mara", el animal que se evapora "para vivir en las nubes" no es sentimental porque la imagen es física y biológica. Pero en "pájaros" —el poema menos logrado— las aves que vuelan porque quieren se convierten en una declaración de libertad que el libro no sostiene en ningún otro lugar. Es el único momento donde el motivo se usa para aliviar en lugar de para tensar.
+
+La nube más interesante de la colección es la de "residuos": "las nubes / son residuos / de animales calcinados." Ahí las nubes no son escape ni consuelo: son materia en descomposición, cuerpos que se vuelven atmósfera. Es una imagen sin piedad y sin romanticismo.
+
+La dirección que le daría más fuerza a este motivo es esa: las nubes y los pájaros como materia extraña, no como escape. Lo que vuela no necesariamente es libre. Lo que flota no necesariamente es ligero. Hay algo perturbador en ese intermedio que la colección toca pero no termina de habitar plenamente.
+
+Sugerencias para el desarrollo de la obra
+
+1. Confiar más en la extrañeza. "un volcán pedalea en la lluvia", "olvidar / que el día tiene segundos", "las nubes / son residuos / de animales calcinados": son los momentos donde la escritura hace algo que la prosa no podría hacer. Cuando la voz se aleja de ahí hacia la declaración directa —como en "pájaros"— el texto pierde la tensión que lo define.
+
+2. Revisar la relación entre título y poema. Los mejores títulos de la colección son los más específicos y los más extraños: "diclofenaco en gel", "patos de xochimilco", "¿era necesario pedir que no volviera pronto?", "dirección de arte". Los más genéricos —"proyección", "negro", "pájaros"— no hacen el trabajo que el texto necesita. El título es el primer verso del poema aunque no lo parezca.
+
+3. Explorar la tipografía como forma. "mara" lo hace con las sangrías. "patos de xochimilco" lo hace con la fragmentación vertical de "nada / de / nada". Hay una voz tipográfica emergente en la colección que podría desarrollarse de forma más sistemática.
+
+4. Escribir un poema sobre nubes o pájaros que no los use como imagen de libertad ni de muerte suave. Eso obligaría a encontrar una tercera cosa: qué son además de escape y elegía.
+
+5. El registro de lo farmacéutico y lo doméstico-contemporáneo (diclofenaco, leche vegetal, termopanel, sertralina, luz de pantalla) es el aporte más propio y más difícil de replicar. Es la zona donde esta poesía tiene algo que decir que otros no están diciendo de la misma manera.
+
+NOTA: 7.5 / 10
+
+La colección tiene una voz reconocible, instintos poéticos reales y varios poemas que ya están terminados. La irregularidad sigue siendo el problema central: "pájaros" convive con "mara" y "diclofenaco en gel" sin que haya un principio de selección visible desde afuera. Un filtro más severo dejaría catorce poemas en lugar de diecisiete, y esos trece serían una colección que se sostiene sin fisuras.
+
+El sitio y la poesía comparten el mismo problema y la misma virtud: la idea de fondo es buena y honesta, la ejecución necesita llevarla hasta donde promete.
+
+——————————————————————————————————————————————————
