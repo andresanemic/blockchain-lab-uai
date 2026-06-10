@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
+import { Inter, JetBrains_Mono, Lato, Oswald } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -16,10 +16,19 @@ const jetbrainsMono = JetBrains_Mono({
   preload: false,
 })
 
-const spaceGrotesk = Space_Grotesk({
-  variable: '--font-space-grotesk',
+// Brochure primary display font — all major headlines
+const lato = Lato({
+  variable: '--font-lato',
   subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
+  weight: ['300', '400', '700', '900'],
+  preload: false,
+})
+
+// Brochure label font — eyebrows & uppercase section tags
+const oswald = Oswald({
+  variable: '--font-oswald',
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
   preload: false,
 })
 
@@ -37,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable} antialiased`}
+      className={`${inter.variable} ${jetbrainsMono.variable} ${lato.variable} ${oswald.variable} antialiased`}
     >
       <body className="min-h-screen">{children}</body>
     </html>

@@ -3,238 +3,113 @@
 import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
-import { ArrowUpRight } from 'lucide-react'
 
-const projects = [
-  {
-    id: 'chatterpay',
-    label: 'Caso de Estudio',
-    title: 'ChatterPay',
-    desc: 'Wallet DeFi que opera vía WhatsApp. Account abstraction en L2 para pagos sin fricción entre usuarios comunes.',
-    tags: ['Account Abstraction', 'L2', 'DeFi'],
-    href: '#',
-    accent: '#3B5BDB',
-    nodes: [[20,40],[60,15],[100,38],[60,62],[38,22],[82,54],[50,38]] as [number,number][],
-    edges: [[0,1],[1,2],[2,3],[3,0],[4,6],[5,6],[1,6],[3,6]] as [number,number][],
-  },
-  {
-    id: 'certificados',
-    label: 'Producto Activo',
-    title: 'Certificados UAI',
-    desc: 'Emisión y validación de credenciales académicas on-chain. Verificación inmutable para títulos y certificados de la universidad.',
-    tags: ['ERC-721', 'Identidad Digital', 'UAI'],
-    href: '/certificados',
-    accent: '#C9A84C',
-    nodes: [[20,40],[60,15],[100,38],[60,62],[38,22],[82,54],[50,38]] as [number,number][],
-    edges: [[0,6],[1,6],[2,6],[3,6],[4,6],[5,6]] as [number,number][],
-  },
-]
-
-function NetworkSVG({ nodes, edges, accent }: {
-  nodes: [number,number][]
-  edges: [number,number][]
-  accent: string
-}) {
-  return (
-    <svg viewBox="0 0 120 78" width="100%" height="100%" aria-hidden="true">
-      {edges.map(([a, b], i) => (
-        <line
-          key={i}
-          x1={nodes[a][0]} y1={nodes[a][1]}
-          x2={nodes[b][0]} y2={nodes[b][1]}
-          stroke={accent}
-          strokeOpacity={0.18}
-          strokeWidth={1}
-        />
-      ))}
-      {nodes.map(([cx, cy], i) => (
-        <circle
-          key={i}
-          cx={cx} cy={cy}
-          r={i === 6 ? 5.5 : 3}
-          fill={accent}
-          fillOpacity={i === 6 ? 0.7 : 0.4}
-        />
-      ))}
-    </svg>
-  )
-}
+const LABEL = 'var(--font-oswald, var(--font-inter))'
+const DISPLAY = 'var(--font-lato, var(--font-inter))'
+const BODY = 'var(--font-inter)'
+const MONO = 'var(--font-jetbrains-mono, monospace)'
 
 export default function ProjectsV2() {
   const sectionRef = useRef<HTMLElement>(null)
 
-  useGSAP(
-    () => {
-      gsap.from('.proj-v2', {
-        y: 52,
-        opacity: 0,
-        duration: 0.85,
-        stagger: 0.22,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 78%' },
-      })
-    },
-    { scope: sectionRef }
-  )
+  useGSAP(() => {
+    gsap.from(sectionRef.current?.querySelectorAll('.reveal') || [], {
+      y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12,
+      scrollTrigger: { trigger: sectionRef.current, start: 'top 76%' },
+    })
+  }, { scope: sectionRef })
 
   return (
-    <section
-      id="proyectos"
-      ref={sectionRef}
-      style={{
-        background: '#0e0e0e',
-        padding: 'clamp(80px, 12vh, 120px) clamp(20px, 4vw, 48px)',
-        borderTop: '1px solid rgba(255,255,255,0.04)',
-      }}
-    >
+    <section id="proyectos" ref={sectionRef}
+      style={{ background: '#F8F8F4', padding: 'clamp(96px,14vh,136px) clamp(24px,5vw,64px)', borderTop: '1px solid rgba(8,13,43,0.06)' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-        <div style={{ marginBottom: '52px' }}>
-          <p
-            style={{
-              fontSize: '10px',
-              fontFamily: 'var(--font-jetbrains-mono)',
-              color: 'rgba(59,91,219,0.65)',
-              letterSpacing: '0.22em',
-              textTransform: 'uppercase',
-              marginBottom: '14px',
-            }}
-          >
-            Proyectos
-          </p>
-          <h2
-            style={{
-              fontFamily: 'var(--font-space-grotesk, var(--font-inter))',
-              fontWeight: 300,
-              fontSize: 'clamp(30px, 4.2vw, 54px)',
-              letterSpacing: '-0.025em',
-              color: '#f2f0ed',
-              lineHeight: 1.1,
-            }}
-          >
-            Tecnología que opera
-            <br />
-            en el mundo real.
+
+        <div className="reveal" style={{ marginBottom: '56px' }}>
+          <p style={{ fontSize: '13px', fontFamily: LABEL, fontWeight: 500, color: '#0057FF', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '16px' }}>Nuestros Proyectos</p>
+          <h2 style={{ fontFamily: DISPLAY, fontWeight: 300, fontSize: 'clamp(36px,5.5vw,72px)', lineHeight: 1.05, letterSpacing: '-0.02em', color: '#080D2B' }}>
+            Lo que estamos<br /><span style={{ color: '#0057FF' }}>construyendo hoy.</span>
           </h2>
         </div>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '16px',
-          }}
-        >
-          {projects.map((p) => (
-            <div
-              key={p.id}
-              className="proj-v2"
-              style={{
-                background: '#181818',
-                border: '1px solid rgba(255,255,255,0.06)',
-                borderRadius: '16px',
-                padding: '32px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0',
-                transition: 'border-color 0.25s',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = `${p.accent}38`)}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)')}
-            >
-              {/* Visual */}
-              <div
-                style={{
-                  height: '110px',
-                  background: 'rgba(0,0,0,0.35)',
-                  borderRadius: '10px',
-                  padding: '16px 24px',
-                  marginBottom: '24px',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <NetworkSVG nodes={p.nodes} edges={p.edges} accent={p.accent} />
-              </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }} className="lg:grid-cols-2">
 
-              <p
-                style={{
-                  fontSize: '10px',
-                  fontFamily: 'var(--font-jetbrains-mono)',
-                  color: p.accent,
-                  opacity: 0.65,
-                  letterSpacing: '0.14em',
-                  textTransform: 'uppercase',
-                  marginBottom: '10px',
-                }}
-              >
-                {p.label}
-              </p>
-
-              <h3
-                style={{
-                  fontSize: '22px',
-                  fontWeight: 500,
-                  color: '#f2f0ed',
-                  letterSpacing: '-0.015em',
-                  marginBottom: '12px',
-                  lineHeight: 1.2,
-                }}
-              >
-                {p.title}
-              </h3>
-
-              <p
-                style={{
-                  fontSize: '13px',
-                  color: 'rgba(242,240,237,0.38)',
-                  lineHeight: 1.65,
-                  marginBottom: '22px',
-                  flexGrow: 1,
-                }}
-              >
-                {p.desc}
-              </p>
-
-              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>
-                {p.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    style={{
-                      fontSize: '10px',
-                      fontFamily: 'var(--font-jetbrains-mono)',
-                      color: 'rgba(242,240,237,0.35)',
-                      background: 'rgba(255,255,255,0.05)',
-                      padding: '4px 10px',
-                      borderRadius: '4px',
-                      letterSpacing: '0.06em',
-                    }}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <a
-                href={p.href}
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  fontSize: '11px',
-                  fontFamily: 'var(--font-jetbrains-mono)',
-                  color: p.accent,
-                  letterSpacing: '0.08em',
-                  textDecoration: 'none',
-                  textTransform: 'uppercase',
-                  transition: 'gap 0.2s',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.gap = '11px')}
-                onMouseLeave={(e) => (e.currentTarget.style.gap = '6px')}
-              >
-                Ver proyecto <ArrowUpRight size={12} />
-              </a>
+          {/* 01 — Certificados NFT */}
+          <div className="reveal" style={{
+            background: '#080D2B', border: '1px solid rgba(0,87,255,0.2)', borderRadius: '20px',
+            padding: '40px', display: 'flex', flexDirection: 'column', gap: '24px',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <span style={{ fontSize: '13px', fontFamily: MONO, color: '#0057FF', letterSpacing: '0.06em' }}>01</span>
+              <span style={{ height: '1px', flex: 1, background: 'rgba(0,87,255,0.2)' }} />
+              <span style={{ fontSize: '11px', fontFamily: MONO, color: 'rgba(0,87,255,0.5)', letterSpacing: '0.08em' }}>CERTIFICADOS NFT EN BLOCKCHAIN</span>
             </div>
-          ))}
+            <div>
+              <h3 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 'clamp(22px,3vw,34px)', color: '#F8F8F4', lineHeight: 1.2, marginBottom: '12px' }}>
+                Sus certificados,<br /><span style={{ color: '#0057FF' }}>imposibles de falsificar.</span>
+              </h3>
+              <p style={{ fontSize: '15px', fontFamily: BODY, color: 'rgba(248,248,244,0.5)', lineHeight: 1.65 }}>
+                Emisión de certificados como NFTs en blockchain. Verificación instantánea con Account Abstraction. Costo menor a $0.01 por certificado.
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '10px' }}>
+              {[{ val: '< $0.01', l: 'Costo/certificado' }, { val: '< 30s', l: 'Emisión' }, { val: '∞', l: 'Años validez' }].map(({ val, l }) => (
+                <div key={l} style={{ background: 'rgba(0,87,255,0.08)', border: '1px solid rgba(0,87,255,0.15)', borderRadius: '10px', padding: '14px 10px', textAlign: 'center' }}>
+                  <p style={{ fontFamily: DISPLAY, fontWeight: 900, fontSize: '20px', color: '#0057FF', marginBottom: '4px', lineHeight: 1 }}>{val}</p>
+                  <p style={{ fontSize: '10px', fontFamily: BODY, color: 'rgba(248,248,244,0.32)', lineHeight: 1.4 }}>{l}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+              {['Blockchain', 'NFT', 'Stellar', 'Account Abstraction', 'Chatbot'].map(t => (
+                <span key={t} style={{ padding: '4px 10px', border: '1px solid rgba(0,87,255,0.25)', borderRadius: '100px', fontSize: '11px', fontFamily: MONO, color: 'rgba(0,87,255,0.8)', letterSpacing: '0.04em' }}>{t}</span>
+              ))}
+            </div>
+            <a href="/certificados" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', background: '#0057FF', color: '#F8F8F4', fontFamily: LABEL, fontWeight: 500, fontSize: '13px', letterSpacing: '0.1em', textTransform: 'uppercase', borderRadius: '8px', textDecoration: 'none', transition: 'background 0.2s', alignSelf: 'flex-start' }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#1A40A1' }} onMouseLeave={e => { e.currentTarget.style.background = '#0057FF' }}>
+              Ver demo →
+            </a>
+          </div>
+
+          {/* 02 — Validación Videos */}
+          <div className="reveal" style={{
+            background: '#FFFFFF', border: '1px solid rgba(8,13,43,0.08)', borderRadius: '20px',
+            padding: '40px', display: 'flex', flexDirection: 'column', gap: '24px',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <span style={{ fontSize: '13px', fontFamily: MONO, color: '#0057FF', letterSpacing: '0.06em' }}>02</span>
+              <span style={{ height: '1px', flex: 1, background: 'rgba(0,87,255,0.15)' }} />
+              <span style={{ fontSize: '11px', fontFamily: MONO, color: 'rgba(0,87,255,0.45)', letterSpacing: '0.08em' }}>VALIDACIÓN DE VIDEOS · RUC-D</span>
+            </div>
+            <div>
+              <h3 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 'clamp(22px,3vw,34px)', color: '#080D2B', lineHeight: 1.2, marginBottom: '12px' }}>
+                Un video de dron como<br /><span style={{ color: '#0057FF' }}>prueba judicial válida.</span>
+              </h3>
+              <p style={{ fontSize: '15px', fontFamily: BODY, color: 'rgba(8,13,43,0.55)', lineHeight: 1.65 }}>
+                Streaming en vivo + SHA-256 + blockchain = ninguna objeción de defensa es válida.
+              </p>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {[
+                { obj: '"No sabemos de dónde viene"', sol: 'GPS + serie del dron + streaming en vivo.' },
+                { obj: '"El video fue editado"', sol: 'SHA-256: un solo píxel cambia el hash.' },
+                { obj: '"Cadena de custodia rota"', sol: 'Al blockchain antes que cualquier mano humana.' },
+              ].map(({ obj, sol }) => (
+                <div key={obj} style={{ background: '#F8F8F4', borderRadius: '10px', padding: '12px 16px', borderLeft: '3px solid #0057FF' }}>
+                  <p style={{ fontSize: '12px', fontFamily: BODY, color: '#cc2200', marginBottom: '3px', fontStyle: 'italic' }}>{obj}</p>
+                  <p style={{ fontSize: '12px', fontFamily: BODY, color: 'rgba(8,13,43,0.6)' }}>{sol}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+              {['SHA-256', 'Blockchain', 'Drones', 'Validez Judicial', 'RUC-D'].map(t => (
+                <span key={t} style={{ padding: '4px 10px', border: '1px solid rgba(0,87,255,0.2)', borderRadius: '100px', fontSize: '11px', fontFamily: MONO, color: 'rgba(0,87,255,0.75)', letterSpacing: '0.04em' }}>{t}</span>
+              ))}
+            </div>
+            <a href="/validacion-pruebas-multimedia" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', border: '1px solid rgba(0,87,255,0.3)', color: '#0057FF', fontFamily: LABEL, fontWeight: 500, fontSize: '13px', letterSpacing: '0.1em', textTransform: 'uppercase', borderRadius: '8px', textDecoration: 'none', transition: 'background 0.2s, color 0.2s', alignSelf: 'flex-start' }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#0057FF'; e.currentTarget.style.color = '#F8F8F4' }} onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#0057FF' }}>
+              Ver validación →
+            </a>
+          </div>
         </div>
       </div>
     </section>
