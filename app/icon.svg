@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Lines first (behind circles) -->
+  <!-- Top diamond: top → upper-left, top → upper-right -->
+  <line x1="50" y1="9" x2="22" y2="33" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="50" y1="9" x2="78" y2="33" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- Diamond sides: upper-left → center, upper-right → center -->
+  <line x1="22" y1="33" x2="50" y2="52" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="78" y1="33" x2="50" y2="52" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- Vertical sides: upper-left → lower-left, upper-right → lower-right -->
+  <line x1="22" y1="33" x2="26" y2="70" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="78" y1="33" x2="74" y2="70" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- Bottom triangle: center → lower-left, center → lower-right -->
+  <line x1="50" y1="52" x2="26" y2="70" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="50" y1="52" x2="74" y2="70" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- Bottom triangle base: lower-left → bottom, lower-right → bottom -->
+  <line x1="26" y1="70" x2="50" y2="91" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="74" y1="70" x2="50" y2="91" stroke="#0057FF" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Nodes (circles on top of lines) -->
+  <circle cx="50" cy="9"  r="5.5" fill="#0057FF"/>
+  <circle cx="22" cy="33" r="5.5" fill="#0057FF"/>
+  <circle cx="78" cy="33" r="5.5" fill="#0057FF"/>
+  <circle cx="50" cy="52" r="5.5" fill="#0057FF"/>
+  <circle cx="26" cy="70" r="5.5" fill="#0057FF"/>
+  <circle cx="74" cy="70" r="5.5" fill="#0057FF"/>
+  <circle cx="50" cy="91" r="5.5" fill="#0057FF"/>
+</svg>

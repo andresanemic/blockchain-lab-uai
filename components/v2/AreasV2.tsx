@@ -1,35 +1,37 @@
 'use client'
 
-import { useRef } from 'react'
+import { useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
+import { useGridGlow } from '@/lib/useGridGlow'
+import { GridGlowLayers } from '@/components/v2/GridGlowLayers'
+import { useIsMobile } from '@/lib/useIsMobile'
 
-const LABEL = 'var(--font-oswald, var(--font-inter))'
 const DISPLAY = 'var(--font-lato, var(--font-inter))'
 const BODY = 'var(--font-inter)'
 const MONO = 'var(--font-jetbrains-mono, monospace)'
 
 const areas = [
-  { num: '01', tag: 'DeFi', title: 'Finanzas Descentralizadas', desc: 'Servicios financieros sin bancos intermediarios.' },
-  { num: '02', title: 'Gobernanza Digital', desc: 'Decisiones colectivas transparentes y verificables.' },
-  { num: '03', title: 'Tokenización de Activos', desc: 'Representar bienes reales como activos digitales.' },
-  { num: '04', title: 'Identidad Digital', desc: 'Identidades autosoberanas y verificables.' },
-  { num: '05', title: 'Smart Contracts', desc: 'Acuerdos que se ejecutan solos, sin terceros.' },
-  { num: '06', title: 'Trazabilidad y Auditoría', desc: 'Registro inmutable de cada operación.' },
-  { num: '07', tag: 'RUC-D', title: 'Recursos Compartidos', desc: 'Recursos únicos compartidos descentralizados.', wide: true },
+  { num: '01', tag: 'DeFi',   title: 'Finanzas Descentralizadas',  desc: 'Servicios financieros sin bancos intermediarios.' },
+  { num: '02',                 title: 'Gobernanza Digital',         desc: 'Decisiones colectivas transparentes y verificables.' },
+  { num: '03',                 title: 'Tokenización de Activos',    desc: 'Representar bienes reales como activos digitales.' },
+  { num: '04',                 title: 'Identidad Digital',          desc: 'Identidades autosoberanas y verificables.' },
+  { num: '05',                 title: 'Smart Contracts',            desc: 'Acuerdos que se ejecutan solos, sin terceros.' },
+  { num: '06',                 title: 'Trazabilidad y Auditoría',   desc: 'Registro inmutable de cada operación.' },
+  { num: '07', tag: 'RUC-D',  title: 'Recursos Compartidos',       desc: 'Recursos únicos compartidos descentralizados.' },
 ]
 
+
 export default function AreasV2() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const { sectionRef, glowRef, gridGlowRef, handleMouseMove } = useGridGlow(true)
+  const [hovered, setHovered] = useState<number | null>(null)
+  const isMobile = useIsMobile()
 
   useGSAP(() => {
-    gsap.from(sectionRef.current?.querySelectorAll('.area-card') || [], {
-      y: 36, opacity: 0, duration: 0.7, ease: 'power3.out', stagger: 0.07,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 74%' },
-    })
-    gsap.from(sectionRef.current?.querySelectorAll('.section-header') || [], {
-      y: 32, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.10,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
+    gsap.from('.area-row', {
+      y: 28, opacity: 0,
+      duration: 0.8, ease: 'expo.out', stagger: 0.055,
+      scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
     })
   }, { scope: sectionRef })
 
@@ -37,72 +39,137 @@ export default function AreasV2() {
     <section
       id="areas"
       ref={sectionRef}
-      style={{ background: '#F8F8F4', padding: 'clamp(96px, 14vh, 136px) clamp(24px, 5vw, 64px)', borderTop: '1px solid rgba(8,13,43,0.06)' }}
+      onMouseMove={handleMouseMove}
+      style={{
+        position: 'relative',
+        overflow: 'hidden',
+        padding: isMobile ? '48px 0' : 'clamp(96px, 14vh, 128px) 0',
+        scrollMarginTop: '12px',
+        /* Dark overlay baked into backgroundImage gradient — no extra div competing for z-index */
+        backgroundImage: 'linear-gradient(rgba(4,6,20,0.58), rgba(4,6,20,0.58)), url(/areas-bg.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      {/* Grid + glow — no overlay div competing for z-index */}
+      <GridGlowLayers dark glowRef={glowRef} gridGlowRef={gridGlowRef} />
 
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '24px', marginBottom: '56px' }}>
-          <div>
-            <p className="section-header" style={{ fontSize: '13px', fontFamily: LABEL, fontWeight: 500, color: '#0057FF', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '16px' }}>
-              Áreas Estratégicas de Trabajo
-            </p>
-            <h2 className="section-header" style={{ fontFamily: DISPLAY, fontWeight: 300, fontSize: 'clamp(36px, 5.5vw, 72px)', lineHeight: 1.05, letterSpacing: '-0.02em', color: '#080D2B' }}>
-              Soluciones aplicadas a<br />
-              <span style={{ color: '#0057FF' }}>desafíos reales.</span>
-            </h2>
-          </div>
-          <p className="section-header" style={{ fontSize: '15px', fontFamily: BODY, color: 'rgba(8,13,43,0.5)', lineHeight: 1.65, maxWidth: '320px' }}>
-            Siete frentes, un mismo objetivo: <strong style={{ color: '#080D2B' }}>confianza verificable.</strong>
-          </p>
+      {/* Ghost numbers */}
+      {areas.map((area, i) => (
+        <div key={area.num} aria-hidden style={{
+          position: 'absolute', right: 'clamp(-60px, -4vw, -20px)', top: '50%',
+          transform: 'translateY(-50%)',
+          fontFamily: DISPLAY, fontWeight: 700,
+          fontSize: 'clamp(220px, 34vw, 480px)',
+          lineHeight: 1, letterSpacing: '-0.06em',
+          color: 'rgba(96,160,255,0.07)',
+          userSelect: 'none', pointerEvents: 'none',
+          opacity: hovered === i ? 1 : 0,
+          transition: 'opacity 0.45s cubic-bezier(0.16,1,0.3,1)',
+          zIndex: 4,
+        }}>{area.num}</div>
+      ))}
+
+      <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 5 }}>
+
+        {/* Meta row */}
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '0 clamp(24px, 5vw, 64px)',
+          marginBottom: '20px',
+        }}>
+          <span style={{ fontFamily: MONO, fontSize: '14px', color: 'rgba(248,248,244,0.50)', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+            Áreas de trabajo
+          </span>
+          <span style={{ fontFamily: MONO, fontSize: '14px', color: 'rgba(248,248,244,0.50)', letterSpacing: '0.10em' }}>
+            07 / estratégicas
+          </span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
-          {areas.map((area) => (
-            <div
-              key={area.num}
-              className={`area-card${area.wide ? ' lg:col-span-3' : ''}`}
-              style={{
-                gridColumn: area.wide ? '1 / -1' : undefined,
-                background: '#FFFFFF',
-                border: '1px solid rgba(8,13,43,0.08)',
-                borderRadius: '16px',
-                padding: '24px 28px',
-                display: 'flex',
-                flexDirection: area.wide ? 'row' : 'column',
-                alignItems: area.wide ? 'center' : 'flex-start',
-                gap: area.wide ? '40px' : '14px',
-                transition: 'border-color 0.25s, box-shadow 0.25s, transform 0.2s',
-                cursor: 'default',
-              }}
-              onMouseEnter={e => {
-                const el = e.currentTarget as HTMLDivElement
-                el.style.borderColor = 'rgba(0,87,255,0.3)'
-                el.style.boxShadow = '0 8px 32px rgba(0,87,255,0.07)'
-                el.style.transform = 'translateY(-2px)'
-              }}
-              onMouseLeave={e => {
-                const el = e.currentTarget as HTMLDivElement
-                el.style.borderColor = 'rgba(8,13,43,0.08)'
-                el.style.boxShadow = 'none'
-                el.style.transform = 'translateY(0)'
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
-                <span style={{ fontSize: '11px', fontFamily: MONO, color: '#0057FF', letterSpacing: '0.06em' }}>{area.num}</span>
-                {area.tag && (
+        {/* List — each row has a fixed height: description is absolute so section never grows */}
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {areas.map((area, i) => {
+            const isActive = hovered === i
+            const isDimmed = hovered !== null && !isActive
+
+            return (
+              <div
+                key={area.num}
+                className="area-row"
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+                style={{
+                  position: 'relative',
+                  padding: `0 clamp(24px, 5vw, 64px)`,
+                  opacity: isDimmed ? 0.28 : 1,
+                  cursor: 'default',
+                  boxShadow: isActive ? 'inset 3px 0 0 #60A0FF' : 'inset 3px 0 0 transparent',
+                  transition: 'opacity 0.4s ease, box-shadow 0.3s ease',
+                }}
+              >
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: isMobile ? '40px 1fr' : '64px 1fr auto',
+                  alignItems: 'center',
+                  gap: isMobile ? '0 16px' : '0 32px',
+                  /* Fixed padding — bottom reserves space for absolute description.
+                     Section height never changes, so background stays still. */
+                  padding: '14px 0 36px',
+                }}>
+                  {/* Index */}
                   <span style={{
-                    fontSize: '9px', fontFamily: MONO, color: '#F8F8F4', background: '#0057FF',
-                    padding: '2px 7px', borderRadius: '4px', letterSpacing: '0.08em', textTransform: 'uppercase',
-                  }}>{area.tag}</span>
-                )}
+                    fontFamily: MONO, fontSize: isMobile ? '12px' : '16px', letterSpacing: '0.08em',
+                    color: isActive ? '#60A0FF' : 'rgba(248,248,244,0.38)',
+                    transition: 'color 0.3s',
+                    display: 'block', lineHeight: 1,
+                  }}>{area.num}</span>
+
+                  {/* Title */}
+                  <div>
+                    <p style={{
+                      fontFamily: DISPLAY, fontWeight: 400,
+                      fontSize: isMobile ? 'clamp(15px, 4vw, 20px)' : 'clamp(18px, 2.1vw, 30px)',
+                      color: isActive ? '#60A0FF' : '#F8F8F4',
+                      lineHeight: 1.1, letterSpacing: '-0.02em',
+                      margin: 0,
+                      transform: isActive ? 'translateX(10px)' : 'translateX(0)',
+                      transition: 'color 0.3s, transform 0.5s cubic-bezier(0.16,1,0.3,1)',
+                    }}>{area.title}</p>
+
+                    {/* Description: absolute so it doesn't affect layout height */}
+                    <p style={{
+                      position: 'absolute',
+                      bottom: '8px',
+                      left: `calc(clamp(24px, 5vw, 64px) + 64px + 32px)`,
+                      right: `clamp(24px, 5vw, 64px)`,
+                      fontFamily: BODY, fontSize: '12.5px',
+                      color: 'rgba(248,248,244,0.55)', lineHeight: 1.6,
+                      margin: 0,
+                      opacity: isActive ? 1 : 0,
+                      transform: isActive ? 'translateX(10px)' : 'translateX(0)',
+                      transition: 'opacity 0.3s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1)',
+                      pointerEvents: 'none',
+                    }}>{area.desc}</p>
+                  </div>
+
+                  {/* Tag — hidden on mobile (col removed from grid) */}
+                  <div style={{ display: isMobile ? 'none' : 'flex', alignItems: 'center', flexShrink: 0 }}>
+                    {area.tag && (
+                      <span style={{
+                        fontFamily: MONO, fontSize: '12px', color: '#60A0FF',
+                        border: '1px solid rgba(96,160,255,0.40)',
+                        padding: '5px 12px', borderRadius: '4px',
+                        letterSpacing: '0.10em', textTransform: 'uppercase', whiteSpace: 'nowrap',
+                        boxShadow: '0 0 0 1px rgba(96,160,255,0.20), 0 0 12px rgba(96,160,255,0.18), 0 2px 8px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.07)',
+                      }}>{area.tag}</span>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div style={{ flex: 1 }}>
-                <p style={{ fontSize: area.wide ? '22px' : '17px', fontFamily: DISPLAY, fontWeight: 700, color: '#080D2B', marginBottom: '6px', lineHeight: 1.3 }}>{area.title}</p>
-                <p style={{ fontSize: '13px', fontFamily: BODY, color: 'rgba(8,13,43,0.5)', lineHeight: 1.55 }}>{area.desc}</p>
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
+
       </div>
     </section>
   )

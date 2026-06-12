@@ -3,104 +3,142 @@
 import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
+import { useGridGlow } from '@/lib/useGridGlow'
+import { GridGlowLayers } from '@/components/v2/GridGlowLayers'
+import { useIsMobile } from '@/lib/useIsMobile'
 
-const LABEL = 'var(--font-oswald, var(--font-inter))'
 const DISPLAY = 'var(--font-lato, var(--font-inter))'
-const BODY = 'var(--font-inter)'
-const MONO = 'var(--font-jetbrains-mono, monospace)'
+const MONO    = 'var(--font-jetbrains-mono, monospace)'
 
 export default function AboutV2() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const { sectionRef, glowRef, gridGlowRef, handleMouseMove } = useGridGlow()
+  const num100Ref = useRef<HTMLParagraphElement>(null)
+  const num7Ref   = useRef<HTMLParagraphElement>(null)
+  const isMobile = useIsMobile()
 
   useGSAP(() => {
-    const els = sectionRef.current?.querySelectorAll('.reveal')
-    if (!els) return
-    gsap.from(els, {
-      y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.10,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 76%' },
+    const st = { trigger: sectionRef.current, start: 'top 65%' }
+
+    // h2 reveal
+    gsap.from('.about-h2', {
+      y: 72, opacity: 0, scale: 0.96, duration: 1.2, ease: 'expo.out',
+      scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
+    })
+
+    // Counter 100%
+    if (num100Ref.current) {
+      const obj = { v: 0 }
+      gsap.to(obj, {
+        v: 100, duration: 1.6, ease: 'expo.out',
+        snap: { v: 1 },
+        scrollTrigger: st,
+        onUpdate: () => { if (num100Ref.current) num100Ref.current.textContent = Math.round(obj.v) + '%' },
+      })
+    }
+
+    // Counter 7
+    if (num7Ref.current) {
+      const obj = { v: 0 }
+      gsap.to(obj, {
+        v: 7, duration: 1.4, ease: 'expo.out',
+        snap: { v: 1 },
+        delay: 0.15,
+        scrollTrigger: st,
+        onUpdate: () => { if (num7Ref.current) num7Ref.current.textContent = String(Math.round(obj.v)) },
+      })
+    }
+
+    // Scrubbed scale dissolve — idéntico a ImpactV2
+    gsap.from('.about-num', {
+      scale: 1.18, opacity: 0,
+      ease: 'none',
+      stagger: 0.12,
+      scrollTrigger: { trigger: sectionRef.current, start: 'top 80%', end: 'top 40%', scrub: 1.2 },
+    })
+
+    // Labels fade
+    gsap.from('.about-label', {
+      y: 20, opacity: 0, duration: 0.7, ease: 'expo.out', stagger: 0.12, delay: 0.35,
+      scrollTrigger: st,
     })
   }, { scope: sectionRef })
-
-  const pill = (text: string) => (
-    <div style={{
-      display: 'inline-flex', alignItems: 'center',
-      padding: '8px 16px',
-      background: '#FFFFFF',
-      border: '1px solid rgba(8,13,43,0.10)',
-      borderRadius: '100px',
-      fontSize: '13px',
-      fontFamily: BODY,
-      color: 'rgba(8,13,43,0.65)',
-    }}>
-      <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#0057FF', marginRight: '8px', flexShrink: 0 }} />
-      {text}
-    </div>
-  )
 
   return (
     <section
       id="nosotros"
       ref={sectionRef}
-      style={{ background: '#F8F8F4', padding: 'clamp(96px, 14vh, 136px) clamp(24px, 5vw, 64px)', borderTop: '1px solid rgba(8,13,43,0.06)' }}
+      onMouseMove={handleMouseMove}
+      style={{ position: 'relative', background: '#F8F8F4', padding: isMobile ? '48px 24px 40px' : 'clamp(96px, 14vh, 136px) clamp(24px, 5vw, 64px) clamp(160px, 28vh, 280px)', overflow: 'hidden', scrollMarginTop: '80px' }}
     >
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-        {/* Blueprint 3-column layout: label+headline | visual | description */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '48px' }} className="lg:grid-cols-[1fr_1fr_1fr] lg:gap-16 lg:items-center">
+      <GridGlowLayers glowRef={glowRef} gridGlowRef={gridGlowRef} />
+      <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 3 }}>
 
-          {/* Left: label + headline */}
-          <div className="reveal">
-            <p style={{ fontSize: '13px', fontFamily: LABEL, fontWeight: 500, color: '#0057FF', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '20px' }}>
-              Quiénes Somos
-            </p>
-            <h2 style={{ fontFamily: DISPLAY, fontWeight: 300, fontSize: 'clamp(36px, 5vw, 64px)', lineHeight: 1.05, letterSpacing: '-0.02em', color: '#080D2B' }}>
-              Un laboratorio<br />
-              para la <span style={{ color: '#0057FF' }}>confianza</span><br />
-              digital.
-            </h2>
-          </div>
+        {/* h2 + stats column — grid asimétrico */}
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr clamp(200px, 22vw, 260px)', gap: isMobile ? '40px' : 'clamp(40px, 6vw, 88px)', alignItems: 'start' }}>
 
-          {/* Center: visual — 3 capabilities */}
-          <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {[
-              { num: '01', title: 'Diseño', desc: 'Arquitecturas a medida del problema' },
-              { num: '02', title: 'Validación', desc: 'Viabilidad técnica y económica' },
-              { num: '03', title: 'Implementación', desc: 'De piloto a producción real' },
-            ].map(({ num, title, desc }) => (
-              <div key={num} style={{
-                background: '#FFFFFF',
-                border: '1px solid rgba(8,13,43,0.08)',
-                borderRadius: '12px',
-                padding: '16px 20px',
-                display: 'flex', alignItems: 'center', gap: '16px',
-                transition: 'border-color 0.2s, box-shadow 0.2s',
-              }}
-                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(0,87,255,0.3)'; (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 24px rgba(0,87,255,0.06)' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(8,13,43,0.08)'; (e.currentTarget as HTMLDivElement).style.boxShadow = 'none' }}
-              >
-                <span style={{ fontSize: '11px', fontFamily: MONO, color: '#0057FF', letterSpacing: '0.06em', flexShrink: 0 }}>{num}</span>
-                <div>
-                  <p style={{ fontSize: '15px', fontFamily: DISPLAY, fontWeight: 700, color: '#080D2B', marginBottom: '2px' }}>{title}</p>
-                  <p style={{ fontSize: '12px', fontFamily: BODY, color: 'rgba(8,13,43,0.5)' }}>{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <h2 className="about-h2" style={{
+            fontFamily: DISPLAY, fontWeight: 300,
+            fontSize: isMobile ? 'clamp(40px, 10vw, 52px)' : 'clamp(52px, 8vw, 112px)',
+            lineHeight: 0.95, letterSpacing: '-0.03em',
+            color: '#080D2B', margin: 0,
+          }}>
+            Innovación<br />
+            Económica y<br />
+            Relaciones<br />
+            <span style={{ color: '#0057FF' }}>Descentralizadas.</span>
+          </h2>
 
-          {/* Right: description */}
-          <div className="reveal">
-            <p style={{ fontSize: '17px', fontFamily: BODY, fontWeight: 700, color: '#080D2B', lineHeight: 1.65, marginBottom: '20px' }}>
-              El Blockchain Lab UAI es un laboratorio orientado al diseño, validación e implementación de soluciones basadas en blockchain para organizaciones públicas y privadas.
-            </p>
-            <p style={{ fontSize: '15px', fontFamily: BODY, color: 'rgba(8,13,43,0.55)', lineHeight: 1.7, marginBottom: '28px' }}>
-              Nuestro propósito: transformar la forma en que las instituciones generan confianza verificable.
-            </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              {pill('Confianza verificable')}
-              {pill('Trazabilidad')}
-              {pill('Eficiencia económica')}
+          {/* Stats — columna vertical derecha (fila horizontal en mobile) */}
+          <div style={{ display: 'flex', flexDirection: isMobile ? 'row' : 'column', flexWrap: isMobile ? 'wrap' : undefined, gap: isMobile ? '24px 32px' : 'clamp(24px, 3vw, 36px)', paddingTop: '8px' }}>
+
+            <div>
+              <p ref={num100Ref} className="about-num" style={{
+                fontFamily: DISPLAY, fontWeight: 900,
+                fontSize: 'clamp(32px, 6.5vw, 90px)',
+                lineHeight: 0.88, letterSpacing: '-0.05em',
+                color: '#0057FF', margin: 0,
+              }}>0%</p>
+              <p className="about-label" style={{
+                fontFamily: MONO, fontSize: '10px',
+                color: 'rgba(8,13,43,0.38)', letterSpacing: '0.14em',
+                textTransform: 'uppercase', marginTop: '10px', whiteSpace: 'pre-line',
+              }}>{'Orientado a impacto\norganizacional'}</p>
             </div>
+
+            <div>
+              <p ref={num7Ref} className="about-num" style={{
+                fontFamily: DISPLAY, fontWeight: 900,
+                fontSize: 'clamp(32px, 6.5vw, 90px)',
+                lineHeight: 0.88, letterSpacing: '-0.05em',
+                color: '#0057FF', margin: 0,
+              }}>0</p>
+              <p className="about-label" style={{
+                fontFamily: MONO, fontSize: '10px',
+                color: 'rgba(8,13,43,0.38)', letterSpacing: '0.14em',
+                textTransform: 'uppercase', marginTop: '10px', whiteSpace: 'pre-line',
+              }}>{'Áreas estratégicas\nactivas'}</p>
+            </div>
+
+            <div>
+              <div className="about-num" style={{ margin: 0, lineHeight: 0 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/uai-negro.png"
+                  alt="Universidad Adolfo Ibáñez"
+                  style={{ height: 'clamp(44px, 6vw, 78px)', width: 'auto', maxWidth: '100%', display: 'block' }}
+                />
+              </div>
+              <p className="about-label" style={{
+                fontFamily: MONO, fontSize: '10px',
+                color: 'rgba(8,13,43,0.38)', letterSpacing: '0.14em',
+                textTransform: 'uppercase', marginTop: '10px', whiteSpace: 'pre-line',
+              }}>{'Respaldo académico\ny científico'}</p>
+            </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
   )

@@ -52,11 +52,12 @@ export default function RoadmapV2() {
 
   useGSAP(() => {
     gsap.from(sectionRef.current?.querySelectorAll('.road-card') || [], {
-      y: 36, opacity: 0, duration: 0.75, ease: 'power3.out', stagger: 0.09,
+      y: 60, opacity: 0, scale: 0.95,
+      duration: 0.9, ease: 'expo.out', stagger: 0.08,
       scrollTrigger: { trigger: sectionRef.current, start: 'top 74%' },
     })
     gsap.from(sectionRef.current?.querySelectorAll('.header-r') || [], {
-      y: 32, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.10,
+      y: 44, opacity: 0, duration: 1.0, ease: 'expo.out', stagger: 0.10,
       scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
     })
   }, { scope: sectionRef })

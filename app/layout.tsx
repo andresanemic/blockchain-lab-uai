@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter, JetBrains_Mono, Lato, Oswald } from 'next/font/google'
+import { Roboto, JetBrains_Mono, Ubuntu, Cantarell } from 'next/font/google'
 import './globals.css'
 import LenisProvider from '@/components/v2/LenisProvider'
 
-const inter = Inter({
+// Body copy — Roboto: the paradigmatic digital-UI / Material / Chrome OS font
+const roboto = Roboto({
   variable: '--font-inter',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '800'],
+  weight: ['400', '500'],
   preload: false,
 })
 
@@ -17,19 +18,19 @@ const jetbrainsMono = JetBrains_Mono({
   preload: false,
 })
 
-// Brochure primary display font — all major headlines
-const lato = Lato({
+// Display / headlines — Ubuntu: canonical Linux desktop typeface, geometric & technical
+const ubuntu = Ubuntu({
   variable: '--font-lato',
   subsets: ['latin'],
-  weight: ['300', '400', '700', '900'],
+  weight: ['300', '400', '500', '700'],
   preload: false,
 })
 
-// Brochure label font — eyebrows & uppercase section tags
-const oswald = Oswald({
+// UI labels / CTA text — Cantarell: GNOME/KDE-associated system UI font
+const cantarell = Cantarell({
   variable: '--font-oswald',
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['400', '700'],
   preload: false,
 })
 
@@ -47,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${jetbrainsMono.variable} ${lato.variable} ${oswald.variable} antialiased`}
+      className={`${roboto.variable} ${jetbrainsMono.variable} ${ubuntu.variable} ${cantarell.variable} antialiased`}
     >
       <body className="min-h-screen"><LenisProvider>{children}</LenisProvider></body>
     </html>

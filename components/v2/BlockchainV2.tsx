@@ -3,61 +3,174 @@
 import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
+import { useGridGlow } from '@/lib/useGridGlow'
+import { GridGlowLayers } from '@/components/v2/GridGlowLayers'
+import { useIsMobile } from '@/lib/useIsMobile'
 
-const LABEL = 'var(--font-oswald, var(--font-inter))'
 const DISPLAY = 'var(--font-lato, var(--font-inter))'
-const BODY = 'var(--font-inter)'
+const BODY    = 'var(--font-inter)'
+const MONO    = 'var(--font-jetbrains-mono, monospace)'
 
-const features = [
-  { key: 'Segura', desc: 'Protegida por criptografía. Inviolable por diseño.' },
-  { key: 'Transparente', desc: 'Cualquiera puede verificar lo registrado.' },
-  { key: 'Inmutable', desc: 'Lo escrito no se puede borrar ni alterar.' },
-  { key: 'Descentralizada', desc: 'Sin un único punto de control ni de falla.' },
+const PIN_MULT = 2
+
+const STEPS = [
+  {
+    title: 'Segura',
+    bullets: [
+      'Criptografía de clave pública protege cada transacción.',
+      'Modificar un registro invalida los bloques posteriores.',
+      'La seguridad es estructural, no depende de personas.',
+    ],
+  },
+  {
+    title: 'Transparente',
+    bullets: [
+      'Cualquier nodo audita la historia completa en tiempo real.',
+      'Las reglas son públicas y ejecutadas por el protocolo.',
+      'El código es la autoridad, sin intermediarios.',
+    ],
+  },
+  {
+    title: 'Inmutable',
+    bullets: [
+      'Lo registrado no puede borrarse ni modificarse.',
+      'Cada bloque porta el hash del anterior, cadena inviolable.',
+      'Ideal para certificados, contratos y trazabilidad.',
+    ],
+  },
+  {
+    title: 'Descentralizada',
+    bullets: [
+      'Sin servidor central que pueda ser atacado o censurado.',
+      'Miles de nodos validan información de forma autónoma.',
+      'Opera aunque fallen múltiples nodos: sin punto único de falla.',
+    ],
+  },
 ]
 
-function NetworkSVG() {
-  const nodes = [
-    { cx: 200, cy: 80 },
-    { cx: 380, cy: 60 },
-    { cx: 140, cy: 200 },
-    { cx: 300, cy: 190 },
-    { cx: 450, cy: 170 },
-    { cx: 240, cy: 310 },
-    { cx: 400, cy: 300 },
-    { cx: 120, cy: 330 },
-  ]
-  const edges = [
-    [0, 1], [0, 2], [0, 3], [1, 4], [1, 3], [2, 3], [2, 7],
-    [3, 4], [3, 5], [3, 6], [4, 6], [5, 6], [5, 7],
-  ]
-  return (
-    <svg viewBox="0 60 520 280" style={{ width: '100%', maxWidth: '460px', display: 'block', margin: '0 auto' }}>
-      {edges.map(([a, b], i) => (
-        <line key={i}
-          x1={nodes[a].cx} y1={nodes[a].cy}
-          x2={nodes[b].cx} y2={nodes[b].cy}
-          stroke="rgba(0,87,255,0.20)" strokeWidth="1.5"
-        />
-      ))}
-      {nodes.map((n, i) => (
-        <g key={i}>
-          <circle cx={n.cx} cy={n.cy} r={i === 3 ? 18 : 10} fill={i === 3 ? '#0057FF' : '#FFFFFF'} stroke="rgba(0,87,255,0.30)" strokeWidth="1.5" />
-          {i === 3 && <circle cx={n.cx} cy={n.cy} r={26} fill="none" stroke="rgba(0,87,255,0.12)" strokeWidth="1" />}
-        </g>
-      ))}
-    </svg>
-  )
+function dotShadow(isActive: boolean, isPassed: boolean) {
+  if (isActive) return '0 0 0 1px rgba(96,160,255,0.40), 0 0 28px rgba(96,160,255,0.45), 0 4px 16px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.15)'
+  if (isPassed) return '0 2px 10px rgba(0,0,0,0.32), inset 0 1px 0 rgba(96,160,255,0.10)'
+  return '0 1px 6px rgba(0,0,0,0.22)'
 }
 
 export default function BlockchainV2() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const { sectionRef, glowRef, gridGlowRef, handleMouseMove } = useGridGlow(true)
+  const isMobile = useIsMobile()
+
+  const progressRef   = useRef<HTMLDivElement>(null)
+  const stRef         = useRef<gsap.plugins.ScrollTriggerInstance | null>(null)
+  const skipRef       = useRef(false)
+  const targetStepRef = useRef<number | null>(null)
+
+  const dotRefs       = useRef<(HTMLDivElement     | null)[]>([])
+  const lineFillRefs  = useRef<(HTMLDivElement     | null)[]>([])
+  const titleRefs     = useRef<(HTMLHeadingElement | null)[]>([])
+  const contentRefs   = useRef<(HTMLDivElement     | null)[]>([])
+
+  function activateStep(s: number) {
+    STEPS.forEach((_, i) => {
+      const isActive = i === s
+      const isPassed = i < s
+      const isFuture = i > s
+
+      const dot = dotRefs.current[i]
+      if (dot) {
+        dot.style.width       = isActive ? '38px' : isPassed ? '28px' : '22px'
+        dot.style.height      = isActive ? '38px' : isPassed ? '28px' : '22px'
+        dot.style.background  = isActive ? '#60A0FF' : isPassed ? 'rgba(96,160,255,0.22)' : 'transparent'
+        dot.style.borderColor = isActive ? '#60A0FF' : isPassed ? 'rgba(96,160,255,0.55)' : 'rgba(248,248,244,0.18)'
+        dot.style.boxShadow   = dotShadow(isActive, isPassed)
+      }
+
+      const title = titleRefs.current[i]
+      if (title) {
+        title.style.color    = isActive ? '#F8F8F4' : isFuture ? 'rgba(248,248,244,0.22)' : 'rgba(248,248,244,0.48)'
+        title.style.fontSize = isActive ? 'clamp(17px, 1.9vw, 26px)' : 'clamp(12px, 1.2vw, 16px)'
+      }
+
+          /* Height is instant (no CSS transition) → single synchronous reflow per step.
+         Opacity fades separately via transition — no layout impact. */
+      const content = contentRefs.current[i]
+      if (content) {
+        content.style.height        = isActive ? 'auto' : '0'
+        content.style.opacity       = isActive ? '1' : '0'
+        content.style.pointerEvents = isActive ? 'auto' : 'none'
+      }
+    })
+  }
+
+  function handleDotClick(idx: number) {
+    const st = stRef.current
+    if (!st) return
+
+    /* Activate with transitions active — dot grows, title expands, content fades in */
+    activateStep(idx)
+
+    /* Snap line fills to target position */
+    for (let i = 0; i < STEPS.length - 1; i++) {
+      const fill = Math.max(0, Math.min(1, idx - i))
+      const inner = lineFillRefs.current[i]
+      if (inner) inner.style.transform = `scaleY(${fill})`
+    }
+
+    skipRef.current       = true
+    targetStepRef.current = idx
+
+    const unlock = () => { skipRef.current = false; targetStepRef.current = null }
+    const fallback = setTimeout(unlock, 2000)
+
+    const target = st.start + (idx / STEPS.length) * (st.end - st.start) + 1
+    const lenis  = (window as any).__lenis
+    if (lenis) {
+      lenis.scrollTo(target, {
+        duration: 0.75,
+        easing: (t: number) => 1 - Math.pow(1 - t, 3),
+        onComplete: () => { clearTimeout(fallback); unlock() },
+      })
+    } else {
+      window.scrollTo({ top: target, behavior: 'smooth' })
+    }
+  }
 
   useGSAP(() => {
-    const els = sectionRef.current?.querySelectorAll('.reveal')
-    if (!els) return
-    gsap.from(els, {
-      y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.10,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 76%' },
+    gsap.fromTo('.bc-header-line',
+      { y: '108%', opacity: 0, filter: 'blur(12px)' },
+      { y: '0%', opacity: 1, filter: 'blur(0px)', duration: 1.25, ease: 'expo.out', stagger: 0.10,
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' } }
+    )
+    gsap.from('.bc-timeline', {
+      y: 40, opacity: 0, duration: 1.1, ease: 'expo.out', delay: 0.15,
+      scrollTrigger: { trigger: sectionRef.current, start: 'top 78%' },
+    })
+
+    activateStep(0)
+
+    gsap.to({}, {
+      scrollTrigger: {
+        trigger:             sectionRef.current,
+        pin:                 true,
+        anticipatePin:       1,
+        start:               'top top',
+        end:                 () => `+=${window.innerHeight * PIN_MULT}`,
+        invalidateOnRefresh: true,
+        onRefresh(self) { stRef.current = self },
+        onUpdate(self) {
+          stRef.current = self
+          if (progressRef.current) {
+            progressRef.current.style.transform = `scaleX(${self.progress})`
+          }
+          /* Line fills: continuous, always update regardless of skipRef */
+          for (let i = 0; i < STEPS.length - 1; i++) {
+            const fill = Math.max(0, Math.min(1, self.progress * STEPS.length - i))
+            const inner = lineFillRefs.current[i]
+            if (inner) inner.style.transform = `scaleY(${fill})`
+          }
+          if (skipRef.current) return
+          const newStep = Math.min(Math.floor(self.progress * STEPS.length), STEPS.length - 1)
+          activateStep(newStep)
+        },
+      },
     })
   }, { scope: sectionRef })
 
@@ -65,87 +178,233 @@ export default function BlockchainV2() {
     <section
       id="blockchain"
       ref={sectionRef}
-      style={{ background: '#080D2B', padding: 'clamp(96px, 14vh, 136px) clamp(24px, 5vw, 64px)' }}
+      onMouseMove={handleMouseMove}
+      style={{
+        position:    'relative',
+        background:  '#080D2B',
+        overflow:    'hidden',
+        height:      '100vh',
+        minHeight:   '600px',
+        /* Fixed paddingTop anchors content at a constant position —
+           immune to timeline height changes (unlike flex/transform centering) */
+        paddingTop:  isMobile ? '48px' : 'clamp(80px, calc(50vh - 230px), 360px)',
+        paddingBottom: isMobile ? '40px' : undefined,
+      }}
     >
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <GridGlowLayers dark glowRef={glowRef} gridGlowRef={gridGlowRef} />
 
-        {/* Blueprint 3-col: left text | center network | right features */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '48px' }} className="lg:grid-cols-[1fr_1fr_1fr] lg:gap-16 lg:items-center">
+      {/* Progress bar */}
+      <div style={{
+        position: 'absolute', top: 0, left: 0, right: 0,
+        height: '2px', background: 'rgba(255,255,255,0.06)', zIndex: 10,
+      }}>
+        <div ref={progressRef} style={{
+          height: '100%', background: '#60A0FF',
+          transformOrigin: 'left center', transform: 'scaleX(0)',
+        }} />
+      </div>
 
-          {/* Left */}
-          <div className="reveal">
-            <p style={{ fontSize: '13px', fontFamily: LABEL, fontWeight: 500, color: 'rgba(0,87,255,0.8)', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '20px' }}>
-              ¿Qué es Blockchain?
-            </p>
-            <h2 style={{ fontFamily: DISPLAY, fontWeight: 300, fontSize: 'clamp(34px, 4.8vw, 60px)', lineHeight: 1.06, letterSpacing: '-0.02em', color: '#F8F8F4', marginBottom: '24px' }}>
-              Infraestructura para<br />
-              la <span style={{ color: '#0057FF' }}>confianza digital.</span>
-            </h2>
-            <p style={{ fontSize: '16px', fontFamily: BODY, color: 'rgba(248,248,244,0.5)', lineHeight: 1.7 }}>
-              Permite{' '}
-              <span style={{ color: 'rgba(0,87,255,0.9)' }}>eliminar intermediarios</span>
-              {' '}y crear sistemas basados en confianza matemática y verificabilidad permanente.
-            </p>
-          </div>
+      {/* Main grid */}
+      <div style={{
+        maxWidth: '1280px',
+        margin:   '0 auto',
+        width:    '100%',
+        padding:  isMobile ? '0 24px' : '0 clamp(24px, 5vw, 80px)',
+        position: 'relative',
+        zIndex:    3,
+        display:   'grid',
+        gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+        gap:      isMobile ? '36px' : 'clamp(48px, 8vw, 100px)',
+        alignItems: 'start',
+      }}>
 
-          {/* Center: network visualization */}
-          <div className="reveal">
-            <div style={{
-              background: 'rgba(255,255,255,0.03)',
-              border: '1px solid rgba(255,255,255,0.07)',
-              borderRadius: '20px',
-              padding: '32px 24px',
-            }}>
-              <NetworkSVG />
+        {/* ── LEFT: header ── */}
+        <div className="bc-left">
+          <h2 style={{
+            fontFamily:    DISPLAY, fontWeight: 300,
+            fontSize:      isMobile ? 'clamp(36px, 9vw, 56px)' : 'clamp(44px, 6.5vw, 88px)',
+            lineHeight:    0.97, letterSpacing: '-0.03em',
+            color:         '#F8F8F4', margin: 0,
+          }}>
+            <div style={{ overflow: 'hidden', lineHeight: 1.04, paddingBottom: '0.12em', marginBottom: '-0.12em' }}>
+              <span className="bc-header-line" style={{ display: 'block', transform: 'translateY(108%)', opacity: 0 }}>
+                Blockchain hace la
+              </span>
             </div>
-          </div>
+            <div style={{ overflow: 'hidden', lineHeight: 1.04, paddingBottom: '0.12em', marginBottom: '-0.12em' }}>
+              <span className="bc-header-line" style={{ display: 'block', color: '#60A0FF', transform: 'translateY(108%)', opacity: 0 }}>
+                confianza
+              </span>
+            </div>
+            <div style={{ overflow: 'hidden', lineHeight: 1.04, paddingBottom: '0.12em', marginBottom: '-0.12em' }}>
+              <span className="bc-header-line" style={{ display: 'block', color: '#60A0FF', transform: 'translateY(108%)', opacity: 0 }}>
+                verificable.
+              </span>
+            </div>
+          </h2>
+        </div>
 
-          {/* Right: 4 features */}
-          <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {features.map(({ key, desc }) => (
-              <div key={key} style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.07)',
-                borderRadius: '12px',
-                padding: '16px 20px',
-                borderLeft: '3px solid #0057FF',
-                transition: 'background 0.2s',
-              }}
-                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = 'rgba(0,87,255,0.06)' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = 'rgba(255,255,255,0.04)' }}
-              >
-                <p style={{ fontSize: '15px', fontFamily: DISPLAY, fontWeight: 700, color: '#F8F8F4', marginBottom: '4px' }}>{key}</p>
-                <p style={{ fontSize: '13px', fontFamily: BODY, color: 'rgba(248,248,244,0.45)', lineHeight: 1.5 }}>{desc}</p>
+        {/* ── RIGHT: timeline ── */}
+        <div className="bc-timeline" style={{ display: 'flex', flexDirection: 'column' }}>
+
+          {/* Step navigation — dots + titles only, fixed layout */}
+          {STEPS.map((step, i) => {
+            const isFirst = i === 0
+            return (
+              <div key={step.title} style={{ display: 'flex', gap: '22px' }}>
+
+                {/* Dot column */}
+                <div style={{
+                  display: 'flex', flexDirection: 'column',
+                  alignItems: 'center', width: '40px', flexShrink: 0,
+                }}>
+                  <div
+                    ref={el => { dotRefs.current[i] = el }}
+                    onClick={() => handleDotClick(i)}
+                    onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = 'scale(1.18)' }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = 'scale(1)' }}
+                    style={{
+                      width:        isFirst ? '38px' : '22px',
+                      height:       isFirst ? '38px' : '22px',
+                      borderRadius: '50%',
+                      background:   isFirst ? '#60A0FF' : 'transparent',
+                      border:       `1.5px solid ${isFirst ? '#60A0FF' : 'rgba(248,248,244,0.18)'}`,
+                      boxShadow:    dotShadow(isFirst, false),
+                      flexShrink:   0,
+                      cursor:       'pointer',
+                      transition: [
+                        'width 0.75s cubic-bezier(0.33,1,0.68,1)',
+                        'height 0.75s cubic-bezier(0.33,1,0.68,1)',
+                        'background 0.65s',
+                        'border-color 0.65s',
+                        'box-shadow 0.65s',
+                        'transform 1.8s cubic-bezier(0.33,1,0.68,1)',
+                      ].join(', '),
+                    }}
+                  />
+
+                  {i < STEPS.length - 1 && (
+                    <div style={{
+                      flex:       '1',
+                      width:      '1.5px',
+                      minHeight:  'clamp(36px, 4.5vh, 52px)',
+                      marginTop:  '7px',
+                      background: 'rgba(255,255,255,0.10)',
+                      position:   'relative',
+                      overflow:   'hidden',
+                    }}>
+                      <div
+                        ref={el => { lineFillRefs.current[i] = el }}
+                        style={{
+                          position:        'absolute',
+                          top: 0, left: 0, right: 0, bottom: 0,
+                          background:      '#60A0FF',
+                          transformOrigin: 'top center',
+                          transform:       'scaleY(0)',
+                          boxShadow:       '0 0 6px rgba(96,160,255,0.55)',
+                        }}
+                      />
+                    </div>
+                  )}
+                </div>
+
+                {/* Title + collapsible content */}
+                <div style={{
+                  flex:          1,
+                  paddingBottom: i < STEPS.length - 1 ? 'clamp(20px, 2.8vh, 32px)' : 0,
+                  paddingTop:    '2px',
+                }}>
+                  <h3
+                    ref={el => { titleRefs.current[i] = el }}
+                    style={{
+                      fontFamily:    MONO,
+                      fontWeight:    400,
+                      fontSize:      isFirst ? 'clamp(17px, 1.9vw, 26px)' : 'clamp(12px, 1.2vw, 16px)',
+                      lineHeight:    1.1,
+                      letterSpacing: '0.07em',
+                      textTransform: 'uppercase',
+                      color:         isFirst ? '#F8F8F4' : 'rgba(248,248,244,0.22)',
+                      margin:        0,
+                      transition:    'color 0.65s cubic-bezier(0.33,1,0.68,1), font-size 0.75s cubic-bezier(0.33,1,0.68,1)',
+                    }}
+                  >
+                    {step.title}
+                  </h3>
+
+                  {/* Height is instant (no transition), opacity fades — zero ongoing reflow */}
+                  <div
+                    ref={el => { contentRefs.current[i] = el }}
+                    style={{
+                      overflow:      'hidden',
+                      height:        isFirst ? 'auto' : '0',
+                      opacity:       isFirst ? 1 : 0,
+                      pointerEvents: isFirst ? 'auto' : 'none',
+                      transition:    'opacity 0.65s cubic-bezier(0.33,1,0.68,1)',
+                    }}
+                  >
+                    <ul style={{
+                      listStyle: 'none', padding: 0,
+                      margin:    '14px 0 16px',
+                      display:   'flex', flexDirection: 'column', gap: '9px',
+                    }}>
+                      {step.bullets.map((bullet, bi) => (
+                        <li key={bi} style={{ display: 'flex', gap: '9px', alignItems: 'flex-start' }}>
+                          <span style={{
+                            width: '4px', height: '4px', borderRadius: '50%',
+                            background: '#60A0FF', flexShrink: 0, marginTop: '6px',
+                            boxShadow: '0 0 5px rgba(96,160,255,0.55)',
+                          }} />
+                          <span style={{
+                            fontFamily: BODY,
+                            fontSize:   'clamp(11px, 0.95vw, 13px)',
+                            color:      'rgba(248,248,244,0.62)',
+                            lineHeight: 1.65,
+                          }}>
+                            {bullet}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <a
+                      href="#"
+                      onClick={e => e.preventDefault()}
+                      onMouseEnter={e => {
+                        const el = e.currentTarget as HTMLAnchorElement
+                        el.style.color = '#60A0FF'
+                        el.style.letterSpacing = '0.13em'
+                        el.style.textDecorationColor = 'rgba(96,160,255,0.70)'
+                      }}
+                      onMouseLeave={e => {
+                        const el = e.currentTarget as HTMLAnchorElement
+                        el.style.color = 'rgba(96,160,255,0.65)'
+                        el.style.letterSpacing = '0.09em'
+                        el.style.textDecorationColor = 'rgba(96,160,255,0.30)'
+                      }}
+                      style={{
+                        fontFamily:          MONO, fontSize: '9px',
+                        color:               'rgba(96,160,255,0.65)',
+                        letterSpacing:       '0.09em', textTransform: 'uppercase',
+                        textDecoration:      'underline',
+                        textUnderlineOffset: '4px',
+                        textDecorationColor: 'rgba(96,160,255,0.30)',
+                        cursor:              'pointer',
+                        display:             'inline-block',
+                        transition:          'color 0.25s, letter-spacing 0.35s cubic-bezier(0.33,1,0.68,1), text-decoration-color 0.25s',
+                      }}
+                    >
+                      Revisa nuestra documentación →
+                    </a>
+                  </div>
+                </div>
+
               </div>
-            ))}
-          </div>
+            )
+          })}
+
+
         </div>
 
-        {/* Bottom callout */}
-        <div className="reveal" style={{
-          marginTop: '64px',
-          background: 'rgba(0,87,255,0.08)',
-          border: '1px solid rgba(0,87,255,0.2)',
-          borderRadius: '16px',
-          padding: '28px 36px',
-          display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap',
-        }}>
-          <p style={{ fontFamily: DISPLAY, fontWeight: 300, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#F8F8F4', lineHeight: 1.4, flex: '1 1 300px' }}>
-            "Confiar cuesta caro. <span style={{ color: '#0057FF' }}>Nosotros lo abaratamos.</span>"
-          </p>
-          <a href="#proyectos" style={{
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            padding: '12px 28px', background: '#0057FF', color: '#F8F8F4',
-            fontFamily: LABEL, fontWeight: 500, fontSize: '13px', letterSpacing: '0.1em', textTransform: 'uppercase',
-            borderRadius: '8px', textDecoration: 'none', transition: 'background 0.2s',
-            flexShrink: 0,
-          }}
-            onMouseEnter={e => { e.currentTarget.style.background = '#1A40A1' }}
-            onMouseLeave={e => { e.currentTarget.style.background = '#0057FF' }}
-          >
-            Ver proyectos →
-          </a>
-        </div>
       </div>
     </section>
   )

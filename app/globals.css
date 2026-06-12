@@ -109,17 +109,32 @@ html {
   }
 }
 
-/* ─── Global cursor: none ─── */
-*, *::before, *::after { cursor: none !important; }
+/* ─── Cursor: estándar del sistema — no usamos cursores personalizados ─── */
+a, button, [role="button"], label, [data-hover] { cursor: pointer; }
 
-/* ─── Selection ─── */
-::selection { background-color: #0057FF; color: #F8F8F4; }
+/* ─── Selection — UAI gold surprise (Ouros-inspired) ─── */
+::selection { background-color: #C9A84C; color: #080D2B; }
 
-/* ─── Scrollbar ─── */
-html { scrollbar-color: #080D2B #F8F8F4; scrollbar-width: thin; }
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: #F8F8F4; }
-::-webkit-scrollbar-thumb { background: #080D2B; }
+/* ─── Scrollbar — hidden; ScrollUI provides visual progress ─── */
+html { scrollbar-width: none; }
+::-webkit-scrollbar { display: none; }
+
+/* ─── GSAP pin spacers — evitar que el fondo cream del body flashee ─── */
+/* El spacer que envuelve la sección blockchain (dark) debe ser dark también */
+.gsap-pin-spacer:has(#blockchain) { background: #080D2B; }
+
+/* ─── Desktop nav: force hidden on mobile (GSAP can override display:none) ─── */
+@media (max-width: 767px) {
+  nav.hidden { display: none !important; }
+}
+
+/* ─── Easings (Ouros Labs reference) ─── */
+:root {
+  --ease-snap-out:   cubic-bezier(0.2, 0.88, 0.12, 1);
+  --ease-snap-in:    cubic-bezier(0.55, 0, 0.95, 0.38);
+  --ease-out-flow:   cubic-bezier(0.22, 1, 0.52, 1);
+  --ease-out-settle: cubic-bezier(0.33, 1, 0.68, 1);
+}
 
 /* ─── Brochure font tokens ─── */
 @theme {
@@ -157,6 +172,12 @@ html { scrollbar-color: #080D2B #F8F8F4; scrollbar-width: thin; }
 }
 .marquee-track { animation: marqueeL 28s linear infinite; }
 
+/* ─── KDE-style scroll-widget bounce ─── */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(6px); opacity: 0.65; }
+}
+
 /* ─── Infinite column scroll (hero) ─── */
 @keyframes heroScrollUp {
   from { transform: translateY(0); }
@@ -166,4 +187,159 @@ html { scrollbar-color: #080D2B #F8F8F4; scrollbar-width: thin; }
   from { transform: translateY(-50%); }
   to   { transform: translateY(0); }
 }
+
+/* ─── Responsive section grid helpers ─────────────────────────────────────
+   These live in CSS (not inline style) so @media queries can override them.
+   ──────────────────────────────────────────────────────────────────────── */
+.section-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .section-grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 64px;
+  }
+}
+
+.section-grid-2-left {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (min-width: 1024px) {
+  .section-grid-2-left {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 80px;
+  }
+}
+
+.section-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 1024px) {
+  .section-grid-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+.section-grid-auto-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (min-width: 1024px) {
+  .section-grid-auto-1 {
+    grid-template-columns: auto 1fr;
+    gap: 80px;
+  }
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media (min-width: 1280px) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ─── Clip-reveal lines (hero headings) ──────────────────────────────────── */
+.line-wrap {
+  display: block;
+  overflow: hidden;
+  line-height: inherit;
+}
+.line-inner {
+  display: block;
+  will-change: transform;
+  transform: translateY(108%);
+}
+
+/* ─── Areas marquee — 4 copias, -25% keyframe seamless ─── */
+@keyframes areas-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
+
+/* ─── Will-change performance hints ─────────────────────────────────────── */
+.will-transform { will-change: transform; }
+.will-opacity   { will-change: opacity;   }
+
+/* ─── Perspective card depth ─────────────────────────────────────────────── */
+.perspective-card {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+.perspective-card:hover {
+  transform: perspective(1200px) rotateY(1deg) rotateX(-0.5deg);
+}
+
+/* ─── Nav scroll progress line ───────────────────────────────────────────── */
+.nav-progress {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #0057FF;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: none;
+  z-index: 10;
+}
+
+/* ─── Marquee pause on hover ─────────────────────────────────────────────── */
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ─── KDE-style floating panel nav CTA ───────────────────────────────── */
+.nav-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  font-family: var(--font-jetbrains-mono, monospace);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(8,13,43,0.85);
+  text-decoration: none;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.70);
+  white-space: nowrap;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s, color 0.25s;
+}
+.nav-cta::before { display: none; }
+.nav-cta span {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+.nav-cta:hover {
+  background: rgba(255,255,255,1);
+  border-color: rgba(255,255,255,1);
+  box-shadow: 0 0 18px rgba(255,255,255,0.18);
+  color: rgba(8,13,43,1);
+}
+
+/* ─── Nav link hover underline (kept for fallback) ────────────────────────── */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: rgba(247,245,242,0.55);
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.nav-link:hover { color: rgba(247,245,242,1); }
+.nav-link.is-active { color: rgba(247,245,242,1); }
 

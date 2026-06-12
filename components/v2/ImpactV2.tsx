@@ -1,30 +1,101 @@
 'use client'
 
-import { useRef } from 'react'
+import Image from 'next/image'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
+import { useGridGlow } from '@/lib/useGridGlow'
+import { GridGlowLayers } from '@/components/v2/GridGlowLayers'
+import { useIsMobile } from '@/lib/useIsMobile'
 
-const LABEL = 'var(--font-oswald, var(--font-inter))'
+const LABEL   = 'var(--font-oswald, var(--font-inter))'
 const DISPLAY = 'var(--font-lato, var(--font-inter))'
-const BODY = 'var(--font-inter)'
+const BODY    = 'var(--font-inter)'
+const MONO    = 'var(--font-jetbrains-mono, monospace)'
 
-const sectors = [
-  { label: 'Sector financiero', icon: '🏦' },
-  { label: 'Educación y certificaciones', icon: '🎓' },
-  { label: 'Salud y trazabilidad', icon: '🏥' },
-  { label: 'Fundaciones y ONG', icon: '🤝' },
-  { label: 'Sector público', icon: '🏛️' },
-  { label: 'Supply chain', icon: '🚚' },
-  { label: 'Recursos Humanos', icon: '👥' },
-]
+const chains = [
+  { name: 'Bitcoin',   logo: '/chains/bitcoin.png',   variant: 'dark'  },
+  { name: 'Ethereum',  logo: '/chains/ethereum.png',  variant: 'light' },
+  { name: 'Avalanche', logo: '/chains/avalanche.png', variant: 'dark'  },
+  { name: 'Stellar',   logo: '/chains/stellar.png',   variant: 'light' },
+  { name: 'Solana',    logo: '/chains/solana.png',    variant: 'dark'  },
+  { name: 'Sui',       logo: '/chains/sui.png',       variant: 'light' },
+  { name: 'ICP',       logo: '/chains/icp.png',       variant: 'dark'  },
+  { name: 'Polkadot',  logo: '/chains/polkadot.png',  variant: 'light' },
+] as const
+
+const DARK_BASE  = '0 1px 0 rgba(255,255,255,0.05) inset, 0 4px 16px rgba(8,13,43,0.22), 0 12px 32px rgba(8,13,43,0.14)'
+const DARK_HOVER = '0 1px 0 rgba(255,255,255,0.07) inset, 0 0 0 4px rgba(8,13,43,0.08), 0 8px 32px rgba(8,13,43,0.32), 0 24px 48px rgba(8,13,43,0.16)'
+const LITE_BASE  = '0 2px 8px rgba(8,13,43,0.06), 0 8px 20px rgba(8,13,43,0.04)'
+const LITE_HOVER = '0 6px 20px rgba(8,13,43,0.10), 0 16px 36px rgba(8,13,43,0.07)'
+
+function ChainPill({ name, logo, variant }: typeof chains[number]) {
+  const isDark = variant === 'dark'
+  // Stellar logo is black → only needs invert on dark pills
+  const needsInvert = name === 'Stellar' && isDark
+
+  return (
+    <div
+      style={{
+        display: 'flex', alignItems: 'center', gap: '11px',
+        padding: '10px 14px',
+        background: isDark ? 'rgba(8,13,43,0.78)' : '#FFFFFF',
+        borderRadius: '12px',
+        border: isDark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(8,13,43,0.14)',
+        backdropFilter: isDark ? 'blur(36px) saturate(1.4)' : undefined,
+        WebkitBackdropFilter: isDark ? 'blur(36px) saturate(1.4)' : undefined,
+        boxShadow: isDark ? DARK_BASE : LITE_BASE,
+        transition: 'transform 0.30s cubic-bezier(0.16,1,0.3,1), box-shadow 0.30s cubic-bezier(0.16,1,0.3,1), border-color 0.20s',
+        cursor: 'default',
+      }}
+      onMouseEnter={e => {
+        const el = e.currentTarget as HTMLDivElement
+        el.style.transform = 'translateY(-2px)'
+        el.style.boxShadow = isDark ? DARK_HOVER : LITE_HOVER
+        if (!isDark) el.style.borderColor = 'rgba(8,13,43,0.28)'
+      }}
+      onMouseLeave={e => {
+        const el = e.currentTarget as HTMLDivElement
+        el.style.transform = 'translateY(0)'
+        el.style.boxShadow = isDark ? DARK_BASE : LITE_BASE
+        if (!isDark) el.style.borderColor = 'rgba(8,13,43,0.14)'
+      }}
+    >
+      <Image
+        src={logo}
+        alt={name}
+        width={26}
+        height={26}
+        style={{
+          width: '26px', height: '26px', objectFit: 'contain', flexShrink: 0,
+          filter: needsInvert ? 'invert(1) brightness(2)' : undefined,
+        }}
+      />
+      <span style={{
+        fontFamily: MONO, fontSize: '10px',
+        color: isDark ? 'rgba(248,248,244,0.88)' : 'rgba(8,13,43,0.70)',
+        letterSpacing: '0.10em', textTransform: 'uppercase',
+        whiteSpace: 'nowrap',
+      }}>{name}</span>
+    </div>
+  )
+}
 
 export default function ImpactV2() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const { sectionRef, glowRef, gridGlowRef, handleMouseMove } = useGridGlow()
+  const isMobile = useIsMobile()
 
   useGSAP(() => {
-    gsap.from(sectionRef.current?.querySelectorAll('.reveal') || [], {
-      y: 36, opacity: 0, duration: 0.85, ease: 'power3.out', stagger: 0.09,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 76%' },
+    gsap.from('.impact-left', {
+      y: 30, opacity: 0, duration: 0.85, ease: 'expo.out',
+      scrollTrigger: { trigger: sectionRef.current, start: 'top 55%' },
+    })
+    gsap.from('.chain-pill', {
+      y: 20, opacity: 0, scale: 0.95, duration: 0.6, ease: 'expo.out', stagger: 0.07,
+      scrollTrigger: { trigger: sectionRef.current, start: 'top 50%' },
+    })
+    gsap.from('.impact-callout', {
+      y: 32, opacity: 0, duration: 0.9, ease: 'expo.out',
+      scrollTrigger: { trigger: '.impact-callout', start: 'top 88%' },
     })
   }, { scope: sectionRef })
 
@@ -32,84 +103,68 @@ export default function ImpactV2() {
     <section
       id="impacto"
       ref={sectionRef}
-      style={{ background: '#F8F8F4', padding: 'clamp(96px, 14vh, 136px) clamp(24px, 5vw, 64px)', borderTop: '1px solid rgba(8,13,43,0.06)' }}
+      onMouseMove={handleMouseMove}
+      style={{ position: 'relative', background: '#F8F8F4', padding: isMobile ? '48px 24px' : 'clamp(96px,14vh,136px) clamp(24px,5vw,64px)', overflow: 'hidden' }}
     >
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <GridGlowLayers glowRef={glowRef} gridGlowRef={gridGlowRef} />
+      <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 3, display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? '40px' : 'clamp(48px, 7vw, 96px)', alignItems: 'start' }}>
 
-        {/* Header */}
-        <div className="reveal" style={{ marginBottom: '64px' }}>
-          <p style={{ fontSize: '13px', fontFamily: LABEL, fontWeight: 500, color: '#0057FF', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '16px' }}>
-            Impacto Esperado
-          </p>
-          <h2 style={{ fontFamily: DISPLAY, fontWeight: 300, fontSize: 'clamp(36px, 5.5vw, 72px)', lineHeight: 1.05, letterSpacing: '-0.02em', color: '#080D2B' }}>
-            Transformación de industrias<br />
-            <span style={{ color: '#0057FF' }}>y sectores.</span>
+        {/* ── LEFT: h2 ── */}
+        <div className="impact-left">
+          <h2 style={{
+            fontFamily: DISPLAY, fontWeight: 300,
+            fontSize: 'clamp(30px, 4.2vw, 56px)',
+            lineHeight: 1.05, letterSpacing: '-0.025em',
+            color: '#080D2B',
+          }}>
+            Blockchain no es una<br />
+            tendencia. Es una nueva<br />
+            <span style={{ color: '#0057FF' }}>infraestructura de confianza.</span>
           </h2>
         </div>
 
-        {/* Stats row */}
-        <div className="reveal" style={{
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px',
-          background: 'rgba(8,13,43,0.08)', borderRadius: '20px', overflow: 'hidden',
-          marginBottom: '56px',
-        }}>
-          {[
-            { val: '7', label: 'Áreas estratégicas', sub: 'de aplicación' },
-            { val: '2+', label: 'Proyectos activos', sub: 'en producción' },
-            { val: 'UAI', label: 'Respaldo académico', sub: 'Universidad Adolfo Ibáñez' },
-          ].map(({ val, label, sub }) => (
-            <div key={val} style={{
-              background: '#FFFFFF',
-              padding: 'clamp(32px, 5vw, 56px) clamp(24px, 4vw, 40px)',
-              textAlign: 'center',
-            }}>
-              <p style={{ fontFamily: DISPLAY, fontWeight: 900, fontSize: 'clamp(48px, 7vw, 88px)', color: '#0057FF', lineHeight: 1, marginBottom: '8px' }}>{val}</p>
-              <p style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: '16px', color: '#080D2B', marginBottom: '4px' }}>{label}</p>
-              <p style={{ fontFamily: BODY, fontSize: '13px', color: 'rgba(8,13,43,0.45)' }}>{sub}</p>
-            </div>
-          ))}
-        </div>
+        {/* ── RIGHT: chain pills + CTA ── */}
+        <div>
+          <p style={{
+            fontSize: '10px', fontFamily: MONO, fontWeight: 500,
+            color: 'rgba(8,13,43,0.35)', letterSpacing: '0.14em',
+            textTransform: 'uppercase', marginBottom: '16px',
+          }}>Experiencia en</p>
 
-        {/* Sector pills */}
-        <div className="reveal">
-          <p style={{ fontSize: '13px', fontFamily: LABEL, fontWeight: 500, color: 'rgba(8,13,43,0.45)', letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '24px' }}>
-            Sectores de aplicación
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-            {sectors.map(({ label, icon }) => (
-              <div
-                key={label}
-                style={{
-                  display: 'flex', alignItems: 'center', gap: '10px',
-                  padding: '12px 20px',
-                  background: '#FFFFFF',
-                  border: '1px solid rgba(8,13,43,0.09)',
-                  borderRadius: '100px',
-                  fontSize: '14px',
-                  fontFamily: BODY,
-                  color: '#080D2B',
-                  transition: 'border-color 0.2s, box-shadow 0.2s, transform 0.15s',
-                  cursor: 'default',
-                }}
-                onMouseEnter={e => {
-                  const el = e.currentTarget as HTMLDivElement
-                  el.style.borderColor = 'rgba(0,87,255,0.3)'
-                  el.style.boxShadow = '0 4px 16px rgba(0,87,255,0.06)'
-                  el.style.transform = 'translateY(-1px)'
-                }}
-                onMouseLeave={e => {
-                  const el = e.currentTarget as HTMLDivElement
-                  el.style.borderColor = 'rgba(8,13,43,0.09)'
-                  el.style.boxShadow = 'none'
-                  el.style.transform = 'translateY(0)'
-                }}
-              >
-                <span style={{ fontSize: '16px' }}>{icon}</span>
-                {label}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+            {chains.map(c => (
+              <div key={c.name} className="chain-pill">
+                <ChainPill {...c} />
               </div>
             ))}
           </div>
+
+          <div className="impact-callout" style={{ marginTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+            <a
+              href="#"
+              onMouseEnter={e => {
+                const el = e.currentTarget as HTMLAnchorElement
+                el.style.color = '#0057FF'
+                el.style.letterSpacing = '0.18em'
+              }}
+              onMouseLeave={e => {
+                const el = e.currentTarget as HTMLAnchorElement
+                el.style.color = 'rgba(8,13,43,0.40)'
+                el.style.letterSpacing = '0.14em'
+              }}
+              style={{
+                fontFamily: MONO, fontSize: '10px', fontWeight: 500,
+                color: 'rgba(8,13,43,0.40)',
+                letterSpacing: '0.14em', textTransform: 'uppercase',
+                textDecoration: 'none',
+                transition: 'color 0.25s ease, letter-spacing 0.35s cubic-bezier(0.16,1,0.3,1)',
+              }}
+            >
+              Lee nuestro blog →
+            </a>
+          </div>
         </div>
+
       </div>
     </section>
   )
