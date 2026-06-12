@@ -2,8 +2,8 @@ import type { RefObject } from 'react'
 
 interface Props {
   dark?: boolean
-  glowRef: RefObject<HTMLDivElement>
-  gridGlowRef: RefObject<HTMLDivElement>
+  glowRef: RefObject<HTMLDivElement | null>
+  gridGlowRef: RefObject<HTMLDivElement | null>
 }
 
 export function GridGlowLayers({ dark = false, glowRef, gridGlowRef }: Props) {
