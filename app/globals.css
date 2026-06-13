@@ -126,6 +126,20 @@ html { scrollbar-width: none; }
 /* El spacer que envuelve la sección blockchain (dark) debe ser dark también */
 .gsap-pin-spacer:has(#blockchain) { background: #080D2B; }
 
+/* paddingTop/Bottom fuera del inline style para que GSAP revertOnUpdate no los sobreescriba.
+   Cuando GSAP crea el pin con isMobile=false captura el paddingTop del primer render y lo
+   restaura en revert, pisando el valor correcto que React ya había aplicado. */
+#blockchain {
+  padding-top: clamp(80px, calc(50vh - 230px), 360px);
+  padding-bottom: 0;
+}
+@media (max-width: 767px) {
+  #blockchain {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+}
+
 /* ─── Desktop nav: force hidden on mobile (GSAP can override display:none) ─── */
 @media (max-width: 767px) {
   nav.hidden { display: none !important; }

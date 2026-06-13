@@ -202,10 +202,10 @@ export default function BlockchainV2() {
         overflow:    'hidden',
         /* Mobile: auto height (no pin) so content never clips or collapses.
            Desktop: fixed 100vh is required for the GSAP pin to work correctly. */
-        height:      isMobile ? 'auto' : '100vh',
-        minHeight:   isMobile ? '100svh' : '600px',
-        paddingTop:  isMobile ? '48px' : 'clamp(80px, calc(50vh - 230px), 360px)',
-        paddingBottom: isMobile ? '56px' : undefined,
+        height:    isMobile ? 'auto' : '100vh',
+        minHeight: isMobile ? '100svh' : '600px',
+        /* paddingTop/Bottom se controlan en globals.css #blockchain para evitar
+           que GSAP revertOnUpdate restaure el valor del primer render (desktop) */
       }}
     >
       <GridGlowLayers dark glowRef={glowRef} gridGlowRef={gridGlowRef} />
