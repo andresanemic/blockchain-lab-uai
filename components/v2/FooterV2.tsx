@@ -14,11 +14,11 @@ const LABEL   = 'var(--font-oswald, var(--font-inter))'
 const MONO    = 'var(--font-jetbrains-mono, monospace)'
 
 const navLinks = [
-  { label: 'Nosotros',            href: '#' },
-  { label: 'Certificados',        href: '#' },
+  { label: 'Nosotros',             href: '#' },
+  { label: 'TIM',                  href: '#' },
+  { label: 'Certificados',         href: '#' },
   { label: 'Validación de videos', href: '#' },
-  { label: 'Blog',                href: '#' },
-  { label: 'LinkedIn',            href: '#' },
+  { label: 'Blog',                 href: '#' },
 ]
 
 const SUBTITLE = 'Empresas, fundaciones e instituciones - co-crea soluciones reales con el Blockchain Lab UAI'

@@ -68,7 +68,7 @@ export default function AboutV2() {
       id="nosotros"
       ref={sectionRef}
       onMouseMove={handleMouseMove}
-      style={{ position: 'relative', background: '#F8F8F4', padding: isMobile ? '48px 24px 40px' : 'clamp(96px, 14vh, 136px) clamp(24px, 5vw, 64px) clamp(160px, 28vh, 280px)', overflow: 'hidden', scrollMarginTop: '80px' }}
+      style={{ position: 'relative', background: '#F8F8F4', padding: isMobile ? '48px 24px 80px' : 'clamp(96px, 14vh, 136px) clamp(24px, 5vw, 64px) clamp(160px, 28vh, 280px)', overflow: 'hidden', scrollMarginTop: '80px' }}
     >
       <GridGlowLayers glowRef={glowRef} gridGlowRef={gridGlowRef} />
       <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 3 }}>
