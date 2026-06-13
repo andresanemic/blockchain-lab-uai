@@ -87,11 +87,11 @@ export default function ImpactV2() {
   useGSAP(() => {
     gsap.from('.impact-left', {
       y: 30, opacity: 0, duration: 0.85, ease: 'expo.out',
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 55%' },
+      scrollTrigger: { trigger: sectionRef.current, start: 'top 90%' },
     })
     gsap.from('.chain-pill', {
       y: 20, opacity: 0, scale: 0.95, duration: 0.6, ease: 'expo.out', stagger: 0.07,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 50%' },
+      scrollTrigger: { trigger: sectionRef.current, start: 'top 88%' },
     })
     gsap.from('.impact-callout', {
       y: 32, opacity: 0, duration: 0.9, ease: 'expo.out',
@@ -117,9 +117,11 @@ export default function ImpactV2() {
             lineHeight: 1.05, letterSpacing: '-0.025em',
             color: '#080D2B',
           }}>
-            Blockchain no es una<br />
-            tendencia. Es una nueva<br />
-            <span style={{ color: '#0057FF' }}>infraestructura de confianza.</span>
+            {isMobile ? (
+              <>Blockchain no es una tendencia. Es una nueva <span style={{ color: '#0057FF' }}>infraestructura de confianza.</span></>
+            ) : (
+              <>Blockchain no es una<br />tendencia. Es una nueva<br /><span style={{ color: '#0057FF' }}>infraestructura de confianza.</span></>
+            )}
           </h2>
         </div>
 

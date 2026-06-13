@@ -393,8 +393,11 @@ export default function ProcessV2() {
           color: '#080D2B',
           marginBottom: 'clamp(40px, 6vh, 64px)',
         }}>
-          Cómo llevamos tu<br />
-          idea a <span style={{ color: '#0057FF' }}>producción.</span>
+          {isMobile ? (
+            <>Cómo llevamos tu idea a <span style={{ color: '#0057FF' }}>producción.</span></>
+          ) : (
+            <>Cómo llevamos tu<br />idea a <span style={{ color: '#0057FF' }}>producción.</span></>
+          )}
         </h2>
 
         {/* Artifact */}
@@ -403,10 +406,11 @@ export default function ProcessV2() {
           style={{
             borderRadius: '20px',
             overflow: 'hidden',
+            background: '#FFFFFF',
             border: '1px solid rgba(8,13,43,0.10)',
             boxShadow: '0 4px 24px rgba(8,13,43,0.10), 0 16px 56px rgba(8,13,43,0.16), 0 40px 80px rgba(8,13,43,0.12), 0 0 0 1px rgba(8,13,43,0.06)',
             display: 'flex', flexDirection: 'column',
-            height: isMobile ? 'auto' : 'clamp(480px, 60vh, 600px)',
+            height: isMobile ? '400px' : 'clamp(480px, 60vh, 600px)',
             maxWidth: '1100px', margin: '0 auto',
             marginBottom: 'clamp(24px, 3.5vh, 36px)',
           }}
@@ -433,24 +437,26 @@ export default function ProcessV2() {
           </div>
 
           {/* Body */}
-          <div style={{ display: 'flex', flex: isMobile ? undefined : 1, overflow: isMobile ? 'visible' : 'hidden', flexDirection: isMobile ? 'column' : 'row' }}>
+          <div style={{ display: 'flex', flex: 1, overflow: 'hidden', flexDirection: isMobile ? 'column' : 'row' }}>
 
             {/* LEFT — step narrative */}
             <div style={{
-              width: isMobile ? '100%' : '42%', flexShrink: 0,
+              width: isMobile ? '100%' : '42%',
+              flexGrow: isMobile ? 1 : 0,
+              flexShrink: 0,
               background: '#FFFFFF',
               borderRight: isMobile ? 'none' : '1px solid rgba(8,13,43,0.07)',
               borderBottom: isMobile ? '1px solid rgba(8,13,43,0.07)' : 'none',
               paddingTop: isMobile ? '24px' : 'clamp(24px, 3.5vw, 40px)',
-              paddingBottom: isMobile ? '24px' : 'clamp(24px, 3.5vw, 40px)',
+              paddingBottom: isMobile ? '20px' : 'clamp(24px, 3.5vw, 40px)',
               paddingLeft: 'clamp(24px, 3vw, 36px)',
               paddingRight: isMobile ? 'clamp(24px, 3vw, 36px)' : 'clamp(48px, 6vw, 80px)',
               display: 'flex', flexDirection: 'column',
               overflow: 'hidden',
             }}>
-              <div ref={leftContentRef} style={{ display: 'flex', flexDirection: 'column', height: isMobile ? 'auto' : '100%' }}>
+              <div ref={leftContentRef} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 {/* Top spacer — desktop only */}
-                <div style={{ flex: isMobile ? undefined : '0 0 13%' }} />
+                {!isMobile && <div style={{ flex: '0 0 13%' }} />}
                 <div>
                   <span style={{
                     display: 'inline-block',
@@ -471,11 +477,11 @@ export default function ProcessV2() {
                       color: '#080D2B', margin: 0,
                     }}>{step.title}</h3>
                   </div>
-                  <p style={{ fontFamily: BODY, fontSize: '13.5px', color: 'rgba(8,13,43,0.55)', lineHeight: 1.70, marginBottom: 0 }}>{step.desc}</p>
+                  <p style={{ fontFamily: BODY, fontSize: isMobile ? '12px' : '13.5px', color: 'rgba(8,13,43,0.55)', lineHeight: 1.65, marginBottom: 0 }}>{step.desc}</p>
                 </div>
-                {!isMobile && <div style={{ flex: 1 }} />}
+                <div style={{ flex: 1 }} />
                 {/* Navigation */}
-                <div style={{ display: 'flex', gap: '8px', marginTop: isMobile ? '24px' : undefined }}>
+                <div style={{ display: 'flex', gap: '8px' }}>
                   <button onClick={() => goTo(displayed - 1)} disabled={displayed === 0} style={{ fontFamily: MONO, fontSize: '10px', letterSpacing: '0.10em', textTransform: 'uppercase', padding: '6px 14px', borderRadius: '4px', cursor: displayed === 0 ? 'default' : 'pointer', border: `1px solid ${displayed === 0 ? 'rgba(8,13,43,0.09)' : 'rgba(8,13,43,0.20)'}`, background: 'transparent', color: displayed === 0 ? 'rgba(8,13,43,0.20)' : 'rgba(8,13,43,0.55)', transition: 'all 0.20s' }}>←</button>
                   <button onClick={() => goTo(displayed + 1)} disabled={displayed === steps.length - 1} style={{ fontFamily: MONO, fontSize: '10px', letterSpacing: '0.10em', textTransform: 'uppercase', padding: '6px 14px', borderRadius: '4px', cursor: displayed === steps.length - 1 ? 'default' : 'pointer', border: `1px solid ${displayed === steps.length - 1 ? 'rgba(8,13,43,0.09)' : 'rgba(0,87,255,0.30)'}`, background: displayed === steps.length - 1 ? 'transparent' : 'rgba(0,87,255,0.05)', color: displayed === steps.length - 1 ? 'rgba(8,13,43,0.20)' : '#0057FF', transition: 'all 0.20s' }}>→</button>
                 </div>

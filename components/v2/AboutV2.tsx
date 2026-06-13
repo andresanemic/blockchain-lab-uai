@@ -17,7 +17,7 @@ export default function AboutV2() {
   const isMobile = useIsMobile()
 
   useGSAP(() => {
-    const st = { trigger: sectionRef.current, start: 'top 65%' }
+    const st = { trigger: sectionRef.current, start: 'top 82%' }
 
     // h2 reveal
     gsap.from('.about-h2', {

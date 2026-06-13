@@ -74,15 +74,11 @@ export default function AreasV2() {
 
         {/* Meta row */}
         <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '0 clamp(24px, 5vw, 64px)',
           marginBottom: '20px',
         }}>
           <span style={{ fontFamily: MONO, fontSize: '14px', color: 'rgba(248,248,244,0.50)', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
             Áreas de trabajo
-          </span>
-          <span style={{ fontFamily: MONO, fontSize: '14px', color: 'rgba(248,248,244,0.50)', letterSpacing: '0.10em' }}>
-            07 / estratégicas
           </span>
         </div>
 
@@ -96,13 +92,14 @@ export default function AreasV2() {
               <div
                 key={area.num}
                 className="area-row"
-                onMouseEnter={() => setHovered(i)}
-                onMouseLeave={() => setHovered(null)}
+                onMouseEnter={() => !isMobile && setHovered(i)}
+                onMouseLeave={() => !isMobile && setHovered(null)}
+                onClick={() => isMobile && setHovered(prev => prev === i ? null : i)}
                 style={{
                   position: 'relative',
                   padding: `0 clamp(24px, 5vw, 64px)`,
                   opacity: isDimmed ? 0.28 : 1,
-                  cursor: 'default',
+                  cursor: isMobile ? 'pointer' : 'default',
                   boxShadow: isActive ? 'inset 3px 0 0 #60A0FF' : 'inset 3px 0 0 transparent',
                   transition: 'opacity 0.4s ease, box-shadow 0.3s ease',
                 }}
@@ -110,11 +107,9 @@ export default function AreasV2() {
                 <div style={{
                   display: 'grid',
                   gridTemplateColumns: isMobile ? '40px 1fr' : '64px 1fr auto',
-                  alignItems: 'center',
+                  alignItems: 'start',
                   gap: isMobile ? '0 16px' : '0 32px',
-                  /* Fixed padding — bottom reserves space for absolute description.
-                     Section height never changes, so background stays still. */
-                  padding: '14px 0 36px',
+                  padding: isMobile ? '14px 0' : '14px 0 36px',
                 }}>
                   {/* Index */}
                   <span style={{
@@ -122,9 +117,10 @@ export default function AreasV2() {
                     color: isActive ? '#60A0FF' : 'rgba(248,248,244,0.38)',
                     transition: 'color 0.3s',
                     display: 'block', lineHeight: 1,
+                    paddingTop: '3px',
                   }}>{area.num}</span>
 
-                  {/* Title */}
+                  {/* Title + description */}
                   <div>
                     <p style={{
                       fontFamily: DISPLAY, fontWeight: 400,
@@ -136,20 +132,36 @@ export default function AreasV2() {
                       transition: 'color 0.3s, transform 0.5s cubic-bezier(0.16,1,0.3,1)',
                     }}>{area.title}</p>
 
-                    {/* Description: absolute so it doesn't affect layout height */}
-                    <p style={{
-                      position: 'absolute',
-                      bottom: '8px',
-                      left: `calc(clamp(24px, 5vw, 64px) + 64px + 32px)`,
-                      right: `clamp(24px, 5vw, 64px)`,
-                      fontFamily: BODY, fontSize: '12.5px',
-                      color: 'rgba(248,248,244,0.55)', lineHeight: 1.6,
-                      margin: 0,
-                      opacity: isActive ? 1 : 0,
-                      transform: isActive ? 'translateX(10px)' : 'translateX(0)',
-                      transition: 'opacity 0.3s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1)',
-                      pointerEvents: 'none',
-                    }}>{area.desc}</p>
+                    {/* Description: inline on mobile (no overlap), absolute on desktop */}
+                    {isMobile ? (
+                      <div style={{
+                        overflow: 'hidden',
+                        maxHeight: isActive ? '60px' : '0',
+                        opacity: isActive ? 1 : 0,
+                        marginTop: isActive ? '6px' : '0',
+                        transition: 'max-height 0.35s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease, margin-top 0.3s ease',
+                      }}>
+                        <p style={{
+                          fontFamily: BODY, fontSize: '12px',
+                          color: 'rgba(248,248,244,0.55)', lineHeight: 1.55,
+                          margin: 0,
+                        }}>{area.desc}</p>
+                      </div>
+                    ) : (
+                      <p style={{
+                        position: 'absolute',
+                        bottom: '8px',
+                        left: `calc(clamp(24px, 5vw, 64px) + 96px)`,
+                        right: `clamp(24px, 5vw, 64px)`,
+                        fontFamily: BODY, fontSize: '12.5px',
+                        color: 'rgba(248,248,244,0.55)', lineHeight: 1.6,
+                        margin: 0,
+                        opacity: isActive ? 1 : 0,
+                        transform: isActive ? 'translateX(10px)' : 'translateX(0)',
+                        transition: 'opacity 0.3s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1)',
+                        pointerEvents: 'none',
+                      }}>{area.desc}</p>
+                    )}
                   </div>
 
                   {/* Tag — hidden on mobile (col removed from grid) */}

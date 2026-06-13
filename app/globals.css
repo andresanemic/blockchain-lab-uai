@@ -96,7 +96,10 @@
 }
 
 html {
-  /* Lenis overrides scroll-behavior */
+  overflow-x: hidden; /* prevent horizontal drift on mobile */
+}
+body {
+  overflow-x: hidden;
 }
 
 @layer base {

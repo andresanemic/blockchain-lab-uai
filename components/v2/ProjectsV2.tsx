@@ -88,7 +88,7 @@ const projects = [
 
 /* ── Card ───────────────────────────────────────────────────────────── */
 
-function ProjectCard({ project }: { project: typeof projects[number] }) {
+function ProjectCard({ project, isMobile }: { project: typeof projects[number]; isMobile: boolean }) {
   const [hovered, setHovered] = useState(false)
   const { dark, feature } = project
 
@@ -107,9 +107,11 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
     ? '0 20px 56px rgba(0,0,0,0.30), 0 8px 24px rgba(0,0,0,0.18)'
     : '0 20px 56px rgba(8,13,43,0.10), 0 8px 24px rgba(8,13,43,0.06)'
 
-  const pad     = feature ? 'clamp(28px, 3.5vw, 48px)' : 'clamp(20px, 2.5vw, 32px)'
-  const iconSz  = feature ? 180 : 40
-  const titleSz = feature ? 'clamp(22px, 2.8vw, 40px)' : 'clamp(15px, 1.7vw, 22px)'
+  // On mobile all cards share the same compact layout regardless of feature flag
+  const isFeatureLayout = feature && !isMobile
+  const pad     = isFeatureLayout ? 'clamp(28px, 3.5vw, 48px)' : 'clamp(20px, 2.5vw, 32px)'
+  const iconSz  = isFeatureLayout ? 180 : 40
+  const titleSz = isFeatureLayout ? 'clamp(22px, 2.8vw, 40px)' : 'clamp(15px, 1.7vw, 22px)'
 
   return (
     <div
@@ -126,8 +128,8 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
         cursor: 'pointer',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: feature ? 'flex-start' : 'space-between',
-        gap: feature ? 'clamp(28px, 5vh, 56px)' : '0',
+        justifyContent: isFeatureLayout ? 'flex-start' : 'space-between',
+        gap: isFeatureLayout ? 'clamp(28px, 5vh, 56px)' : '0',
         padding: pad,
         boxShadow: hovered ? shadowHover : shadowBase,
         transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
@@ -257,18 +259,18 @@ export default function ProjectsV2() {
         minHeight: isMobile ? 'auto' : 'clamp(460px, 60vh, 640px)',
       }}>
         {/* 01 TIM */}
-        <div style={isMobile ? { height: '320px' } : { gridColumn: '1', gridRow: '1 / 3' }}>
-          <ProjectCard project={projects[0]} />
+        <div style={isMobile ? { height: '200px' } : { gridColumn: '1', gridRow: '1 / 3' }}>
+          <ProjectCard project={projects[0]} isMobile={isMobile} />
         </div>
 
         {/* 02 Certificados */}
         <div style={isMobile ? { height: '200px' } : { gridColumn: '2', gridRow: '1' }}>
-          <ProjectCard project={projects[1]} />
+          <ProjectCard project={projects[1]} isMobile={isMobile} />
         </div>
 
         {/* 03 Video */}
         <div style={isMobile ? { height: '200px' } : { gridColumn: '2', gridRow: '2' }}>
-          <ProjectCard project={projects[2]} />
+          <ProjectCard project={projects[2]} isMobile={isMobile} />
         </div>
       </div>
 

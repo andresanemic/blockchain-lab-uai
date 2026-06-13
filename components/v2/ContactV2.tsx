@@ -69,7 +69,7 @@ export default function ContactV2() {
       {
         y: '0%', opacity: 1, filter: 'blur(0px)',
         duration: 1.25, ease: 'expo.out', stagger: 0.10,
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 92%' },
       }
     )
   }, { scope: sectionRef })

@@ -1816,6 +1816,330 @@ gsap.to(overlay, {
 
 ---
 
+## Problema 31: Deriva horizontal — el sitio se desplaza lateralmente en móvil
+
+### Síntoma
+En dispositivos móviles, el sitio tiene un pequeño scroll horizontal. Al hacer swipe lateral con el dedo, el contenido se desplaza unos píxeles a la derecha revelando un margen blanco, y al soltar vuelve. En algunos casos el desplazamiento queda "fijo" y el layout aparece cortado.
+
+### Causa
+Algún elemento tiene un ancho ligeramente superior al viewport o un `margin` / `padding` negativo que empuja el contenido fuera de los límites. En este proyecto la fuente principal es la grilla de fondo con `backgroundAttachment: fixed` más los gradients de glow que se calculan respecto al viewport — en ciertos viewpoints móviles el elemento con `position: absolute; inset: 0` puede provocar un overflow implícito de 1–2px.
+
+### Solución: `overflow-x: hidden` en `html` y `body`
+
+```css
+/* globals.css */
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
+```
+
+**Por qué en ambos**: si solo se aplica en `body`, el scroll horizontal puede seguir siendo gestionable en el `html`. Poner ambos garantiza que cualquier overflow lateral quede bloqueado a nivel de raíz, independientemente de qué elemento lo cause.
+
+**Efectos secundarios**: ninguno en este proyecto. `overflow-x: hidden` en `html`/`body` no afecta el scroll vertical ni el smooth scroll de Lenis.
+
+---
+
+## Problema 32: GSAP pin en móvil — flash blanco, colapso de sección y layout roto (BlockchainV2)
+
+### Síntoma
+En móvil, la sección `BlockchainV2` muestra tres bugs simultáneos:
+1. **Flash blanco** al hacer scroll rápido hacia la sección — una franja blanca aparece durante ~150ms antes de que la sección se estabilice.
+2. **Sección "aplastada"** — al terminar el pin, la sección aparece colapsada a ~0px de altura y desaparece del flujo.
+3. **Layout inclinado** — el contenido se desalinea verticalmente y aparece fuera de su posición natural durante el scroll.
+
+### Causa
+`pin: true` de GSAP ScrollTrigger crea un `<div class="gsap-pin-spacer">` para reservar el espacio de la sección mientras está fijada. En móvil, donde la sección tiene `height: 100vh` y el pin dura `2 × 100vh`, el spacer crea 200vh de espacio extra en el flujo — el triple de lo que el usuario espera ver. Al terminar el pin, GSAP intenta restablecer el layout y el espaciado queda inconsistente, produciendo el "aplastamiento". El flash surge porque el spacer hereda el fondo del body (cream) durante el frame de transición al modo pin.
+
+### Solución: deshabilitar el pin completamente en móvil
+
+```tsx
+// BlockchainV2.tsx — dentro de useGSAP
+useGSAP(() => {
+  const triggerStart = isMobile ? 'top 88%' : 'top 80%'
+
+  // El pin solo se activa en desktop
+  if (!isMobile) {
+    gsap.to({}, {
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        pin: true,
+        anticipatePin: 1,
+        start: 'top top',
+        end: () => `+=${window.innerHeight * PIN_MULT}`,
+        scrub: 1.2,
+        onUpdate: (self) => { /* timeline scrub logic */ },
+      },
+    })
+  }
+
+  // Animaciones de entrada — independientes del pin
+  gsap.fromTo('.bc-h2-line', ...)
+}, { scope: sectionRef, dependencies: [isMobile], revertOnUpdate: true })
+```
+
+Y en el JSX de la sección:
+```tsx
+<section style={{
+  height: isMobile ? 'auto' : '100vh',
+  minHeight: isMobile ? '100svh' : '600px',
+  paddingBottom: isMobile ? '56px' : undefined,
+}}>
+```
+
+En móvil la sección fluye normalmente como `height: auto`. Los dots del timeline siguen siendo clickeables pero llaman `activateStep(idx)` directamente sin `lenis.scrollTo` (no hay posición de scroll que calcular en un layout de flujo).
+
+### Regla general
+> Nunca mantener `pin: true` en secciones que muestran contenido en una sola columna en móvil. El pin asume que la sección tiene suficiente anchura y altura para que el efecto tenga sentido — en móvil esto rara vez se cumple. Desactivar con `if (!isMobile)` y asegurarse de que `useGSAP` tiene `dependencies: [isMobile], revertOnUpdate: true`.
+
+---
+
+## Problema 33: Descripción de área en AreasV2 se superpone al contenido en móvil
+
+### Síntoma
+Al tocar una fila en AreasV2 (móvil), la descripción aparece pero se superpone sobre las filas siguientes, tapándolas. El layout se ve como si la descripción "flotara" encima del contenido en lugar de empujar las filas hacia abajo.
+
+### Causa
+La descripción usa `position: absolute` con `left` calculado en función de las columnas del grid desktop (`calc(clamp(24px, 5vw, 64px) + 96px)`). En móvil, ese cálculo produce un `left` que coloca la descripción fuera del flujo normal. Al estar `absolute`, no empuja a las filas vecinas — las superpone.
+
+### Solución: descripción inline en móvil (accordion), absoluta solo en desktop
+
+```tsx
+// AreasV2.tsx — descripción condicional según isMobile
+{/* Mobile: inline accordion con maxHeight transition */}
+{isMobile && hovered === i && (
+  <div style={{
+    maxHeight: hovered === i ? '200px' : '0',
+    overflow: 'hidden',
+    transition: 'max-height 0.35s cubic-bezier(0.16,1,0.3,1)',
+    paddingBottom: hovered === i ? '12px' : '0',
+  }}>
+    <p style={{ fontSize: '13px', color: 'rgba(248,248,244,0.62)', lineHeight: 1.6 }}>
+      {step.desc}
+    </p>
+  </div>
+)}
+
+{/* Desktop: absolute fuera del flujo */}
+{!isMobile && hovered === i && (
+  <p style={{
+    position: 'absolute',
+    left: 'calc(clamp(24px, 5vw, 64px) + 96px)',
+    top: '50%', transform: 'translateY(-50%)',
+    ...
+  }}>
+    {step.desc}
+  </p>
+)}
+```
+
+La fila en móvil también usa `onClick` para toggle en lugar de `onMouseEnter`:
+```tsx
+onClick={() => isMobile && setHovered(prev => prev === i ? null : i)}
+onMouseEnter={() => !isMobile && setHovered(i)}
+onMouseLeave={() => !isMobile && setHovered(null)}
+```
+
+---
+
+## Problema 34: H2 de ProcessV2 rompe mal en móvil — "producción." queda sola en una línea
+
+### Síntoma
+El H2 de `ProcessV2` ("Cómo llevamos tu / idea a / producción.") usa `<br/>` manuales para controlar los saltos de línea en desktop. En móvil, la primera línea ("Cómo llevamos tu") ya es suficientemente larga para llenar el viewport, haciendo que "producción." quede sola en una cuarta línea — visualmente desbalanceado.
+
+### Causa
+Los `<br/>` manuales son fijos: no responden al viewport. En desktop el H2 es `clamp(44px, 6.5vw, 88px)` en una columna amplia. En móvil el mismo texto en una sola columna angosta genera líneas de distinta longitud.
+
+### Solución: JSX condicional con isMobile
+
+```tsx
+<h2>
+  {isMobile ? (
+    <>Cómo llevamos tu idea a <span>producción.</span></>
+  ) : (
+    <>Cómo llevamos tu<br />idea a <span>producción.</span></>
+  )}
+</h2>
+```
+
+En móvil el browser hace el word-wrap automáticamente según el ancho disponible, produciendo siempre un resultado visualmente balanceado.
+
+---
+
+## Problema 35: Artefacto de ProcessV2 transparente en la parte inferior + botones no al fondo
+
+### Síntoma (dos bugs juntos)
+1. El artefacto del procesador de pasos tiene la parte inferior transparente en móvil — el fondo cream de la sección se ve a través del panel izquierdo.
+2. Los botones de navegación (← →) no están pegados al fondo del artefacto — flotan en el medio del panel.
+
+### Causa
+Dos causas independientes que se manifiestan juntas:
+
+**Causa A (transparencia):** El artefacto (`display: flex; flexDirection: column`) no tenía `background` definido — heredaba `transparent`. El panel izquierdo (`flexGrow: 0`) solo tenía el alto de su contenido, dejando el espacio restante vacío y transparente.
+
+**Causa B (botones flotantes):** El spacer flex (`flex: 1`) entre la descripción del paso y los botones necesita un contenedor padre con altura definida para expandirse. Sin `flexGrow` en el panel izquierdo, el spacer no tiene referencia de altura y no empuja los botones al fondo.
+
+### Solución
+
+```tsx
+// 1. Background en el artefacto
+<div style={{
+  background: '#FFFFFF',    // ← evita que el fondo cream traspase
+  display: 'flex',
+  flexDirection: 'column',
+  height: isMobile ? '400px' : 'clamp(480px, 60vh, 600px)',
+  borderRadius: '20px',
+  overflow: 'hidden',
+}}>
+
+// 2. Panel izquierdo con flexGrow en móvil
+<div style={{
+  flexGrow: isMobile ? 1 : 0,   // ← en móvil, ocupa toda la altura disponible
+  flexShrink: 0,                // ← NO usar shorthand 'flex' (ver Problema 36)
+  display: 'flex',
+  flexDirection: 'column',
+}}>
+  {/* Contenido + spacer + botones */}
+  <div style={{ flex: 1 }} />   {/* spacer que empuja botones al fondo */}
+  <div>{/* botones ← → */}</div>
+</div>
+```
+
+---
+
+## Problema 36: Conflicto React entre propiedad shorthand `flex` y longhand `flexShrink`
+
+### Síntoma
+En la consola del navegador aparece:
+
+```
+Warning: Updating a style property during rerender (flex) when a conflicting property is
+set (flexShrink) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand
+properties for the same value; instead, replace the shorthand with separate values.
+```
+
+El componente que causa el warning mezcla en el mismo elemento:
+```tsx
+style={{
+  flex: isMobile ? 1 : undefined,  // shorthand
+  flexShrink: 0,                    // longhand del mismo shorthand
+}}
+```
+
+### Causa
+`flex` es un shorthand que engloba `flexGrow`, `flexShrink` y `flexBasis`. Cuando React reconcilia el style durante un re-render, detecta que `flex` y `flexShrink` controlan la misma propiedad y genera el warning — el comportamiento puede ser indefinido dependiendo del orden de aplicación.
+
+### Solución: usar solo longhands, nunca mezclar
+
+```tsx
+// ❌ Mezcla shorthand + longhand → warning de React
+style={{
+  flex: isMobile ? 1 : undefined,
+  flexShrink: 0,
+}}
+
+// ✅ Solo longhands — sin conflicto
+style={{
+  flexGrow: isMobile ? 1 : 0,   // equivalente a flex: 1 / flex: 0
+  flexShrink: 0,
+  flexBasis: 'auto',             // si se necesita
+}}
+```
+
+### Regla general
+> En objetos `style` de React, nunca combinar `flex` (shorthand) con `flexGrow`, `flexShrink` o `flexBasis` (longhands) en el mismo elemento. Usar siempre los tres longhands o el shorthand solo, nunca los dos.
+
+---
+
+## Problema 37: Card "feature" (TIM) tiene ícono y tipografía más grandes que las otras cards en móvil
+
+### Síntoma
+En la rejilla de proyectos (`ProjectsV2`), la card de TIM tiene un ícono de 180px mientras las otras tienen 40px. En desktop esto es intencional — TIM es la feature card. En móvil las cards están apiladas en columna con la misma altura y el ícono gigante ocupa casi toda la card, empujando el texto hacia el borde inferior.
+
+### Causa
+El tamaño del ícono, la tipografía y el layout se determinaban con la flag `feature` (booleano estático del prop). Esta flag es `true` para TIM independientemente del viewport.
+
+```tsx
+// ❌ Antes — ícono siempre 180px para la feature card
+const iconSz = feature ? 180 : 40
+```
+
+### Solución: patrón `isFeatureLayout`
+
+```tsx
+// ✅ Solo es "feature layout" en desktop
+const isFeatureLayout = feature && !isMobile
+
+const iconSz    = isFeatureLayout ? 180 : 40
+const titleSz   = isFeatureLayout ? 'clamp(22px, 2.4vw, 34px)' : '17px'
+const pad       = isFeatureLayout ? '32px 36px' : '20px 24px'
+const gap       = isFeatureLayout ? '24px' : '12px'
+const justify   = isFeatureLayout ? 'flex-end' : 'flex-start'
+```
+
+En móvil, todas las cards se tratan igual: ícono 40px, tipografía 17px, padding uniforme. La card de TIM sigue siendo visualmente distinta por su posición (primera) y altura (200px vs las otras).
+
+---
+
+## Problema 38: Animaciones de entrada se disparan cuando el elemento ya pasó por pantalla en móvil
+
+### Síntoma
+En móvil, varias secciones ya son visibles en pantalla pero sus animaciones de entrada todavía no han disparado. El usuario ve el contenido estático (sin animar) mientras hace scroll, y la animación se dispara tarde — cuando el elemento ya lleva un rato visible.
+
+### Causa
+Los scroll triggers estaban configurados con `start: 'top 65–75%'` — es decir, "dispara cuando el top del elemento llegue al 65–75% desde arriba del viewport". En desktop (viewport alto) ese porcentaje corresponde a que el elemento ya entró bastante en pantalla antes de animar. En móvil (viewport más corto), ese mismo porcentaje se alcanza cuando el elemento ya está completamente visible, haciendo que la animación llegue tarde o nunca.
+
+### Solución: mover todos los triggers a `88–95%`
+
+| Componente | Antes | Después |
+|---|---|---|
+| `AboutV2` — contadores | `top 65%` | `top 82%` |
+| `ImpactV2` — `.impact-left` | `top 75%` | `top 90%` |
+| `ImpactV2` — `.chain-pill` | `top 75%` | `top 88%` |
+| `ContactV2` — reveal | `top 75%` | `top 92%` |
+| `FooterV2` — reveal | `top 80%` | `top 95%` |
+| `BlockchainV2` — entrada | `top 80%` | `top 88%` (móvil) |
+
+Con `top 88–95%`, la animación dispara en cuanto el borde superior del elemento asoma en el viewport (el 88–95% del viewport desde arriba). En móvil esto se siente inmediato y natural; en desktop el elemento ya lleva unos píxeles visibles cuando anima — también correcto.
+
+### Regla general
+> Valores de `start` entre `top 88%` y `top 95%` son los más seguros para móvil. Usar `80%` solo cuando se quiere un delay deliberado (el elemento está bastante visible antes de animar). Nunca bajar de `top 65%` en componentes que deben ser compatibles con móvil.
+
+---
+
+## Problema 39: Palabras sueltas en líneas únicas por `<br/>` manual — ImpactV2 móvil
+
+### Síntoma
+En ImpactV2, el H2 "Blockchain no es una / tendencia. Es una nueva / infraestructura de confianza." tiene `<br/>` manuales para el layout desktop. En móvil, "nueva" queda sola en una línea — tres palabras en la segunda línea y una sola en la tercera.
+
+### Causa
+Idéntica al Problema 34: los `<br/>` manuales no responden al viewport. En un H2 de `clamp(30px, 4.2vw, 56px)` en móvil, el punto de quiebre natural de "tendencia. Es una nueva" es diferente al impuesto por el `<br/>`.
+
+### Solución: JSX condicional con `isMobile` — eliminar `<br/>` en móvil
+
+```tsx
+<h2>
+  {isMobile ? (
+    // Sin <br/> — el browser hace wrap automático
+    <>Blockchain no es una tendencia. Es una nueva{' '}
+      <span style={{ color: '#0057FF' }}>infraestructura de confianza.</span>
+    </>
+  ) : (
+    // <br/> manuales para desktop
+    <>Blockchain no es una<br />tendencia. Es una nueva<br />
+      <span style={{ color: '#0057FF' }}>infraestructura de confianza.</span>
+    </>
+  )}
+</h2>
+```
+
+### Regla general
+> Cualquier H2 o H3 con `<br/>` manuales debe tener una variante móvil sin ellos si el componente es responsive. Revisar sistemáticamente todos los textos con saltos manuales al implementar la versión móvil de una sección.
+
+---
+
 ## Resumen rápido
 
 | # | Problema | Causa | Solución |
@@ -1854,3 +2178,12 @@ gsap.to(overlay, {
 | 28 | Texto MONO uppercase cortado en el borde derecho en móvil | `<br/>` manual fuerza una línea más larga que el viewport; MONO + `0.16em` letter-spacing la hace ~140px más ancha de lo disponible | Eliminar `<br/>`, reducir `letterSpacing` a `0.12em`, añadir `wordBreak: 'break-word'` y `maxWidth: '100%'` |
 | 29 | Demasiado espacio entre secciones en móvil | `clamp(96px, 14vh, 136px)` diseñado para desktop — el mínimo de 96px es ~25% del viewport en móvil; en columna única el contenido es mucho más corto | `isMobile ? '48px 24px' : 'clamp(96px, 14vh, 136px) clamp(24px, 5vw, 64px)'` en cada sección — nunca confiar en `clamp` para adaptar el espaciado a móvil |
 | 30 | Transición overlay al hacer click en link interno no se ve — page scrollea en paralelo | `LenisProvider` tiene un listener global en `document` para todos los `a[href^="#"]`. Al hacer click, React llama `e.preventDefault()` pero el listener de Lenis ya se disparó en paralelo (el DOM listener en `document` es independiente de `preventDefault`). Resultado: el scroll suave de Lenis (1.6s) inicia al mismo tiempo que el overlay, haciéndolo imperceptible | En `LenisProvider.handleAnchorClick` añadir `if (e.defaultPrevented) return` como primera línea — React llama `preventDefault()` antes de que el evento llegue a `document`, por lo que el guard funciona correctamente |
+| 31 | Deriva horizontal — el sitio se desplaza lateralmente en móvil | Algún elemento supera el ancho del viewport (grilla `backgroundAttachment:fixed`, glow layers, margen negativo) causando overflow-x implícito | `overflow-x: hidden` en `html` y `body` en `globals.css` |
+| 32 | BlockchainV2 con `pin: true` produce flash blanco, colapso de sección y layout inclinado en móvil | GSAP crea un `pin-spacer` de 200vh que desarregla el flujo; en móvil el contenido es una sola columna y el pin no tiene sentido | Deshabilitar el pin con `if (!isMobile)` en `useGSAP`; sección con `height: auto; minHeight: 100svh` en móvil; `dependencies: [isMobile], revertOnUpdate: true` |
+| 33 | Descripción de área en AreasV2 se superpone al contenido en lugar de empujar las filas en móvil | `position: absolute` con `left` calculado para el grid desktop — en móvil el elemento flota fuera del flujo y tapa las filas siguientes | En móvil: descripción inline con `maxHeight` transition (accordion); en desktop: mantener `position: absolute` |
+| 34 | H2 de ProcessV2 rompe mal en móvil — palabra sola en una línea | `<br/>` manuales fijos para desktop generan un salto en móvil donde el texto tiene distinto ancho disponible | JSX condicional `isMobile`: sin `<br/>` en móvil, con `<br/>` en desktop |
+| 35 | Artefacto de ProcessV2 transparente en la parte inferior + botones flotantes (no al fondo) en móvil | (A) Artefacto sin `background` — el fondo cream traspasa. (B) Panel izquierdo sin `flexGrow` — el spacer flex no tiene referencia de altura y no empuja los botones al fondo | `background: '#FFFFFF'` en el artefacto + `flexGrow: isMobile ? 1 : 0` en el panel izquierdo |
+| 36 | Warning React: "Updating a style property during rerender (flex) when a conflicting property is set (flexShrink)" | `flex` (shorthand) y `flexShrink` (longhand) en el mismo objeto `style` — React detecta el conflicto y el comportamiento es indefinido | Reemplazar con longhands: `flexGrow: isMobile ? 1 : 0` + `flexShrink: 0`; nunca mezclar shorthand y longhand en el mismo elemento |
+| 37 | Card TIM tiene ícono 180px y tipografía mayor que las otras cards en móvil | `iconSz = feature ? 180 : 40` — TIM tiene `feature: true` independientemente del viewport | `isFeatureLayout = feature && !isMobile` — en móvil todas las cards usan ícono 40px y tipografía uniforme |
+| 38 | Animaciones de entrada disparan cuando el elemento ya lleva tiempo visible en móvil | `start: 'top 65–75%'` diseñado para viewports altos de desktop — en móvil el elemento ya está completamente visible cuando se alcanza ese porcentaje | Mover todos los triggers a `top 88–95%`: disparan en cuanto el borde superior del elemento asoma en el viewport |
+| 39 | Palabras sueltas en líneas únicas por `<br/>` manual (ImpactV2, ProcessV2 móvil) | `<br/>` fijos para desktop crean saltos de línea en puntos que no coinciden con el word-wrap natural en el ancho de móvil | JSX condicional `isMobile`: sin `<br/>` en móvil — el browser hace wrap automático |

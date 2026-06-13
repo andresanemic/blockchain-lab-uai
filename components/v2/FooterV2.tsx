@@ -66,7 +66,7 @@ export default function FooterV2() {
     gsap.fromTo('.footer-cta-line',
       { y: '108%', opacity: 0, filter: 'blur(12px)' },
       { y: '0%', opacity: 1, filter: 'blur(0px)', duration: 1.25, ease: 'expo.out', stagger: 0.10,
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' } }
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 95%' } }
     )
   }, { scope: sectionRef })
 
@@ -183,7 +183,7 @@ export default function FooterV2() {
         </div>
 
         {/* ── ROW 2 col 3: Logos + copyright ── */}
-        <div style={{ paddingBottom: PB, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <div style={{ paddingBottom: isMobile ? '32px' : PB, display: 'flex', flexDirection: 'column', gap: '10px' }}>
           <div style={{ borderRadius: '10px', overflow: 'hidden', width: '100%', boxShadow: '0 2px 10px rgba(8,13,43,0.10)' }}>
             <Image src="/logos-uai-1.png" alt="Universidad Adolfo Ibáñez — Dirección de Innovación y Transferencia" width={680} height={210} style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>

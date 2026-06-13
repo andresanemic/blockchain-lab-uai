@@ -101,6 +101,17 @@ export default function BlockchainV2() {
   }
 
   function handleDotClick(idx: number) {
+    // On mobile there is no pin — just activate the step directly
+    if (isMobile) {
+      activateStep(idx)
+      for (let i = 0; i < STEPS.length - 1; i++) {
+        const fill = Math.max(0, Math.min(1, idx - i))
+        const inner = lineFillRefs.current[i]
+        if (inner) inner.style.transform = `scaleY(${fill})`
+      }
+      return
+    }
+
     const st = stRef.current
     if (!st) return
 
@@ -134,45 +145,51 @@ export default function BlockchainV2() {
   }
 
   useGSAP(() => {
+    const triggerStart = isMobile ? 'top 88%' : 'top 80%'
+
     gsap.fromTo('.bc-header-line',
       { y: '108%', opacity: 0, filter: 'blur(12px)' },
       { y: '0%', opacity: 1, filter: 'blur(0px)', duration: 1.25, ease: 'expo.out', stagger: 0.10,
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' } }
+        scrollTrigger: { trigger: sectionRef.current, start: triggerStart } }
     )
     gsap.from('.bc-timeline', {
       y: 40, opacity: 0, duration: 1.1, ease: 'expo.out', delay: 0.15,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 78%' },
+      scrollTrigger: { trigger: sectionRef.current, start: triggerStart },
     })
 
     activateStep(0)
 
-    gsap.to({}, {
-      scrollTrigger: {
-        trigger:             sectionRef.current,
-        pin:                 true,
-        anticipatePin:       1,
-        start:               'top top',
-        end:                 () => `+=${window.innerHeight * PIN_MULT}`,
-        invalidateOnRefresh: true,
-        onRefresh(self) { stRef.current = self },
-        onUpdate(self) {
-          stRef.current = self
-          if (progressRef.current) {
-            progressRef.current.style.transform = `scaleX(${self.progress})`
-          }
-          /* Line fills: continuous, always update regardless of skipRef */
-          for (let i = 0; i < STEPS.length - 1; i++) {
-            const fill = Math.max(0, Math.min(1, self.progress * STEPS.length - i))
-            const inner = lineFillRefs.current[i]
-            if (inner) inner.style.transform = `scaleY(${fill})`
-          }
-          if (skipRef.current) return
-          const newStep = Math.min(Math.floor(self.progress * STEPS.length), STEPS.length - 1)
-          activateStep(newStep)
+    // Pin and scroll-driven steps — desktop only
+    // On mobile the pin causes flashing and layout collapse; dots are tappable instead
+    if (!isMobile) {
+      gsap.to({}, {
+        scrollTrigger: {
+          trigger:             sectionRef.current,
+          pin:                 true,
+          anticipatePin:       1,
+          start:               'top top',
+          end:                 () => `+=${window.innerHeight * PIN_MULT}`,
+          invalidateOnRefresh: true,
+          onRefresh(self) { stRef.current = self },
+          onUpdate(self) {
+            stRef.current = self
+            if (progressRef.current) {
+              progressRef.current.style.transform = `scaleX(${self.progress})`
+            }
+            /* Line fills: continuous, always update regardless of skipRef */
+            for (let i = 0; i < STEPS.length - 1; i++) {
+              const fill = Math.max(0, Math.min(1, self.progress * STEPS.length - i))
+              const inner = lineFillRefs.current[i]
+              if (inner) inner.style.transform = `scaleY(${fill})`
+            }
+            if (skipRef.current) return
+            const newStep = Math.min(Math.floor(self.progress * STEPS.length), STEPS.length - 1)
+            activateStep(newStep)
+          },
         },
-      },
-    })
-  }, { scope: sectionRef })
+      })
+    }
+  }, { scope: sectionRef, dependencies: [isMobile], revertOnUpdate: true })
 
   return (
     <section
@@ -183,12 +200,12 @@ export default function BlockchainV2() {
         position:    'relative',
         background:  '#080D2B',
         overflow:    'hidden',
-        height:      '100vh',
-        minHeight:   '600px',
-        /* Fixed paddingTop anchors content at a constant position —
-           immune to timeline height changes (unlike flex/transform centering) */
+        /* Mobile: auto height (no pin) so content never clips or collapses.
+           Desktop: fixed 100vh is required for the GSAP pin to work correctly. */
+        height:      isMobile ? 'auto' : '100vh',
+        minHeight:   isMobile ? '100svh' : '600px',
         paddingTop:  isMobile ? '48px' : 'clamp(80px, calc(50vh - 230px), 360px)',
-        paddingBottom: isMobile ? '40px' : undefined,
+        paddingBottom: isMobile ? '56px' : undefined,
       }}
     >
       <GridGlowLayers dark glowRef={glowRef} gridGlowRef={gridGlowRef} />
@@ -216,10 +233,11 @@ export default function BlockchainV2() {
         gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
         gap:      isMobile ? '36px' : 'clamp(48px, 8vw, 100px)',
         alignItems: 'start',
+        /* On mobile the two columns stack — ensure H2 doesn't stretch */
       }}>
 
         {/* ── LEFT: header ── */}
-        <div className="bc-left">
+        <div className="bc-left" style={{ alignSelf: 'start' }}>
           <h2 style={{
             fontFamily:    DISPLAY, fontWeight: 300,
             fontSize:      isMobile ? 'clamp(36px, 9vw, 56px)' : 'clamp(44px, 6.5vw, 88px)',
@@ -316,6 +334,7 @@ export default function BlockchainV2() {
                 }}>
                   <h3
                     ref={el => { titleRefs.current[i] = el }}
+                    onClick={() => handleDotClick(i)}
                     style={{
                       fontFamily:    MONO,
                       fontWeight:    400,
@@ -325,6 +344,7 @@ export default function BlockchainV2() {
                       textTransform: 'uppercase',
                       color:         isFirst ? '#F8F8F4' : 'rgba(248,248,244,0.22)',
                       margin:        0,
+                      cursor:        'pointer',
                       transition:    'color 0.65s cubic-bezier(0.33,1,0.68,1), font-size 0.75s cubic-bezier(0.33,1,0.68,1)',
                     }}
                   >
