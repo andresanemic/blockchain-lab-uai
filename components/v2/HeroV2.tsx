@@ -237,7 +237,7 @@ export default function HeroV2() {
       )
     }
 
-  }, { scope: sectionRef })
+  }, { scope: sectionRef, dependencies: [isMobile] })
 
   return (
     <section

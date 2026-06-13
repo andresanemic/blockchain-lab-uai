@@ -20,10 +20,11 @@ export default function AboutV2() {
     const st = { trigger: sectionRef.current, start: 'top 82%' }
 
     // h2 reveal
-    gsap.from('.about-h2', {
-      y: 72, opacity: 0, scale: 0.96, duration: 1.2, ease: 'expo.out',
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
-    })
+    gsap.fromTo('.about-h2',
+      { y: 72, opacity: 0, scale: 0.96 },
+      { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: 'expo.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' } }
+    )
 
     // Counter 100%
     if (num100Ref.current) {
@@ -48,20 +49,20 @@ export default function AboutV2() {
       })
     }
 
-    // Scrubbed scale dissolve — idéntico a ImpactV2
-    gsap.from('.about-num', {
-      scale: 1.18, opacity: 0,
-      ease: 'none',
-      stagger: 0.12,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 80%', end: 'top 40%', scrub: 1.2 },
-    })
+    // Scrubbed scale dissolve
+    gsap.fromTo('.about-num',
+      { scale: 1.18, opacity: 0 },
+      { scale: 1, opacity: 1, ease: 'none', stagger: 0.12,
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%', end: 'top 40%', scrub: 1.2 } }
+    )
 
     // Labels fade
-    gsap.from('.about-label', {
-      y: 20, opacity: 0, duration: 0.7, ease: 'expo.out', stagger: 0.12, delay: 0.35,
-      scrollTrigger: st,
-    })
-  }, { scope: sectionRef })
+    gsap.fromTo('.about-label',
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.7, ease: 'expo.out', stagger: 0.12, delay: 0.35,
+        scrollTrigger: st }
+    )
+  }, { scope: sectionRef, dependencies: [isMobile] })
 
   return (
     <section

@@ -16,8 +16,8 @@ const MONO    = 'var(--font-jetbrains-mono, monospace)'
 const navLinks = [
   { label: 'Nosotros',             href: '#' },
   { label: 'TIM',                  href: '#' },
-  { label: 'Certificados',         href: '#' },
-  { label: 'Validación de videos', href: '#' },
+  { label: 'Certificados',         href: '/certificados' },
+  { label: 'Validación de videos', href: '/validacion-videos' },
   { label: 'Blog',                 href: '#' },
 ]
 
@@ -66,9 +66,9 @@ export default function FooterV2() {
     gsap.fromTo('.footer-cta-line',
       { y: '108%', opacity: 0, filter: 'blur(12px)' },
       { y: '0%', opacity: 1, filter: 'blur(0px)', duration: 1.25, ease: 'expo.out', stagger: 0.10,
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 95%' } }
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' } }
     )
-  }, { scope: sectionRef })
+  }, { scope: sectionRef, dependencies: [isMobile] })
 
   const PT = 'clamp(88px, 10vh, 108px)'
   const PB = 'clamp(40px, 5vh, 56px)'

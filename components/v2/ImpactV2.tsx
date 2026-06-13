@@ -85,19 +85,22 @@ export default function ImpactV2() {
   const isMobile = useIsMobile()
 
   useGSAP(() => {
-    gsap.from('.impact-left', {
-      y: 30, opacity: 0, duration: 0.85, ease: 'expo.out',
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 90%' },
-    })
-    gsap.from('.chain-pill', {
-      y: 20, opacity: 0, scale: 0.95, duration: 0.6, ease: 'expo.out', stagger: 0.07,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 88%' },
-    })
-    gsap.from('.impact-callout', {
-      y: 32, opacity: 0, duration: 0.9, ease: 'expo.out',
-      scrollTrigger: { trigger: '.impact-callout', start: 'top 88%' },
-    })
-  }, { scope: sectionRef })
+    gsap.fromTo('.impact-left',
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.85, ease: 'expo.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 90%' } }
+    )
+    gsap.fromTo('.chain-pill',
+      { y: 20, opacity: 0, scale: 0.95 },
+      { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: 'expo.out', stagger: 0.07,
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 88%' } }
+    )
+    gsap.fromTo('.impact-callout',
+      { y: 32, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.9, ease: 'expo.out',
+        scrollTrigger: { trigger: '.impact-callout', start: 'top 88%' } }
+    )
+  }, { scope: sectionRef, dependencies: [isMobile] })
 
   return (
     <section

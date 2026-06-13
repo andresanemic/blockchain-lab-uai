@@ -351,20 +351,21 @@ export default function ProcessV2() {
   }
 
   useGSAP(() => {
-    gsap.from('.proc-h2', {
-      y: 64, opacity: 0, duration: 1.0, ease: 'expo.out',
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 72%' },
-    })
-    gsap.from('.proc-artifact', {
-      opacity: 0, x: 56, scale: 0.96,
-      duration: 1.4, ease: 'expo.out',
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 72%' },
-    })
+    gsap.fromTo('.proc-h2',
+      { y: 64, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.0, ease: 'expo.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 72%' } }
+    )
+    gsap.fromTo('.proc-artifact',
+      { opacity: 0, x: 56, scale: 0.96 },
+      { opacity: 1, x: 0, scale: 1, duration: 1.4, ease: 'expo.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 72%' } }
+    )
     // Init progress bar to step 1/5
     if (progressRef.current) {
       gsap.set(progressRef.current, { scaleX: 1 / steps.length })
     }
-  }, { scope: sectionRef })
+  }, { scope: sectionRef, dependencies: [isMobile] })
 
   const step = steps[displayed]
   const PanelComponent = PANELS[displayed]

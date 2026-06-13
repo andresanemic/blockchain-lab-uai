@@ -28,12 +28,12 @@ export default function AreasV2() {
   const isMobile = useIsMobile()
 
   useGSAP(() => {
-    gsap.from('.area-row', {
-      y: 28, opacity: 0,
-      duration: 0.8, ease: 'expo.out', stagger: 0.055,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
-    })
-  }, { scope: sectionRef })
+    gsap.fromTo('.area-row',
+      { y: 28, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: 'expo.out', stagger: 0.055,
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' } }
+    )
+  }, { scope: sectionRef, dependencies: [isMobile] })
 
   return (
     <section

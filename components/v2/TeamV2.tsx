@@ -177,16 +177,17 @@ export default function TeamV2() {
   }, [])
 
   useGSAP(() => {
-    gsap.from('.team-card', {
-      y: 80, opacity: 0, scale: 0.94,
-      duration: 1.2, ease: 'expo.out', stagger: 0.12,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 72%' },
-    })
-    gsap.from('.team-marquee', {
-      opacity: 0, y: 32, duration: 1.1, ease: 'expo.out',
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 78%' },
-    })
-  }, { scope: sectionRef })
+    gsap.fromTo('.team-card',
+      { y: 80, opacity: 0, scale: 0.94 },
+      { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: 'expo.out', stagger: 0.12,
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 72%' } }
+    )
+    gsap.fromTo('.team-marquee',
+      { opacity: 0, y: 32 },
+      { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 78%' } }
+    )
+  }, { scope: sectionRef, dependencies: [isMobile] })
 
   return (
     <section

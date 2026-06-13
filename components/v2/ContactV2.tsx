@@ -72,7 +72,7 @@ export default function ContactV2() {
         scrollTrigger: { trigger: sectionRef.current, start: 'top 92%' },
       }
     )
-  }, { scope: sectionRef })
+  }, { scope: sectionRef, dependencies: [isMobile] })
 
   return (
     <section

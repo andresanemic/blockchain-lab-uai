@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
+import Link from 'next/link'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
 import { useGridGlow } from '@/lib/useGridGlow'
@@ -67,6 +68,7 @@ const projects = [
     icon: 'badge'    as const,
     dark: false,
     feature: true,
+    href: null,
   },
   {
     index: '02',
@@ -75,6 +77,7 @@ const projects = [
     icon: 'document' as const,
     dark: true,
     feature: false,
+    href: '/certificados',
   },
   {
     index: '03',
@@ -83,6 +86,7 @@ const projects = [
     icon: 'video'    as const,
     dark: false,
     feature: false,
+    href: '/validacion-videos',
   },
 ] as const
 
@@ -90,7 +94,7 @@ const projects = [
 
 function ProjectCard({ project, isMobile }: { project: typeof projects[number]; isMobile: boolean }) {
   const [hovered, setHovered] = useState(false)
-  const { dark, feature } = project
+  const { dark, feature, href } = project
 
   const bg          = dark ? '#080D2B' : '#FFFFFF'
   const borderBase  = dark ? 'rgba(255,255,255,0.07)'   : 'rgba(8,13,43,0.08)'
@@ -113,33 +117,31 @@ function ProjectCard({ project, isMobile }: { project: typeof projects[number]; 
   const iconSz  = isFeatureLayout ? 180 : 40
   const titleSz = isFeatureLayout ? 'clamp(22px, 2.8vw, 40px)' : 'clamp(15px, 1.7vw, 22px)'
 
-  return (
-    <div
-      className="project-card"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        position: 'relative',
-        height: '100%',
-        borderRadius: '20px',
-        background: bg,
-        border: `1px solid ${hovered ? borderHover : borderBase}`,
-        overflow: 'hidden',
-        cursor: 'pointer',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: isFeatureLayout ? 'flex-start' : 'space-between',
-        gap: isFeatureLayout ? 'clamp(28px, 5vh, 56px)' : '0',
-        padding: pad,
-        boxShadow: hovered ? shadowHover : shadowBase,
-        transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
-        transition: [
-          'transform 0.50s cubic-bezier(0.16,1,0.3,1)',
-          'box-shadow 0.50s cubic-bezier(0.16,1,0.3,1)',
-          'border-color 0.30s ease',
-        ].join(', '),
-      }}
-    >
+  const cardStyle: React.CSSProperties = {
+    position: 'relative',
+    height: '100%',
+    borderRadius: '20px',
+    background: bg,
+    border: `1px solid ${hovered ? borderHover : borderBase}`,
+    overflow: 'hidden',
+    cursor: 'pointer',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: isFeatureLayout ? 'flex-start' : 'space-between',
+    gap: isFeatureLayout ? 'clamp(28px, 5vh, 56px)' : '0',
+    padding: pad,
+    boxShadow: hovered ? shadowHover : shadowBase,
+    transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
+    transition: [
+      'transform 0.50s cubic-bezier(0.16,1,0.3,1)',
+      'box-shadow 0.50s cubic-bezier(0.16,1,0.3,1)',
+      'border-color 0.30s ease',
+    ].join(', '),
+    textDecoration: 'none',
+  }
+
+  const inner = (
+    <>
       {/* Blue progress line — slides in from left on hover */}
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0, height: '2px',
@@ -196,6 +198,31 @@ function ProjectCard({ project, isMobile }: { project: typeof projects[number]; 
           {project.desc}
         </p>
       </div>
+    </>
+  )
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className="project-card"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={cardStyle}
+      >
+        {inner}
+      </Link>
+    )
+  }
+
+  return (
+    <div
+      className="project-card"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={cardStyle}
+    >
+      {inner}
     </div>
   )
 }
@@ -207,18 +234,20 @@ export default function ProjectsV2() {
   const isMobile = useIsMobile()
 
   useGSAP(() => {
-    gsap.from('.projects-heading', {
-      y: 72, opacity: 0, duration: 1.2, ease: 'expo.out',
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
-    })
-    gsap.from('.project-card', {
-      opacity: 0, y: 48, scale: 0.97,
-      duration: 1.0, ease: 'expo.out',
-      stagger: { amount: 0.7, from: 'start' },
-      delay: 0.25,
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 68%' },
-    })
-  }, { scope: sectionRef })
+    gsap.fromTo('.projects-heading',
+      { y: 72, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.2, ease: 'expo.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' } }
+    )
+    gsap.fromTo('.project-card',
+      { opacity: 0, y: 48, scale: 0.97 },
+      { opacity: 1, y: 0, scale: 1,
+        duration: 1.0, ease: 'expo.out',
+        stagger: { amount: 0.7, from: 'start' },
+        delay: 0.25,
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 68%' } }
+    )
+  }, { scope: sectionRef, dependencies: [isMobile] })
 
   return (
     <section
