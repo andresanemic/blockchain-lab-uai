@@ -1,9 +1,11 @@
 'use client'
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import ScrambleText from './ScrambleText'
 import { gsap } from '@/lib/gsap'
+import { useIsMobile } from '@/lib/useIsMobile'
 
 const MONO  = 'var(--font-jetbrains-mono, monospace)'
 const DISPLAY = 'var(--font-lato, var(--font-inter))'
@@ -17,6 +19,9 @@ const navLinks = [
 
 
 export default function NavV2() {
+  const pathname = usePathname()
+  const isMobile = useIsMobile()
+
   const [expanded,      setExpanded]      = useState(false)
   const [hoverExpanded, setHoverExpanded] = useState(false)
   const [menuOpen,      setMenuOpen]      = useState(false)
@@ -25,6 +30,9 @@ export default function NavV2() {
   const menuLinksRef  = useRef<HTMLDivElement>(null)
   const navRef        = useRef<HTMLElement>(null)
   const hoverTimer    = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // Tracks whether the entrance animation has already run this mount cycle
+  // (prevents re-animation when resizing mobile → desktop after first paint)
+  const hasAnimated   = useRef(false)
 
   const isOpen = expanded || hoverExpanded
 
@@ -71,16 +79,40 @@ export default function NavV2() {
     return () => observer.disconnect()
   }, [])
 
-  // Entrance animation on mount — desktop only; skip on mobile to prevent GSAP
-  // from overriding the display:none from Tailwind's `hidden` class
+  // E3: Entrance animation — desktop only.
+  // RC-3: dep [isMobile] makes the guard reactive to viewport resize.
+  // RC-4: cleanup kills any in-flight tween when nav unmounts or deps change.
+  // animation-skip: on internal pages (pathname !== '/') skip the 1.4s animation;
+  //   use gsap.set for immediate opacity:1 (evidencia nivel 2 — 1.4s invisible en FPL).
   useEffect(() => {
-    if (navRef.current && window.innerWidth >= 768) {
-      gsap.fromTo(navRef.current,
-        { opacity: 0, top: '-34px' },
-        { opacity: 1, top: '14px', duration: 1.1, ease: 'expo.out', delay: 0.3 }
-      )
+    if (!navRef.current || isMobile) return
+
+    if (!hasAnimated.current) {
+      if (pathname === null || pathname === '/') {
+        gsap.fromTo(navRef.current,
+          { opacity: 0, top: '-34px' },
+          { opacity: 1, top: '14px', duration: 1.1, ease: 'expo.out', delay: 0.3 }
+        )
+      } else {
+        gsap.set(navRef.current, { opacity: 1, top: '14px' })
+      }
+      hasAnimated.current = true
+    } else {
+      // Returning to desktop after a mobile resize: restore visibility without re-animating
+      gsap.set(navRef.current, { opacity: 1, top: '14px' })
     }
-  }, [])
+
+    return () => { gsap.killTweensOf(navRef.current) } // RC-4
+  }, [isMobile, pathname])
+
+  // E-RC3: When resizing from desktop to mobile, kill the desktop tween and
+  // reset opacity to 0 so the nav is hidden (belt-and-suspenders alongside CSS display:none).
+  useEffect(() => {
+    if (isMobile && navRef.current) {
+      gsap.killTweensOf(navRef.current)
+      gsap.set(navRef.current, { opacity: 0 })
+    }
+  }, [isMobile])
 
   // Mobile overlay animation
   useEffect(() => {
@@ -130,7 +162,6 @@ export default function NavV2() {
           // expanded:  translateX(-50%) centers the full 1120px nav
           transform: isOpen ? 'translateX(-50%)' : 'translateX(-89px)',
           zIndex: 1000,
-          display: 'flex',
           alignItems: 'center',
           width: 'min(1120px, 95vw)',
           overflow: 'hidden',
