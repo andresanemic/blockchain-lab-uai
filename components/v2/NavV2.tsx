@@ -10,9 +10,9 @@ const DISPLAY = 'var(--font-lato, var(--font-inter))'
 const BODY  = 'var(--font-inter)'
 
 const navLinks = [
-  { label: 'Proyectos',    href: '#proyectos',    sectionId: 'proyectos' },
-  { label: 'Áreas',        href: '#areas',       sectionId: 'areas' },
-  { label: 'Blog',         href: '#',             sectionId: null },
+  { label: 'Proyectos', href: '/#proyectos', sectionId: 'proyectos' },
+  { label: 'Áreas',     href: '/#areas',     sectionId: 'areas'     },
+  { label: 'Blog',      href: '#',           sectionId: null        },
 ]
 
 
@@ -104,6 +104,7 @@ export default function NavV2() {
         onComplete: () => gsap.set(overlay, { pointerEvents: 'none' }),
       })
     }
+    return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
   useEffect(() => {
