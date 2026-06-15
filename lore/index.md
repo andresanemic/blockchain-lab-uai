@@ -26,6 +26,11 @@ Una línea por patrón. Formato: `sistema · síntoma · confianza · archivo`
 - `animation` · GSAP sobreescribe `display:none` — necesita guard de viewport + CSS `!important` · confirmado · [animation.md](animation.md)
 - `animation` · Pin GSAP en móvil debe desactivarse completamente con guard `isMobile` · confirmado · [animation.md](animation.md)
 - `animation` · Triggers `top 88–95%` para que las animaciones disparen en cuanto el elemento asoma · confirmado · [animation.md](animation.md)
+- `animation` · GSAP entrance sin bifurcación por ruta → FOUC ~1.4s en páginas no-target · conjetura · [animation.md](animation.md)
+
+## testing
+
+- `testing` · MutationObserver + gap discriminator para testear `gsap.set` vs `gsap.fromTo` sin depender de timing · conjetura · [testing.md](testing.md)
 
 ## scroll
 

@@ -184,3 +184,15 @@ Sub-tarea 7b: conectar `activeId` al render de los links. Actualmente `activeId`
 - `gp1 › LenisProvider restaura scroll` → deuda técnica (requiere `<Link>` + BFCache o eliminar `scrollRestoration: 'manual'`)
 - `gp2 › RC-1: nav PIERDE data-*` → gate para INC-002 (route group)
 - `gp5 › S-02: nav visible dentro de 200ms` → gate de Etapa 1, debe pasar a GREEN
+
+---
+
+## Etapa 3 — Navegación a sección incorrecta desde páginas internas (pendiente — sin investigar)
+
+**Síntoma reportado (2026-06-15, usuario):** Desde una página interna (ej. `/certificados`), al hacer click en un link del nav que apunta a una sección del landing (ej. "Proyectos" → `/#proyectos`), la navegación lleva al landing pero aterriza en una sección incorrecta (ej. "Blockchain" en vez de "Proyectos").
+
+**Scope probable:** RC-6/RC-7 (comportamiento de anchors + LenisProvider desde internas). Relacionado con Etapa 2 pero síntoma distinto — requiere ciclo propio de investigación.
+
+**Estado:** ⏸ NO INVESTIGADO. No escribir código ni abrir ciclo hasta instrucción explícita del usuario.
+
+**Nota para el ciclo futuro:** Validar primero si Etapa 2 (RC-6/RC-7) ya existe en una rama y si este síntoma aplica al mismo scope, o si merece INC separado.

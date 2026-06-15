@@ -202,3 +202,13 @@
 - Pista: Triggers entre `top 88%` y `top 95%` son seguros para ambos breakpoints — disparan en cuanto el borde superior del elemento asoma en pantalla. Valores menores a `top 70%` son sospechosos en componentes responsive. Buscar triggers con porcentajes bajos en componentes que también se usan en móvil.
 - Confianza: confirmado
 - ⚠ Validar contra código actual.
+
+---
+
+### [animation] Animación GSAP de entrada sin bifurcación por ruta causa FOUC en páginas no-target
+
+- Contexto: Componente compartido (navbar, header) con una animación `gsap.fromTo` de entrada que solo se desea en una ruta específica (ej. landing), pero que se importa en cada `page.tsx` sin guard de pathname.
+- Causa probable: La animación corre en TODAS las rutas. En páginas no-target, el elemento permanece invisible durante el delay+duration completo (puede ser ~1.4s) antes de llegar a `opacity:1`.
+- Pista: Bifurcar en el `useEffect` con `usePathname()`. En la ruta target: `gsap.fromTo(...)` completo. En el resto: `gsap.set(el, { opacity: 1, ... })` inmediato. El fallback SSR (`pathname === null`) debe tratarse igual que la ruta target para evitar flash de re-hydration. Añadir `hasAnimated.current` ref para evitar re-animación en resize mobile→desktop.
+- Confianza: conjetura (primera aparición — INC-001)
+- ⚠ Validar contra código actual.

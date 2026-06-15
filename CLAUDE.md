@@ -39,7 +39,7 @@ CursorV2 + ScrollUI → NavV2 → Hero → About → Blockchain → Areas → Pr
 
 ## Componentes v2 (una línea c/u)
 
-- **NavV2** — pill flotante centrada que se expande a 1120px en hover (500ms).
+- **NavV2** — pill flotante centrada que se expande a 1120px en hover (500ms); animación GSAP de entrada solo en `/` (internas: `gsap.set` inmediato vía `usePathname` — INC-001).
 - **HeroV2** — portada editorial; grid 2col; H1 weight 300; columna derecha con scroll infinito de cards; grilla doble + glow; botón "Colaborar" → fade a blanco + jump a `#contacto` (soluciones.md #30).
 - **AboutV2** — grid asimétrico; H2 gigante weight 300; stats con counter animado (trigger top 82%, #38).
 - **BlockchainV2** — sección dark pinned solo en desktop (`PIN_MULT=2`); móvil sin pin (`height: auto`); timeline vertical de 4 pasos, dots/headers clickeables; flash blanco evitado con `:has(#blockchain)` (#32).
