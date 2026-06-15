@@ -45,14 +45,14 @@ Formato por path: recorrido · DEBE · NO DEBE · plataforma.
 
 GP-2 a GP-5 cubren los fallos sistémicos que aparecieron al crear páginas. Amplía esta lista a medida que el intake descubra recorridos nuevos; **cada agregado lo apruebas tú**.
 
-## GP-10 · Link de nav a sección con pin GSAP llega al destino correcto desde página interna
+## GP-10 (revisado 2026-06-15) · Navegación del nav lleva a destino correcto
 
-**Plataforma:** desktop
-**Recorrido:** desde `/certificados`, click en "Proyectos" (`href="/#proyectos"`) → Full Page Load a `/#proyectos`.
-**DEBE:** el usuario aterriza en la sección Proyectos; `#proyectos` queda dentro del viewport tras carga completa.
-**NO DEBE:** aterrizar en la sección Blockchain en lugar de Proyectos — manifestación de **RC-8** (el browser auto-scroll a `#proyectos` ocurre antes de que GSAP configure el pin-spacer de BlockchainV2; al instalarse el spacer, `#proyectos` se desplaza hacia abajo y el viewport queda apuntando a Blockchain).
+**Plataforma:** desktop + móvil
+**Recorrido:** (a) en home, click en cada link del nav; (b) desde una página interna (`/certificados`, `/validacion-videos`), click en cada link visible del nav.
+**DEBE:** cada click lleva a la página o sección correcta, sin pasos intermedios visibles.
+**NO DEBE:** mostrar una sección/página incorrecta en cualquier momento del trayecto (ni `Áreas` ni `Proyectos` como opciones desde páginas internas).
 
-> **Sub-caso B (RC-6) descartado 2026-06-15:** La premisa "FooterV2 no incluye id='contacto' en /certificados" era incorrecta. `FooterV2.tsx:79` tiene `id="contacto"` y se renderiza en todas las páginas — `querySelector("#contacto")` siempre encuentra el elemento y Guard 2 llama `e.preventDefault()` correctamente. No hay URL pollution. Bug no existe en el codebase actual. Ver REMEDIATION_PLAN_etapa3.md § RC-6 descartado y `lore/testing.md`.
+> **Historial:** GP-10 original (hasta Etapa 3) cubría FPL a `/#proyectos` desde `/certificados` — gate de RC-8, resuelto. Sub-caso RC-6 descartado (bug no existía). RC-9 (flash transitorio de Blockchain) y RC-7b (estado activo de links) vueltos irrelevantes por cambio de scope: los links de sección de landing no se muestran en páginas internas. Ver `incidents/INC-001.md § Decisión de scope`.
 
 ---
 
