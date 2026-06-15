@@ -45,20 +45,14 @@ Formato por path: recorrido · DEBE · NO DEBE · plataforma.
 
 GP-2 a GP-5 cubren los fallos sistémicos que aparecieron al crear páginas. Amplía esta lista a medida que el intake descubra recorridos nuevos; **cada agregado lo apruebas tú**.
 
-## GP-10 · Links de nav a secciones del landing llegan al destino correcto desde páginas internas
+## GP-10 · Link de nav a sección con pin GSAP llega al destino correcto desde página interna
 
 **Plataforma:** desktop
-**Recorrido general:** usuario en una página interna (ej. `/certificados`) interactúa con links del nav que apuntan a secciones o anchors del sitio.
+**Recorrido:** desde `/certificados`, click en "Proyectos" (`href="/#proyectos"`) → Full Page Load a `/#proyectos`.
+**DEBE:** el usuario aterriza en la sección Proyectos; `#proyectos` queda dentro del viewport tras carga completa.
+**NO DEBE:** aterrizar en la sección Blockchain en lugar de Proyectos — manifestación de **RC-8** (el browser auto-scroll a `#proyectos` ocurre antes de que GSAP configure el pin-spacer de BlockchainV2; al instalarse el spacer, `#proyectos` se desplaza hacia abajo y el viewport queda apuntando a Blockchain).
 
-### Sub-caso A — Links `/#sección` con pin GSAP (RC-8)
-**Recorrido:** desde `/certificados`, click en "Proyectos" (`href="/#proyectos"`) o "Áreas" (`href="/#areas"`).
-**DEBE:** el usuario aterriza en la sección correcta del landing; el scroll final queda estable sobre esa sección.
-**NO DEBE:** aterrizar en una sección incorrecta adyacente al pin de BlockchainV2 (ej. "Blockchain" en vez de "Proyectos") — manifestación de **RC-8** (browser auto-scroll a `#proyectos` ocurre antes de que GSAP configure el pin-spacer, que luego desplaza la posición).
-
-### Sub-caso B — CTA "Colaborar" / `#contacto` desde páginas internas (RC-6)
-**Recorrido:** desde `/certificados`, click en "Colaborar" (`href="#contacto"`) del nav.
-**DEBE:** comportamiento limpio — si `#contacto` no existe en la página actual, la URL no cambia; si existe, scroll suave al anchor.
-**NO DEBE:** la URL quedar con hash appended sin navegación (ej. `/certificados#contacto`) — manifestación de **RC-6** (LenisProvider intercepta el click, no encuentra el elemento, retorna sin `e.preventDefault()`, el browser appende el hash).
+> **Sub-caso B (RC-6) descartado 2026-06-15:** La premisa "FooterV2 no incluye id='contacto' en /certificados" era incorrecta. `FooterV2.tsx:79` tiene `id="contacto"` y se renderiza en todas las páginas — `querySelector("#contacto")` siempre encuentra el elemento y Guard 2 llama `e.preventDefault()` correctamente. No hay URL pollution. Bug no existe en el codebase actual. Ver REMEDIATION_PLAN_etapa3.md § RC-6 descartado y `lore/testing.md`.
 
 ---
 

@@ -31,6 +31,7 @@ Una línea por patrón. Formato: `sistema · síntoma · confianza · archivo`
 ## testing
 
 - `testing` · MutationObserver + gap discriminator para testear `gsap.set` vs `gsap.fromTo` sin depender de timing · conjetura · [testing.md](testing.md)
+- `testing` · Presencia de elementos en DOM: verificar en browser real, no por code-reading de imports — un Footer con `id="X"` puede existir en páginas que no incluyen el componente específico · confirmado · [testing.md](testing.md)
 
 ## scroll
 

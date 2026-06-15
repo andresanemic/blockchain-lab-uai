@@ -7,4 +7,4 @@ Campos faltantes → UNKNOWN, nunca asumir.
 
 | ID | Síntoma | Estado | Confidence |
 |---|---|---|---|
-| [INC-001](INC-001.md) | NavV2 desktop: flash / FOUC ~1.4s en páginas internas | ✅ CERRADO (Etapa 1) · Etapa 2 pendiente | ALTA |
+| [INC-001](INC-001.md) | NavV2 desktop: flash / FOUC ~1.4s en páginas internas + FPL a /#hash aterriza en sección incorrecta | ✅ CERRADO (Etapas 1+3) | ALTA |
