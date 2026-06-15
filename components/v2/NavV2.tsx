@@ -11,16 +11,24 @@ const MONO  = 'var(--font-jetbrains-mono, monospace)'
 const DISPLAY = 'var(--font-lato, var(--font-inter))'
 const BODY  = 'var(--font-inter)'
 
-const navLinks = [
-  { label: 'Proyectos', href: '/#proyectos', sectionId: 'proyectos' },
-  { label: 'Áreas',     href: '/#areas',     sectionId: 'areas'     },
-  { label: 'Blog',      href: '#',           sectionId: null        },
+const homeLinks = [
+  { label: 'Proyectos', href: '/#proyectos' },
+  { label: 'Áreas',     href: '/#areas'     },
+  { label: 'Blog',      href: '#'           },
+]
+
+const internalLinks = [
+  { label: 'TIM',                  href: '#'                  },
+  { label: 'Certificados',         href: '/certificados'      },
+  { label: 'Validación de Videos', href: '/validacion-videos' },
+  { label: 'Blog',                 href: '#'                  },
 ]
 
 
 export default function NavV2() {
   const pathname = usePathname()
   const isMobile = useIsMobile()
+  const navLinks = (pathname === '/' || pathname === null) ? homeLinks : internalLinks
 
   const [expanded,      setExpanded]      = useState(false)
   const [hoverExpanded, setHoverExpanded] = useState(false)
@@ -212,7 +220,7 @@ export default function NavV2() {
           }}>
             {navLinks.map(link => (
               <a
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 style={{
                   display: 'inline-flex', alignItems: 'center',
@@ -314,7 +322,7 @@ export default function NavV2() {
         <div ref={menuLinksRef} style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           {navLinks.map((link, i) => (
             <a
-              key={link.href}
+              key={link.label}
               href={link.href}
               className="mob-link"
               onClick={() => setMenuOpen(false)}
