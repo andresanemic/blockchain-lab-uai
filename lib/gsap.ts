@@ -7,4 +7,4 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP)
 }
 
-export { gsap, ScrollTrigger, SplitText }
+export { gsap, ScrollTrigger }

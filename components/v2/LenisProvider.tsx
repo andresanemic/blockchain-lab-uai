@@ -73,7 +73,7 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
   useEffect(() => {
     if (isFirstPath.current) {
       isFirstPath.current = false
-      return
+      if (!window.location.hash) return
     }
 
     const lenis = lenisRef.current
