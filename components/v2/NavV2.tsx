@@ -63,8 +63,8 @@ export default function NavV2() {
   useEffect(() => {
     const map: Record<string, string> = {
       areas: 'areas', proyectos: 'proyectos', equipo: 'equipo',
-      impacto: 'areas', blockchain: 'proyectos', acerca: 'equipo',
-      proceso: 'equipo', roadmap: 'equipo',
+      impacto: 'areas', blockchain: 'proyectos',
+      proceso: 'equipo',
     }
     const observer = new IntersectionObserver(
       entries => {
