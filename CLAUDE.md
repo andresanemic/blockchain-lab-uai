@@ -53,6 +53,7 @@ CursorV2 + ScrollUI → NavV2 → Hero → About → Blockchain → Areas → Pr
 - **CursorV2** — existe pero NO se usa.
 - **ScrollUI** — línea de progreso vertical 2px a la derecha, `#60A0FF`.
 - **GridGlowLayers / useGridGlow** — grilla doble compartida + glow cursor; `useGridGlow(true)` para dark.
+- **LenisProvider** — FPL con hash: `isFirstPath` con guard `!window.location.hash`; ejecuta `setTimeout(400ms) → ScrollTrigger.refresh() → lenis.scrollTo(hash)` para corregir posición tras instalación del pin-spacer de BlockchainV2.
 
 ## Documentación detallada (leer on-demand, NO @import)
 

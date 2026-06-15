@@ -15,6 +15,16 @@
 
 ---
 
+### [testing] `waitUntil:'load'` no captura comportamiento ocurrido antes del evento `load`
+
+- Contexto: Tests Playwright que intentan observar el estado visual del DOM durante el intervalo entre `DOMContentLoaded` y la hidratación de React / ejecución de efectos GSAP. El comportamiento que ocurre antes de `load` (auto-scroll nativo del browser al hash, instalación de pin-spacer por GSAP en `useEffect`) es invisible a un test que usa `waitUntil:'load'` como punto de entrada.
+- Causa probable: `waitUntil:'load'` espera el evento `load`; cuando el test empieza a medir, los efectos pre-load ya ocurrieron. Para el caso de RC-9 (INC-001 Etapa 3): State 1 (~50–200ms, browser en `#proyectos`) y State 2 (~400ms, viewport en Blockchain tras pin-spacer) terminan antes de que cualquier `page.evaluate` pueda correr después de `waitUntil:'load'`.
+- Pista: Para testear comportamiento pre-load, considerar `page.addInitScript` que registra `scrollY` a ~16ms desde el primer render, o escuchar `page.on('domcontentloaded', ...)`. `waitUntil:'load'` es una barrera de entrada para el test, no una ventana de observación del ciclo de vida completo. Si el síntoma es "el test nunca ve el estado intermedio esperado", preguntarse si ese estado ya terminó antes de que el test empezara a mirar.
+- Confianza: conjetura (INC-001 Etapa 3 — investigación RC-9, primera aparición)
+- ⚠ Validar contra código actual.
+
+---
+
 ### [testing] Verificar presencia de elementos en browser real antes de escribir análisis o tests basados en code-reading
 
 - Contexto: INC-001 Etapa 3 — GP-10B fue diseñado asumiendo que `#contacto` no existe en `/certificados`. ROOT_CAUSE_ANALYSIS afirmaba que `app/certificados/page.tsx` no incluye `ContactV2` y por tanto `id="contacto"` no está en el DOM. Sin embargo, `FooterV2.tsx:79` tiene `id="contacto"` en su root element y FooterV2 se renderiza en todas las páginas. El análisis de código puro buscó `ContactV2` (el componente específico) en lugar de buscar el atributo `id="contacto"` en todos los componentes — detectó correctamente la ausencia de ContactV2, pero no detectó que FooterV2 también porta ese ID.

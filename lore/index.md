@@ -32,6 +32,7 @@ Una línea por patrón. Formato: `sistema · síntoma · confianza · archivo`
 
 - `testing` · MutationObserver + gap discriminator para testear `gsap.set` vs `gsap.fromTo` sin depender de timing · conjetura · [testing.md](testing.md)
 - `testing` · Presencia de elementos en DOM: verificar en browser real, no por code-reading de imports — un Footer con `id="X"` puede existir en páginas que no incluyen el componente específico · confirmado · [testing.md](testing.md)
+- `testing` · `waitUntil:'load'` no captura comportamiento pre-load (auto-scroll nativo, pin-spacer GSAP) — para observar estados transitorios usar `addInitScript` con polling de `scrollY` desde el primer render · conjetura · [testing.md](testing.md)
 
 ## scroll
 
@@ -40,6 +41,7 @@ Una línea por patrón. Formato: `sistema · síntoma · confianza · archivo`
 - `scroll` · `100vh` desborda en iOS Safari — usar `100svh` en secciones full-height · confirmado · [scroll.md](scroll.md)
 - `scroll` · LenisProvider intercepta anchors y lanza scroll en paralelo al handler del componente · confirmado · [scroll.md](scroll.md)
 - `scroll` · Navegación SPA con Lenis — scroll position no se resetea entre páginas · confirmado · [scroll.md](scroll.md)
+- `scroll` · Guard `isFirstPath` en `useEffect([pathname])` sin discriminar hash — FPL a `/#seccion` queda sin corrección de posición · conjetura · [scroll.md](scroll.md)
 
 ## layout
 

@@ -45,6 +45,16 @@
 
 ---
 
+### [scroll] Guard `isFirstPath` en `useEffect([pathname])` — FPL con hash queda sin corrección si el guard no discrimina hash
+
+- Contexto: Provider de scroll (Lenis u otro) con `useEffect([pathname])` que usa `isFirstPath` para distinguir FPL de soft navigation. Si el FPL llega con hash (`/#seccion`), el guard `if (isFirstPath) return` lo trata idéntico a un FPL sin hash y aborta la corrección de posición.
+- Causa probable: `isFirstPath` captura si es la primera ruta cargada, no si hay hash en la URL. El browser hace auto-scroll nativo al hash antes de que GSAP instale el pin-spacer; cuando el pin-spacer dobla la altura del documento, el viewport queda desplazado y el bloque de corrección nunca corre porque el efecto hizo return incondicionalmente.
+- Pista: Si el síntoma es "navego a `/#seccion` y aterrizo en la sección equivocada en FPL (pero no en soft nav)", buscar un `if (isFirstPath) return` sin discriminar hash. La fix canónica es `if (isFirstPath && !window.location.hash) return` — deja pasar los FPL con hash al bloque de corrección (`setTimeout → ScrollTrigger.refresh() → lenis.scrollTo(hash)`). El timeout debe dar margen suficiente para que GSAP instale pin-spacers antes de llamar a `scrollTo`.
+- Confianza: conjetura (INC-001 Etapa 3 — RC-8, primera aparición)
+- ⚠ Validar contra código actual.
+
+---
+
 ### [scroll] Contenido invisible + scroll en posición incorrecta al navegar entre páginas
 
 - Contexto: SPA con Lenis y GSAP ScrollTrigger. Al navegar de una página a otra, la nueva página puede mostrar contenido en `opacity:0` (animaciones no disparadas) o arrancar mid-scroll.
